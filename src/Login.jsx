@@ -1,11 +1,9 @@
-import React from 'react'
-
-
+import myImage from './assets/Rectangle 20.jpg'
 const Login = () => {
   return (
     <div className='flex'>
-        <div className='w-1/2'>
-            <h1 className=''>Login</h1>
+        <div className='w-1/2 mt-16'>
+            <h1 className='text- font-bold'>Login</h1>
             <p className='text-sm'>Login to access your Golobe account</p>
             <fieldset className='border-2 w-2/3 mt-4 mx-4 rounded-md'>
                 <legend className=' ml-3 text-sm'>Email</legend>
@@ -24,7 +22,11 @@ const Login = () => {
             </div>
             <button className='w-2/3 mx-4 py-2 rounded-md font-semibold bg-emerald-200'>Login</button>
         </div>
-        <div className='border-4'></div>
+        <div className='border-4'>
+            <img src={myImage}
+                className='w-90'
+            />
+        </div>
 
     </div>
   )
