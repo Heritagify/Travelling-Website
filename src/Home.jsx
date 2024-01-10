@@ -38,7 +38,7 @@ const Home = () => {
       </div>
 
       <div className='relative rounded-lg px-1 pt-2 pb-2 mx-28 mt-32 shadow-md shadow-blue-400 bg-white'>
-        <div className='flex text-emerald-900'>
+        <div className='flex text-blackGreen'>
           <button className='flex py-2 px-4 '><IoAirplane className="text-2xl"/>Flights</button>
           <button className='flex py-2 px-4 border-l-2 '><IoBed className=" text-2xl"/>Stays</button>
         </div>
@@ -57,14 +57,16 @@ Show Flights</button>
 
     </div>
 
-      <div className='flex justify-between mt-52'>
-        <div className='leading-loose'>
-          <h1 className='text-3xl'>Plan your perfect trip</h1>
-          <p className='text-gray-600'>Search Flights & Places Hire to our most popular destinations</p>
+      <div className='mx-28'>
+        <div className='flex justify-between mt-52'>
+          <div className='leading-loose'>
+            <h1 className='text-3xl'>Plan your perfect trip</h1>
+            <p className='text-gray-600'>Search Flights & Places Hire to our most popular destinations.</p>
+          </div>
+          <button className='border-2 px-3 text-gray-700 text-md'>See more places</button>
         </div>
-        <button className='border-2 px-3 text-gray-700 text-md'>See more places</button>
+        <Places/>
       </div>
-<Places/>
     </div>
   )
 }
