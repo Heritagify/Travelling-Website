@@ -7,7 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        'blackGreen' : '#112211'
+        'blackGreen' : '#112211',
+        'mintGreen' : '#8DD3BB',
+        'lightMint': '#8DD3BB'
+      },
+      fontFamily: {
+        'monts' : ['Montserrat', 'sans-serif'],
+
       }
     },
   },
