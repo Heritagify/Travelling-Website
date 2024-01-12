@@ -1,6 +1,6 @@
 import myImage from './assets/login1.jpg'
-import eyesOff from './assets/eye-off.svg'
-import logo from './assets/Group.svg'
+// import eyesOff from './assets/eye-off.svg'
+import logo from './assets/Group.png'
 const Login = () => {
   return (
     <div>
@@ -19,9 +19,9 @@ const Login = () => {
                 <fieldset className='flex border-2 w-2/3 mt-4 mx-4 rounded-md'>
                     <legend className='text-sm'>Password</legend>
                     <input className='w-full outline-none px-2' type='password'/>
-                    <img src={eyesOff}
+                    {/* <img src={eyesOff}
                         className='w-4'
-                    />
+                    /> */}
                 </fieldset>
                 <div className="flex justify-between w-2/5 mx-4 mt-2">
                     <div className='flex space-x-1 pl-2'>
