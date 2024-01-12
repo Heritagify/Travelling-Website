@@ -1,23 +1,24 @@
-import logo from '../assets/footLogo.svg'
+import logo from '../assets/footLogo.png'
 import { FaFacebook } from 'react-icons/fa'
 import { FaTwitter } from 'react-icons/fa'
 import { FaYoutube } from 'react-icons/fa'
 import { AiFillInstagram } from 'react-icons/ai'
 import { IoLogoWhatsapp } from 'react-icons/io'
+import Vector from './Vector'
 
 
 const Footer = () => {
   return (
     <div className=''>
         {/* --------Float------ */}
-        <div className="absolute bg-lightMint h-56 border-4 border-green-500 -mt-28 container mb-44 rounded-lg mx-8 flex">
+        <div className="absolute bg-lightMint lg:h-56 -mt-28 w-4/5 mb-44 rounded-xl mx-20 lg:mx-28 flex justify-between">
             <div className="border-4 w-3/5 pl-2">
                 <h1 className="text-blackGreen font-monts font-bold text-4xl py-2 w-20">Subscribe Newsletter</h1>
                 <h3 className="font-monts font-bold text-xl text-blackGreen">The Travel</h3>
-                <p className="">Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
-                <div className="border-4">
+                <p className="text-base font-medium font-monts">Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
+                <div className="py-2">
                     <input
-                        className="bg-white p-3 h-10 w-1/2 outline-none"
+                        className="bg-white p-3 lg:w-3/4 outline-none"
                         placeholder="Your email address"
                     />
                     <button 
@@ -25,6 +26,8 @@ const Footer = () => {
                     </button>
                 </div>
             </div>
+            {/* VECTOR______ */}
+            <Vector/>
         </div>
         {/* ----------Float Ends--------------- */}
         
@@ -32,7 +35,7 @@ const Footer = () => {
           <div className='mt-30'>
               <div className="justify-center space-y-5 lg:space-y-0 grid md:grid-cols-2 lg:grid-cols-6 lg:space-x-3 mx-3 md:mx-6 lg:mx-20 text-blackGreen">
                 <div className="space-y-5">
-                <img src={logo} alt="logo" className='w-52 lg:w-30 shadow-sm shadow-blackGreen rounded-lg px-3'/>
+                <img src={logo} alt="logo" className='w-52 lg:w-28 shadow-sm py-2 shadow-blackGreen rounded-lg'/>
                     <div className="flex text-blackGreen space-x-4 md:space-x-1 text-4xl lg:text-xl">
                         <FaFacebook/>
                         <FaTwitter/>

@@ -37,7 +37,7 @@ const Home = () => {
             <button className='flex py-2 px-4 '><IoAirplane className="text-2xl" />Flights</button>
             <button className='flex py-2 px-4 border-l-2 '><IoBed className="text-2xl" />Stays</button>
           </div>
-          <div className='flex my-4 space-x-5 mx-3'>
+          <div className='lg:flex my-4 space-x-5 mx-3'>
             <SwapInput />
             <TripOption />
             <DateSelector />
@@ -53,13 +53,13 @@ const Home = () => {
       </div>
 
       {/* Featured Places */}
-      <div className='mx-28'>
-        <div className='flex justify-between mt-52'>
+      <div className='mx-5 md:mx-28'>
+        <div className='md:flex justify-between mt-52'>
           <div className='leading-loose'>
             <h1 className='text-3xl'>Plan your perfect trip</h1>
             <p className='text-gray-600'>Search Flights & Places. Hire to our most popular destinations.</p>
           </div>
-          <button className='border-2 px-3 text-gray-700 text-md'>See more places</button>
+          <button className='border-4 rounded-2xl hover:bg-cyan-300 lg:border-2 px-3 mx-20 py-2 lg-mx-0 mt-2 lg:mt-0 text-gray-700 lg:text-md'>See more places</button>
         </div>
         <Places />
       </div>

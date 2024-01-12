@@ -28,7 +28,7 @@ const TripOption = () => {
           <select
             id="travelType"
             name="travelType"
-            className="text-gray-600 outline-none appearance-none w-60"
+            className="text-gray-600 text-sm lg:text-base outline-none appearance-none w-60"
             required
           >
             <option value="1Economy">1 Passenger - Economy</option>

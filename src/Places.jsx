@@ -26,9 +26,9 @@ const Places = () => {
   ];
 
   return (
-    <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mx-5 mt-10'>
+    <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 lg:mx-5 mt-10 w-full'>
       {images.map((image) => (
-        <div key={image.id} className='border flex gap-1 rounded-lg shadow-md shadow-gray-300 text-blackGreen font-monts'>
+        <div key={image.id} className='w-full border flex gap-1 rounded-lg shadow-md shadow-gray-300 text-blackGreen font-monts'>
           <img
           src={image.src}
           alt={image.alt}
