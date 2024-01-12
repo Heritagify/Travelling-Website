@@ -7,12 +7,17 @@ import TripOption from './components/TripOption.jsx';
 import Passenger from './components/Passenger.jsx';
 import Places from './Places.jsx';
 import Navbar1 from './components/Navbar1.jsx';
-import Footer from './components/Footer.jsx'
+import Footer from './components/Footer.jsx';
+
+
+
+
+
 const Home = () => {
   return (
-    <div className="mx-5 mt-5">
+    <div>
       {/* Hero Section */}
-      <div className="rounded-3xl relative p-3 pt-1 bg-cover h-[550px] bg-center bg-gray-900" style={{ backgroundImage: 'url("/src/assets/lp1.png")' }}>
+      <div className="rounded-3xl relative p-3 pt-1 bg-cover h-[550px] bg-center bg-gray-900 mx-3 mt-3" style={{ backgroundImage: 'url("/src/assets/lp1.png")' }}>
         <div className="rounded-3xl absolute inset-0 bg-black bg-opacity-30"></div>
 
         {/* Navigation */}

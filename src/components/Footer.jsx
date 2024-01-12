@@ -1,29 +1,85 @@
+import logo from '../assets/footLogo.svg'
+import { FaFacebook } from 'react-icons/fa'
+import { FaTwitter } from 'react-icons/fa'
+import { FaYoutube } from 'react-icons/fa'
+import { AiFillInstagram } from 'react-icons/ai'
+import { IoLogoWhatsapp } from 'react-icons/io'
+
 
 const Footer = () => {
   return (
-    <div className='bg-mintGreen border-red-400 border-4 h-96 mt-80 w-full'>
-    <div className="bg-lightMint h-80 border-4 border-green-500 -mt-52 rounded-lg mx-20 flex">
-        <div className="border-4 w-3/5">
-            <h1 className="text-blackGreen">Subscribe Newsletter</h1>
-            <h3 className="">The travel</h3>
-            <p className="">Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
-            <div className="border-4">
-                <input
-                    className="bg-white"
-                    placeholder="Your email address"
-                />
-                    <button className="bg-blackGreen text-white rounded-lg">Subscribe</button>
+    <div className=''>
+        {/* --------Float------ */}
+        <div className="absolute bg-lightMint h-56 border-4 border-green-500 -mt-28 container mb-44 rounded-lg mx-8 flex">
+            <div className="border-4 w-3/5 pl-2">
+                <h1 className="text-blackGreen font-monts font-bold text-4xl py-2 w-20">Subscribe Newsletter</h1>
+                <h3 className="font-monts font-bold text-xl text-blackGreen">The Travel</h3>
+                <p className="">Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
+                <div className="border-4">
+                    <input
+                        className="bg-white p-3 h-10 w-1/2 outline-none"
+                        placeholder="Your email address"
+                    />
+                    <button 
+                        className="bg-blackGreen align-middle p-3 px-4 text-white text-sm rounded-lg outline-none">Subscribe
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
-      
-
-      <div className="grid grid-cols-6 space-x-6">
-        <img src="../assets/Group.svg" alt="logo" />
-        <div className="flex text-blackGreen">
-            
+        {/* ----------Float Ends--------------- */}
+        
+        <div className=' bg-mintGreen mt-40 pt-44 pb-10'>
+          <div className='mt-30'>
+              <div className="justify-center space-y-5 lg:space-y-0 grid md:grid-cols-2 lg:grid-cols-6 lg:space-x-3 mx-3 md:mx-6 lg:mx-20 text-blackGreen">
+                <div className="space-y-5">
+                <img src={logo} alt="logo" className='w-52 lg:w-30 shadow-sm shadow-blackGreen rounded-lg px-3'/>
+                    <div className="flex text-blackGreen space-x-4 md:space-x-1 text-4xl lg:text-xl">
+                        <FaFacebook/>
+                        <FaTwitter/>
+                        <FaYoutube/>
+                        <AiFillInstagram/>
+                        <IoLogoWhatsapp/>
+                    </div>
+                </div>
+                {/* .........1.... */}
+                <div className="space-y-1">
+                    <h1 className="font-bold text-xl">Our Destinations</h1>
+                    <p className=" font-monts">Canada</p>
+                    <p className="font-monts text-sm">Alaska</p>
+                    <p className="font-monts text-sm">France</p>
+                    <p className="font-monts text-sm">Iceland</p>
+                </div>
+                {/* .........2.... */}
+                 <div className="space-y-1 ">
+                    <h1 className="font-bold text-2xl lg:text-xl">Our Acvtivities</h1>
+                    <p className="text-lg font-medium lg:text-sm  font-monts">Northern lights</p>
+                    <p className="font-monts text-sm ">Cruising & Sailing</p>
+                    <p className="font-monts text-sm">Multi-activities</p>
+                    <p className="font-monts text-sm">Kayaing</p>
+                </div>
+                {/* .........3.... */}
+                 <div className="space-y-1 ">
+                    <h1 className="font-bold text-2xl lg:text-xl">Travel Blogs</h1>
+                    <p className="text-sm  font-monts">Bali Travel Guide</p>
+                    <p className="font-monts text-sm">Sri lanks Travel Guide</p>
+                    <p className="font-monts text-sm">Peru Travel Guide</p>
+                    <p className="font-monts text-sm">Bali travel guide</p>
+                </div>
+                {/* .........4.... */}
+                 <div className=" space-y-1 ">
+                    <h1 className="font-bold text-2xl lg:text-xl">About Us</h1>
+                    <p className="text-sm  font-monts">Our Story</p>
+                    <p className="font-monts text-sm">Work with us</p>
+                </div>
+                {/* .........5.... */}
+                 <div className="space-y-1 ">
+                    <h1 className="font-bold text-2xl lg:text-xl">Contact Us</h1>
+                    <p className="text-sm  font-monts">Our Story</p>
+                    <p className="font-monts text-sm">Work with us</p>
+                </div>
+              </div>
+          </div>
         </div>
-      </div>
     </div>
   )
 }

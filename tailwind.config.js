@@ -9,7 +9,8 @@ export default {
       colors: {
         'blackGreen' : '#112211',
         'mintGreen' : '#8DD3BB',
-        'lightMint': '#8DD3BB'
+        'lightMint': '#d1f9ed',
+        'slamon' : '#FF8682'
       },
       fontFamily: {
         'monts' : ['Montserrat', 'sans-serif'],
