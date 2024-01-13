@@ -1,13 +1,12 @@
 import myImage from './assets/login1.jpg'
-// import eyesOff from './assets/eye-off.svg'
-import logo from './assets/Group.png'
+import { BsEyeSlashFill } from "react-icons/bs";
+import logo from './assets/footLogo.png'
+
 const Login = () => {
   return (
-    <div>
-    <h1 className=''>g<img src={logo} 
-        className='bg-black'
-    />ologe</h1>
-   
+    <div className='container mx-16 border-8'>
+        <img src={logo} className=''/>
+   -
         <div className='flex'>
             <div className='w-1/2 mt-16'>
                 <h1 className='text- font-bold'>Login</h1>
@@ -19,9 +18,7 @@ const Login = () => {
                 <fieldset className='flex border-2 w-2/3 mt-4 mx-4 rounded-md'>
                     <legend className='text-sm'>Password</legend>
                     <input className='w-full outline-none px-2' type='password'/>
-                    {/* <img src={eyesOff}
-                        className='w-4'
-                    /> */}
+                    <BsEyeSlashFill />
                 </fieldset>
                 <div className="flex justify-between w-2/5 mx-4 mt-2">
                     <div className='flex space-x-1 pl-2'>
