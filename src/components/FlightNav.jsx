@@ -43,7 +43,7 @@ const FlightNav = () => {
       </div>
 
       {/* Desktop Navigation */}
-      <nav className="hidden sm:flex text-white justify-between p-4 items-center  px-5 border-4 border-purple-900">
+      <nav className="hidden sm:flex text-white justify-between p-4 items-center bg-white  px-5 border-4 border-purple-900">
         <div className="flex space-x- text-blackGreen">
           <h1 className="flex space-x-3">
             <IoAirplane className="text-blackGreen text-2xl" />Find Flight
