@@ -1,7 +1,7 @@
 const TripOption = () => {
   return (
     <div>
-        <fieldset className="border border-gray-500 p-2 rounded-md w-40">
+        <fieldset className="border border-gray-500 p-2 rounded-md lg:w-52">
           <legend className="text-sm text-gray-500 ml-1">Trip</legend>
 
           <div className="">

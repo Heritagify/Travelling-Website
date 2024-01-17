@@ -11,7 +11,7 @@ const SwapInput = () => {
   };
 
   return (
-    <fieldset className="border border-gray-400 rounded-md py-2 w-20">
+    <fieldset className="border border-gray-400 rounded-md py-2 lg:w-20">
       <legend className="text-sm text-gray-500 ml-3">From -To</legend>
 
       <div className="flex items-center">
