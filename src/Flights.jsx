@@ -151,7 +151,7 @@ const Flights = () => {
                         </div>
                       </div>
                       <p className="text-sm font-monts">
-                        Traveling is a unique experience as it's the best way to unplug from the pushes and pulls of daily life.
+                        Traveling is a unique experience as it is the best way to unplug from the pushes and pulls of daily life.
                         It helps us to forget about our problems, frustrations, and fears at home.
                         During our journey, we experience life in different ways.
                         We explore new places, cultures, cuisines, traditions, and ways of living.
