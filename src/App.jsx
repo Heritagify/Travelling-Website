@@ -3,20 +3,22 @@ import {BrowserRouter, Routes, Route } from "react-router-dom"// import { MapCon
 import Home from './Home'
 import Login from './Login';
 import Flights from './Flights';
-import ForgotPassword from "./ForgotPassword"
+import ForgotPassword from "./ForgotPassword";
+import VerifyCode from "./VerifyCode";
+import SetPassword from "./SetPassword"
 
 function App() {
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Home/>}></Route>
-      <Route path="/login" element={<Login/>}></Route>
-      <Route path="/flight" element={<Flights/>}></Route>
-      <Route path="/forgottenPassword" element={<ForgotPassword/>}></Route>
-    </Routes>
-  {/* <Map/> */}
-  {/* <Login/> */}
-  {/* <Home/> */}
+        <Routes>
+          <Route path="/" element={<Home/>}></Route>
+          <Route path="/login" element={<Login/>}></Route>
+          <Route path="/flight" element={<Flights/>}></Route>
+          <Route path="/forgottenPassword" element={<ForgotPassword/>}></Route>
+          <Route path="/verifyCode" element={<VerifyCode/>}></Route>
+          <Route path="/setPassword" element={<SetPassword/>}></Route>
+        </Routes>
+
     </BrowserRouter>
   );
 }
