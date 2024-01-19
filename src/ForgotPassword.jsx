@@ -25,49 +25,48 @@ const ForgotPassword = () => {
 
 
   return (
+    <div className="bg-gradient-to-r from-blue-100 to-green-700 animate-gradient min-h-screen">
     <div className="flex">
 
-        <div className="w-1/2 p-14">
-                  <img src={ logo } className="w-28 mx-8" alt="logo"/>
-                  <div className="pt-12 mx-8 text-blackGreen">
-                      <Link to="/login" className=" flex gap-1 items-center cursor-pointer">
-                        <IoChevronBack/> Back to login
-                      </Link>
-                      <h1 className="text-4xl tracking-wide font-semibold font-monts">Forgot your password?</h1>
-                      <p className="w-96 text-xs font-monts py-2 font-medium">Don’t worry, happens to all of us. Enter your email below to recover your password</p>
-                      <fieldset className='border-2 py-1 w-full mt-4 my-5 rounded-md'>
-                        <legend className=' ml-3 text-sm'>Email</legend>
-                        <input className='w-full outline-none px-2' placeholder="herogreat@gmail.com" />
-                      </fieldset>
-                      <button className='w-full py-2 rounded-md font-semibold bg-emerald-200'>Submit</button>
-                      
-                      <div className="flex items-center py-6">
-                            <div className="w-48 border-t border-gray-300"></div>
-                            <div className="mx-3 text-sm text-gray-500">or login with</div>
-                            <div className="w-48 border-t border-gray-300"></div>
-                        </div>
-
-                        <div className="flex justify-between">
-                          <button
-                           className="text-blue-400 p-2 px-10 border border-blue-300">
-                            < FaFacebook  className="text-2xl"/> 
-                           </button>
-                          <button 
-                            className="text-rainbow p-2 px-10 border border-blue-300">
-                             < FaGooglePlusG className="text-red-400 text-2xl"/> 
+          <div className="w-1/2 p-14">
+                    <img src={ logo } className="w-28 mx-8" alt="logo"/>
+                    <div className="pt-12 mx-8 text-blackGreen">
+                        <Link to="/login" className=" flex gap-1 items-center cursor-pointer">
+                          <IoChevronBack/> Back to login
+                        </Link>
+                        <h1 className="text-4xl tracking-wide font-semibold font-monts">Forgot your password?</h1>
+                        <p className="w-96 text-xs font-monts py-2 font-medium">Don’t worry, happens to all of us. Enter your email below to recover your password</p>
+                        <fieldset className='border-2 border-green-300 py-1 w-full mt-4 my-5 rounded-md '>
+                          <legend className=' ml-3 text-sm'>Email</legend>
+                          <input className='w-full p-1 outline-none px-2 bg-transparent' placeholder="herogreat@gmail.com" />
+                        </fieldset>
+                        <button className='w-full py-2 rounded-md font-semibold hover:text-white bg-gradient-to-r from-blue-900 to-green-800'>Submit</button>
+          
+                        <div className="flex items-center py-6">
+                              <div className="w-48 border-t border-blue-500"></div>
+                              <div className="mx-3 text-sm text-gray-500">or login with</div>
+                              <div className="w-48 border-t border-blue-500"></div>
+                          </div>
+                          <div className="flex justify-between">
+                            <button
+                             className="text-blue-400 p-2 px-10 border rounded-xl border-blue-300">
+                              < FaFacebook  className="text-3xl animate-bounce"/>
+                             </button>
+                            <button
+                              className="text-rainbow p-3 rounded-full border border-emerald-500">
+                               < FaGooglePlusG className="text-red-400 text-3xl animate-bounce"/>
+                              </button>
+                            <button
+                              className="p-2 px-10 border border-blue-300">
+                              <FaApple className="text-3xl animate-bounce" />
                             </button>
-                          <button 
-                            className="p-2 px-10 border border-blue-300">
-                            <FaApple className="text-2xl" />
-                          </button>
-                        </div>
-
-                  </div>
-        </div>
-
-          <div className="w-1/2 p-5">
-        <div className="items-center flex justify-center">
-            <img src={ myImage } alt="resort" className="object-cover w-2/3"/>
+                          </div>
+                    </div>
+          </div>
+            <div className="w-1/2 p-5">
+          <div className=" items-center flex justify-center">
+              <img src={ myImage } alt="resort" className="rounded-3xl object-cover w-2/3"/>
+            </div>
           </div>
         </div>
 
