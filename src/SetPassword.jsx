@@ -60,14 +60,14 @@ const SetPassword = () => {
             )}
           </fieldset>
 
-          <button className="w-full py-2 rounded-md font-semibold hover:text-white bg-gradient-to-r from-blue-300 to-green-400">
+          <button className="w-full lg:w-96 py-2 rounded-md font-semibold hover:text-white bg-gradient-to-r from-blue-300 to-green-400">
             Set password
           </button>
         </div>
       </div>
-      <div className="w-full md:w-1/2 p-5">
+      <div className="w-full md:w-2/3 lg:w-1/2 py-12 lg:py-2 border-8 border-green-600">
         <div className="items-center flex justify-center">
-          <img src={myImage} alt="resort" className="rounded-3xl object-cover w-full h-64 md:h-full md:w-2/3" />
+          <img src={myImage} alt="resort" className="rounded-3xl object-cover w-full h-64 md:h-full md:w-full lg:w-2/3" />
         </div>
       </div>
     </div>
