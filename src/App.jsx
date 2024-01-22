@@ -5,7 +5,8 @@ import Login from './Login';
 import Flights from './Flights';
 import ForgotPassword from "./ForgotPassword";
 import VerifyCode from "./VerifyCode";
-import SetPassword from "./SetPassword"
+import SetPassword from "./SetPassword";
+import SignUp from "./SignUp"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/forgottenPassword" element={<ForgotPassword/>}></Route>
           <Route path="/verifyCode" element={<VerifyCode/>}></Route>
           <Route path="/setPassword" element={<SetPassword/>}></Route>
+          <Route path="/signUp" element={<SignUp/>}></Route>
         </Routes>
 
     </BrowserRouter>
