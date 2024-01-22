@@ -9,3 +9,20 @@
 body {
   font-family: 'Trade Gothic LT Extended', sans-serif;
 }
+
+@keyframes rotateFlip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.rotate-flip {
+  animation: rotateFlip 5s ease-in-out infinite; /* Adjust the duration as needed */
+}
+
