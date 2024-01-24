@@ -64,7 +64,7 @@ const SignUp = () => {
 
         <div className="">
           <div>
-            <h1 className='text-2xl md:text-3xl tracking-wide font-semibold font-monts'>Sign Up</h1>
+            <h1 className='text-2xl md:text-2xl md:font-bold tracking-wide font-semibold font-monts'>Sign Up</h1>
             <p className='text-xs text-gray-500 font-monts pb-3 font-medium'>Let’s get you all set up so you can access your personal account.</p>
           </div>
 
