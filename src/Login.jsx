@@ -90,19 +90,19 @@ const Login = () => {
 
                     {/* -----------OTHER LOGIN OPTIONS----------- */}
                     <div className="flex justify-center space-x-9">
-                            <button
-                             className="text-blue-400 px-2 border rounded-xl border-blue-300">
-                              < FaFacebook  className="text-xl animate-bounce"/>
-                             </button>
-                            <button
-                              className="text-rainbow p-3 rounded-full border border-emerald-500">
-                               < FaGooglePlusG className="text-red-400 text-xl animate-bounce"/>
-                              </button>
-                            <button
-                              className=" p-3 border border-blue-300 rounded-full">
-                              <FaApple className="text-xl animate-bounce" />
-                            </button>
-                          </div>
+                        <button
+                          className="text-blue-400 px-2 border rounded-xl border-blue-300">
+                          < FaFacebook  className="text-xl animate-bounce"/>
+                          </button>
+                        <button
+                          className="text-rainbow p-3 rounded-full border border-emerald-500">
+                            < FaGooglePlusG className="text-red-400 text-xl animate-bounce"/>
+                          </button>
+                        <button
+                          className=" p-3 border border-blue-300 rounded-full">
+                          <FaApple className="text-xl animate-bounce" />
+                        </button>
+                    </div>
                 </div>
           )}
             </div>
