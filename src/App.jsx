@@ -8,6 +8,7 @@ import VerifyCode from "./VerifyCode";
 import SetPassword from "./SetPassword";
 import SignUp from "./SignUp"
 import PaymentForm from "./PaymentForm";
+import Account from "./AccountFlows/Account"
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/verifyCode" element={<VerifyCode/>}></Route>
           <Route path="/setPassword" element={<SetPassword/>}></Route>
           <Route path="/signUp" element={<SignUp/>}></Route>
+          <Route path="/account" element={<Account/>}></Route>
           <Route path="/paymentForm" element={<PaymentForm/>}></Route>
         </Routes>
 
