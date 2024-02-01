@@ -1,5 +1,5 @@
 import { useState } from "react";
-import AccountsNav from "../components/AccountsNav"
+import AccountsNav from "../components/Headers/AccountsNav"
 import profilePicture from "../assets/user.png"
 
 const Account = () => {
