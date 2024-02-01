@@ -8,7 +8,7 @@ import VerifyCode from "./VerifyCode";
 import SetPassword from "./SetPassword";
 import SignUp from "./SignUp"
 import PaymentForm from "./PaymentForm";
-import Account from "./AccountFlows/Account"
+import Account from "./AccounFlows/Account"
 
 function App() {
   return (

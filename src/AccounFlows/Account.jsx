@@ -4,6 +4,7 @@ import profilePicture from "../assets/user.png"
 
 const Account = () => {
 
+  // eslint-disable-next-line no-unused-vars
   const [user, setUser] = useState({
     name: 'John Doe',
     profilePicture: profilePicture,

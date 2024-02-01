@@ -6,7 +6,7 @@ import DateSelector from './components/Dateselector.jsx';
 import TripOption from './components/TripOption.jsx';
 import Passenger from './components/Passenger.jsx';
 import Places from './Places.jsx';
-import Navbar1 from './components/Navbar1.jsx';
+import Navbar1 from './components/NavbarLogin.jsx';
 import Footer from './components/Footer.jsx';
 
 
