@@ -1,7 +1,7 @@
 import vector1 from '../assets/vectors/vector1.png';
-import vector2 from '../assets/vectors/vector2.png';
-import vector3 from '../assets/vectors/vector3.png';
-import vector4 from '../assets/vectors/vector4.png';
+import vector2 from '../assets/vectors/Vector2.png'
+import vector3 from '../assets/vectors/Vector3.png';
+import vector4 from '../assets/vectors/Vector4.png';
 import slamon from '../assets/vectors/slamon.png';
 
 const Vector = () => {

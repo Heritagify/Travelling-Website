@@ -10,6 +10,7 @@ import SignUp from "./SignUp"
 import PaymentForm from "./PaymentForm";
 import Account from "./AccounFlows/Account"
 
+
 function App() {
   return (
     <BrowserRouter>
