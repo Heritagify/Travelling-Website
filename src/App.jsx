@@ -1,32 +1,34 @@
-import {BrowserRouter, Routes, Route } from "react-router-dom"// import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-// import Map from './Map.jsx'
-import Home from './Home'
-import Login from './Login';
-import Flights from './Flights';
-import ForgotPassword from "./ForgotPassword";
-import VerifyCode from "./VerifyCode";
-import SetPassword from "./SetPassword";
-import SignUp from "./SignUp"
-import PaymentForm from "./PaymentForm";
-import Account from "./AccounFlows/Account"
+import React, { Suspense } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Spinner from "./components/Spinner";
 
+const Home = React.lazy(() => import("./Home"));
+const Login = React.lazy(() => import("./Login"));
+const Flights = React.lazy(() => import("./Flights"));
+const ForgotPassword = React.lazy(() => import("./ForgotPassword"));
+const VerifyCode = React.lazy(() => import("./VerifyCode"));
+const SetPassword = React.lazy(() => import("./SetPassword"));
+const SignUp = React.lazy(() => import("./SignUp"));
+const PaymentForm = React.lazy(() => import("./PaymentForm"));
+const Account = React.lazy(() => import("./AccounFlows/Account"));
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
+      <Suspense fallback={<Spinner />}>
         <Routes>
-          <Route path="/" element={<Home/>}></Route>
-          <Route path="/login" element={<Login/>}></Route>
-          <Route path="/flight" element={<Flights/>}></Route>
-          <Route path="/forgottenPassword" element={<ForgotPassword/>}></Route>
-          <Route path="/verifyCode" element={<VerifyCode/>}></Route>
-          <Route path="/setPassword" element={<SetPassword/>}></Route>
-          <Route path="/signUp" element={<SignUp/>}></Route>
-          <Route path="/account" element={<Account/>}></Route>
-          <Route path="/paymentForm" element={<PaymentForm/>}></Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/flight" element={<Flights />} />
+          <Route path="/forgottenPassword" element={<ForgotPassword />} />
+          <Route path="/verifyCode" element={<VerifyCode />} />
+          <Route path="/setPassword" element={<SetPassword />} />
+          <Route path="/signUp" element={<SignUp />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="/paymentForm" element={<PaymentForm />} />
         </Routes>
-
-    </BrowserRouter>
+      </Suspense>
+    </Router>
   );
 }
 
