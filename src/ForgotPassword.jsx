@@ -38,7 +38,9 @@ const ForgotPassword = () => {
       <div className="md:flex">
 
           <div className="md:w-1/2 p-4 md:p-10">
-                    <img src={ logo } className="w-28 mx-8" alt="logo"/>
+                    <Link to="/">
+                      <img src={ logo } className="w-28 mx-8" alt="logo"/>
+                    </Link>
                     <div className="pt-8 mx-4 md:mx-8 text-blackGreen">
                         <Link to="/login" className=" flex gap-1 items-center cursor-pointer">
                           <IoChevronBack/> Back to login
