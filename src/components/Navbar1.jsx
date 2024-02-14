@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { IoAirplane, IoBed } from 'react-icons/io5';
 import { FaTimes, FaBars } from 'react-icons/fa';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+// import Spinner from "../components/Spinner"
 
 import logo from '../assets/Group.png';
 
@@ -22,8 +23,10 @@ const MobileNav = ({ isOpen, toggle }) => (
         Find Stays
       </h1>
       <div className=" font-bold space-x-5 items-center space-y-2">
-        <p className="text-white px-8 text-center border-2 rounded-3xl py-2">LOGIN</p>
-        <button className="text-blackGreen bg-white rounded-3xl px-10 py-2">Sign Up</button>
+        <Link to="../login" className=" text-white px-8 text-center border-2 rounded-3xl py-2">LOGIN</Link>
+          <Link to="/signUp.jsx">
+          <button className="text-blackGreen bg-white rounded-3xl px-10 py-2">Sign Up</button>
+          </Link>
       </div>
     </div>
   </div>
@@ -43,7 +46,7 @@ const Navbar1 = () => {
       </div>
 
       {/* Desktop Navigation */}
-      <nav className="hidden sm:flex text-white justify-between p-2 items-center">
+      <nav className="hidden sm:flex text-white justify-between p-2 items-center border-4">
         <div className="flex space-x-5">
           <h1 className="flex space-x-3">
             <IoAirplane className="text-white text-2xl" />Find Flight
@@ -56,8 +59,12 @@ const Navbar1 = () => {
         <img src={logo}/>
         </div>
         <div className="flex font-bold space-x-5 items-center">
-          <p className="font-monts">LOGIN</p>
-          <button className="text-blackGreen font-bold bg-white rounded-md p-1">Sign Up</button>
+          <Link to="/login">
+            <button className="cursor-pointer font-monts">LOGIN</button>
+          </Link>
+          <Link to="/signUp">
+            <button className="text-blackGreen font-bold bg-white rounded-md p-1">Sign Up</button>
+          </Link>
         </div>
       </nav>
 

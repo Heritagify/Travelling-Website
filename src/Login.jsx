@@ -35,7 +35,9 @@ const Login = () => {
     <div className='px-28 py-2 h-screen bg-gradient-to-r from-blue-100 to-green-200 '>
         <div className='flex justify-between'>
             <div className='w-2/5 ml-10 mt-5 text-blackGreen'>
-                <img src={logo} className='w-36 mb-8'/>
+                <Link to="/">
+                  <img src={logo} className='w-36 mb-8'/>
+                </Link>
 
                 {isLoading ? (
             <SkeletonLoader />

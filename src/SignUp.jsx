@@ -60,7 +60,9 @@ const SignUp = () => {
       </div>
 
       <div className={`w-2/3 p-3 px-10 text-blackGreen ${fadeIn ? 'opacity-100' : 'opacity-0'}`}>
-        <img src={logo} className='w-28 mb-6' alt="Logo" />
+        <Link to="/">
+          <img src={logo} className='w-28 mb-6' alt="Logo" />
+        </Link>
 
         <div className="">
           <div>
@@ -115,8 +117,7 @@ const SignUp = () => {
           </div>
 
 
-
-          <div>
+ <div>
   <div className="flex gap-4">
     <div className="w-1/2">
       <div>

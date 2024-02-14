@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { IoAirplane, IoBed } from 'react-icons/io5';
 import { FaTimes, FaBars } from 'react-icons/fa';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import logo from '../assets/footLogo.png';
 
@@ -22,7 +22,7 @@ const MobileNav = ({ isOpen, toggle }) => (
         Find Stays
       </h1>
       <div className=" font-bold space-x-5 items-center space-y-2">
-        <p className="text-white px-8 text-center border-2 rounded-3xl py-2">LOGIN</p>
+        <button className="text-white px-8 text-center border-2 rounded-3xl py-2 cursor-pointer">LOGIN</button>
         <button className="text-blackGreen bg-white rounded-3xl px-10 py-2">Sign Up</button>
       </div>
     </div>
@@ -56,7 +56,9 @@ const FlightNav = () => {
         <img src={logo}/>
         </div>
         <div className="flex font-bold space-x-6 items-center mr-20">
-          <p className="font-monts text-blackGreen">LOGIN</p>
+          <Link to="../Login.jsx">
+            <button className="cursor-pointer font-monts border-4  text-blackGreen ">LOGIN</button>
+          </Link>
           <button className="text-white font-bold bg-blackGreen text-sm rounded-md px-5 p-3">Sign Up</button>
         </div>
       </nav>

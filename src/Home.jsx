@@ -21,7 +21,7 @@ const Home = () => {
         <div className="rounded-3xl absolute inset-0 bg-black bg-opacity-30"></div>
 
         {/* Navigation */}
-        <Navbar1/>
+        <Navbar1 />
 
 
         {/* Introduction */}
