@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Spinner from "./components/Spinner";
+import addUserToDatabase from '../Backend/addUserToDatabase.js';
 
 const Home = React.lazy(() => import("./Home"));
 const Login = React.lazy(() => import("./Login"));
