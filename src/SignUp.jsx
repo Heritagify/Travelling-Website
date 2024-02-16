@@ -9,7 +9,7 @@ import { FaGooglePlusG } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
-const SignUp = () => {
+const SignUp = ({ addUserToDatabase}) => {
   const formik = useFormik({
     initialValues: {
       firstName: '',
@@ -32,7 +32,7 @@ const SignUp = () => {
 
     onSubmit: values => {
       // Handle form submission
-      console.log('Form submitted:', values);
+      addUserToDatabase(values);
     },
   });
   const [fadeIn, setFadeIn] = useState(false);

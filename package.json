@@ -2,7 +2,7 @@
   "name": "mymernproject",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,7 +13,9 @@
     "@googlemaps/react-wrapper": "^1.1.35",
     "axios": "^1.6.7",
     "date-fns": "^2.30.0",
+    "express": "^4.18.2",
     "formik": "^2.4.5",
+    "mongodb": "^6.3.0",
     "mongoose": "^8.1.2",
     "react": "^18.2.0",
     "react-datepicker": "^4.25.0",

@@ -23,7 +23,7 @@ function App() {
           <Route path="/forgottenPassword" element={<ForgotPassword />} />
           <Route path="/verifyCode" element={<VerifyCode />} />
           <Route path="/setPassword" element={<SetPassword />} />
-          <Route path="/signUp" element={<SignUp />} />
+          <Route path="/signUp" element={<SignUp addUserToDatabase={addUserToDatabase}/>} />
           <Route path="/account" element={<Account />} />
           <Route path="/paymentForm" element={<PaymentForm />} />
         </Routes>
