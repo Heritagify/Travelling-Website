@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Spinner from "./components/Spinner";
-import addUserToDatabase from '../Backend/addUserToDatabase.js';
+// import addUserToDatabase from '../Backend/addUserToDatabase.js';
 
 const Home = React.lazy(() => import("./Home"));
 const Login = React.lazy(() => import("./Login"));
@@ -24,7 +24,8 @@ function App() {
           <Route path="/forgottenPassword" element={<ForgotPassword />} />
           <Route path="/verifyCode" element={<VerifyCode />} />
           <Route path="/setPassword" element={<SetPassword />} />
-          <Route path="/signUp" element={<SignUp addUserToDatabase={addUserToDatabase}/>} />
+          <Route path="/signUp" element={<SignUp />} />
+          {/* <Route path="/signUp" element={<SignUp addUserToDatabase={addUserToDatabase}/>} /> */}
           <Route path="/account" element={<Account />} />
           <Route path="/paymentForm" element={<PaymentForm />} />
         </Routes>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import AccountsNav from "../components/Headers/AccountsNav"
 import profilePicture from "../assets/user.png"
+import ProfilePicture from "./Profile";
 
 const Account = () => {
 

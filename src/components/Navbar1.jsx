@@ -46,7 +46,7 @@ const Navbar1 = () => {
       </div>
 
       {/* Desktop Navigation */}
-      <nav className="hidden sm:flex text-white justify-between p-2 items-center border-4">
+      <nav className="hidden sm:flex text-white justify-between p-2 items-center">
         <div className="flex space-x-5">
           <h1 className="flex space-x-3">
             <IoAirplane className="text-white text-2xl" />Find Flight
