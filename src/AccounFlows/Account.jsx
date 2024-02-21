@@ -4,6 +4,7 @@ import profilePicture from "../assets/user.png";
 import Profile from './Profile';
 import CoverPhoto from '../assets/CoverPhoto.png';
 import { IoCloudUploadSharp } from "react-icons/io5";
+import UserAccount from "./UserAcoount";
 
 const Account = () => {
 
@@ -56,6 +57,9 @@ const Account = () => {
         <div className="absolute bottom-0 left-0 right-0 flex justify-center -mb-36 border-">
         <Profile user={user} onProfilePictureChange={handleProfilePictureChange} />
         </div>
+      </div>
+      <div className="shadow-lg border shadow-gray-300 mt-24 mx-14">
+        <UserAccount/>
       </div>
     </div>
   );
