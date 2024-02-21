@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import { IoPencilOutline } from "react-icons/io5";
+import defaultProfilePicture from "../../src/assets/user.png"; // Import the default profile picture
 
-const Profile = ({ user, onProfilePictureChange }) => {
-  const [profilePicture, setProfilePicture] = useState(user.profilePicture);
+const Profile = ({ user, profilePicture, onProfilePictureChange }) => {
+  const [currentProfilePicture, setCurrentProfilePicture] = useState(profilePicture || defaultProfilePicture); // Use default profile picture if profilePicture is not available
 
   const handleProfilePictureChange = (e) => {
     const file = e.target.files[0];
     const reader = new FileReader();
     reader.onloadend = () => {
-      setProfilePicture(reader.result);
+      setCurrentProfilePicture(reader.result);
       // Pass the updated profile picture to the parent component
       onProfilePictureChange(reader.result);
     };
@@ -18,12 +19,12 @@ const Profile = ({ user, onProfilePictureChange }) => {
   };
 
   return (
-    <div className="flex items-center">
+    <div className="flex flex-col items-center">
       <div className="relative">
         <img
-          src={profilePicture}
+          src={currentProfilePicture}
           alt={`Profile picture of ${user.name}`}
-          className="w-32 h-32 rounded-full mr-2 border-2 border-red-500"
+          className="w-32 h-32 rounded-full mr-2 border-4 border-mintGreen"
         />
         <label
           htmlFor="profilePictureInput"
@@ -39,8 +40,9 @@ const Profile = ({ user, onProfilePictureChange }) => {
           onChange={handleProfilePictureChange}
         />
       </div>
-      <div className="ml-4">
+      <div className="ml-4 text-center mt-3">
         <h2 className="text-lg font-semibold">{user.name}</h2>
+        <p className="text-gray-500">{user.email}</p>
       </div>
     </div>
   );

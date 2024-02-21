@@ -10,9 +10,15 @@ const Account = () => {
   const [user, setUser] = useState({
     name: 'John Doe',
     profilePicture: profilePicture,
+    email: 'swiftytech@gmail.com',
   });
 
   const [coverPhoto, setCoverPhoto] = useState(CoverPhoto);
+
+    // Function to handle profile picture change
+    const handleProfilePictureChange = (newProfilePicture) => {
+      setUser(prevUser => ({ ...prevUser, profilePicture: newProfilePicture }));
+    };
 
   // Function to handle cover photo change
   const handleCoverPhotoChange = (e) => {
@@ -31,24 +37,24 @@ const Account = () => {
     <div>
       <AccountsNav user={user} />
       <div className="h-56 rounded-lg mx-14 my-5 relative bg-cover bg-center" style={{ backgroundImage: `url(${coverPhoto})` }}>
-        <input 
-          type="file" 
+        <input
+          type="file"
           id="coverPhotoInput"
-          accept="image/*" 
-          className="hidden" 
-          onChange={handleCoverPhotoChange} 
+          accept="image/*"
+          className="hidden"
+          onChange={handleCoverPhotoChange}
           style={{ display: 'none' }} // hide the default input appearance
         />
-        <label 
-          htmlFor="coverPhotoInput" 
+        <label
+          htmlFor="coverPhotoInput"
           className="absolute flex items-center bottom-4 right-4 px-3 py-2 bg-mintGreen text-xs text-blackGreen rounded-lg hover:bg-blackGreen hover:text-mintGreen cursor-pointer"
           style={{ zIndex: 1 }} // Ensure label covers the entire parent container
         >
           <IoCloudUploadSharp style={{ marginRight: '0.5rem' }} />Upload new cover
         </label>
 
-        <div className="absolute bottom-0 left-0 right-0 flex justify-center -mb-20 border-">
-          <Profile user={user} />
+        <div className="absolute bottom-0 left-0 right-0 flex justify-center -mb-36 border-">
+        <Profile user={user} onProfilePictureChange={handleProfilePictureChange} />
         </div>
       </div>
     </div>
