@@ -8,19 +8,18 @@ import { FaHeart } from 'react-icons/fa6';
 
 const AccountsNav = ({ user }) => {
   return (
-    <nav className="p-4 shadow-md shadow-gray-200">
+    <nav className="shadow-md shadow-gray-200">
       <div className="flex justify-between items-center mx-8">
-      <div className='flex justify-between space-x-5'>
-          <h1 className="flex text-blackGreen text-lg">
-            <IoAirplane className="mr-1 text-2xl" />
-            Find Flight
-          </h1>
-          <h1 className="flex text-blackGreen text-lg border-b-4 border-emerald-200">
-            <IoBed className="mr-1 text-2xl" />
-            Find Stays
-          </h1>
-      </div>
-
+        <div className='flex justify-between space-x-5'>
+            <h1 className="flex py-4 text-blackGreen text-lg">
+              <IoAirplane className="mr-1 text-2xl" />
+              Find Flight
+            </h1>
+            <h1 className="flex py-4 text-blackGreen text-lg border-b-4 border-emerald-300">
+              <IoBed className="mr-1 text-2xl" />
+              Find Stays
+            </h1>
+        </div>
 
           <Link to="/">
             <img src={logo} className='w-28'/>
