@@ -31,11 +31,11 @@ const Footer = () => {
         </div>
         {/* ----------Float Ends--------------- */}
         
-        <div className=' bg-mintGreen mt-40 pt-44 pb-10'>
+        <div className=' bg-emerald-200 mt-40 pt-44 pb-10'>
           <div className='mt-30'>
               <div className="justify-center space-y-5 lg:space-y-0 grid md:grid-cols-2 lg:grid-cols-6 lg:space-x-3 mx-3 md:mx-6 lg:mx-20 text-blackGreen">
                 <div className="space-y-5">
-                <img src={logo} alt="logo" className='w-52 lg:w-28 shadow-sm py-2 shadow-blackGreen rounded-lg'/>
+                <img src={logo} alt="logo" className='w-52 lg:w-28 py-2 rounded-lg'/>
                     <div className="flex text-blackGreen space-x-4 md:space-x-1 text-4xl lg:text-xl">
                         <FaFacebook/>
                         <FaTwitter/>

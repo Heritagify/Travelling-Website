@@ -14,6 +14,7 @@ export default {
       },
       fontFamily: {
         'monts' : ['Montserrat', 'sans-serif'],
+        'trade' : ['Trade Gothic LT', 'sans-serif'],
 
       }
     },
