@@ -4,7 +4,11 @@ import profilePicture from "../assets/user.png";
 import Profile from './Profile';
 import CoverPhoto from '../assets/CoverPhoto.png';
 import { IoCloudUploadSharp } from "react-icons/io5";
-import UserAccount from "./UserAcoount";
+import { MdAccountCircle } from "react-icons/md";
+import { GoHistory } from "react-icons/go";
+import { RiSecurePaymentLine } from "react-icons/ri";
+// import UserAccount from "./UserAcoount";
+import TicketBooking from "./history/TicketsBookings"
 import Footer from "../components/Footer";
 
 const Account = () => {
@@ -38,7 +42,7 @@ const Account = () => {
   return (
     <div>
       <AccountsNav user={user} />
-      <div className="h-56 rounded-lg mx-14 my-5 relative bg-cover bg-center" style={{ backgroundImage: `url(${coverPhoto})` }}>
+      <div className="h-56 mt-20 rounded-lg mx-14 my-5 relative bg-cover bg-center" style={{ backgroundImage: `url(${coverPhoto})` }}>
         <input
           type="file"
           id="coverPhotoInput"
@@ -59,8 +63,16 @@ const Account = () => {
         <Profile user={user} onProfilePictureChange={handleProfilePictureChange} />
         </div>
       </div>
-      <div className="">
-        <UserAccount/>
+      <div className="pt-36"> {/* Add padding to the top */}
+        <div className="flex items-center justify-between shadow-sm shadow-gray-300 mx-14">
+            <div className="w-full flex items-center gap-1 p-2 text-blackGreen font-semibold font-monts"><MdAccountCircle className="text-2xl text-emerald-800"/>Account</div>
+            <div className="w-full flex items-center gap-1 p-2 text-blackGreen font-semibold font-monts"><span className="text-gray-300 text-5xl mr-2 font-light">|</span><GoHistory className="text-2xl text-emerald-800"/>History</div>
+            <div className="w-full flex items-center gap-1 p-2 text-blackGreen font-semibold font-monts"><span className="text-gray-300 text-5xl mr-2 font-light">|</span><RiSecurePaymentLine className="text-2xl text-emerald-800"/>Payment Methods</div>
+        </div>
+        <div className="">
+          {/* <UserAccount/> */}
+          <TicketBooking />
+        </div>
       </div>
       {/* ------------FOOTER------------ */}
       <div className="mt-48">

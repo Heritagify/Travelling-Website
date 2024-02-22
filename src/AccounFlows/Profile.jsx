@@ -28,7 +28,7 @@ const Profile = ({ user, profilePicture, onProfilePictureChange }) => {
         />
         <label
           htmlFor="profilePictureInput"
-          className="absolute bottom-1 right-3 p-2 bg-red-500 rounded-full cursor-pointer"
+          className="absolute bottom-1 right-3 p-2 bg-mintGreen rounded-full cursor-pointer"
         >
           <IoPencilOutline />
         </label>

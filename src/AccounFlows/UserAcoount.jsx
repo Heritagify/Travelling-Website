@@ -30,9 +30,9 @@ const UserAccount = () => {
   };
 
   return (
-    <div className="mt-24 mx-16">
-      <h1 className="text-3xl font-trade font-bold mb-4 ">Account</h1>
-      <div className="mt-4 shadow-md border-2 rounded-2xl shadow-gray-300 p-5">
+    <div className="mt-5 mx-16">
+      <h1 className="text-2xl font-monts font-semibold mb-2">Account</h1>
+      <div className="shadow-md border-2 rounded-2xl shadow-gray-300 p-5">
         {Object.entries(userData).map(([field, value]) => (
           <div key={field} className="mb-4">
             <label htmlFor={field} className="block -mb-2 text-sm font-lighter text-gray-500 capitalize">{field}</label>

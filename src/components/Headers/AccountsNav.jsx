@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import logo from "../../assets/footLogo.png";
 import { FaHeart } from 'react-icons/fa6';
 import { IoAirplane, IoBed } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
 
 const AccountsNav = ({ user }) => {
   return (
-    <nav className="shadow-md shadow-gray-200">
+    <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-10">
       <div className="flex justify-between items-center mx-8">
         <div className='flex justify-between space-x-5'>
             <h1 className="flex py-4 text-blackGreen text-lg">
@@ -18,6 +19,10 @@ const AccountsNav = ({ user }) => {
               Find Stays
             </h1>
         </div>
+
+        <Link to="/">
+            <img src={logo} className='w-28'/>
+          </Link>
 
         <div className='flex items-center space-x-3'>
           <div className='flex space-x-1 items-center'>
