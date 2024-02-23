@@ -7,8 +7,8 @@ import { IoCloudUploadSharp } from "react-icons/io5";
 import { MdAccountCircle } from "react-icons/md";
 import { GoHistory } from "react-icons/go";
 import { RiSecurePaymentLine } from "react-icons/ri";
-// import UserAccount from "./UserAcoount";
-import TicketBooking from "./history/TicketsBookings"
+import UserAccount from "./UserAcoount";
+// import TicketBooking from "./history/TicketsBookings"
 import Footer from "../components/Footer";
 
 const Account = () => {
@@ -65,13 +65,13 @@ const Account = () => {
       </div>
       <div className="pt-36"> {/* Add padding to the top */}
         <div className="flex items-center justify-between shadow-sm shadow-gray-300 mx-14">
-            <div className="w-full flex items-center gap-1 p-2 text-blackGreen font-semibold font-monts"><MdAccountCircle className="text-2xl text-emerald-800"/>Account</div>
-            <div className="w-full flex items-center gap-1 p-2 text-blackGreen font-semibold font-monts"><span className="text-gray-300 text-5xl mr-2 font-light">|</span><GoHistory className="text-2xl text-emerald-800"/>History</div>
-            <div className="w-full flex items-center gap-1 p-2 text-blackGreen font-semibold font-monts"><span className="text-gray-300 text-5xl mr-2 font-light">|</span><RiSecurePaymentLine className="text-2xl text-emerald-800"/>Payment Methods</div>
+            <div className="w-full flex items-center gap-1 p-2 text-blackGreen font-semibold font-monts hover:bg-mintGreen hover:rounded-xl cursor-pointer"><span className="text-gray-100 text-5xl mr-2 font-light">|</span><MdAccountCircle className="text-2xl text-emerald-800"/>Account</div>
+            <div className="w-full flex items-center gap-1 p-2 text-blackGreen font-semibold font-monts hover:bg-mintGreen hover:rounded-xl cursor-pointer"><span className="text-gray-300 text-5xl mr-2 font-light">|</span><GoHistory className="text-2xl text-emerald-800"/>History</div>
+            <div className="w-full flex items-center gap-1 p-2 text-blackGreen font-semibold font-monts hover:bg-mintGreen hover:rounded-xl cursor-pointer"><span className="text-gray-300 text-5xl mr-2 font-light">|</span><RiSecurePaymentLine className="text-2xl text-emerald-800"/>Payment Methods</div>
         </div>
         <div className="">
-          {/* <UserAccount/> */}
-          <TicketBooking />
+          <UserAccount/>
+          {/* <TicketBooking /> */}
         </div>
       </div>
       {/* ------------FOOTER------------ */}

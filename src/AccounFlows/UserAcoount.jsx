@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaPenToSquare } from "react-icons/fa6";
+import { FaPenToSquare, FaEye, FaEyeSlash } from "react-icons/fa6";
 
 const UserAccount = () => {
   const [userData, setUserData] = useState({
@@ -13,6 +13,7 @@ const UserAccount = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [currentField, setCurrentField] = useState('');
   const [newValue, setNewValue] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleChange = (field) => {
     setCurrentField(field);
@@ -22,11 +23,16 @@ const UserAccount = () => {
   const closeModal = () => {
     setModalOpen(false);
     setNewValue('');
+    setShowPassword(false); // Reset password visibility
   };
 
   const handleSave = () => {
     setUserData({ ...userData, [currentField]: newValue });
     closeModal();
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
   };
 
   return (
@@ -38,13 +44,22 @@ const UserAccount = () => {
             <label htmlFor={field} className="block -mb-2 text-sm font-lighter text-gray-500 capitalize">{field}</label>
             <div className="flex items-center">
               <input
-                type="text"
+                type={field === 'password' && !showPassword ? 'password' : 'text'}
                 id={field}
                 name={field}
                 value={value}
                 readOnly
                 className="w-full font-semibold rounded-md shadow-sm focus:outline-none text-blackGreen font-monts"
               />
+              {field === 'password' && (
+                <button
+                  type="button"
+                  className="text-gray-500 focus:outline-none"
+                  onClick={togglePasswordVisibility}
+                >
+                  {showPassword ? <FaEyeSlash /> : <FaEye />}
+                </button>
+              )}
               <button
                 type="button"
                 className="flex border-2 border-mintGreen items-center gap-1 ml-2 px-4 py-2 hover:bg-mintGreen text-blackGreen text-sm rounded-md focus:outline-none focus:bg-mintGreen"
@@ -62,7 +77,7 @@ const UserAccount = () => {
           <div className="bg-mintGreen w-1/3 px-5 py-20 rounded-lg shadow-md">
             <label htmlFor="newValue" className="block text-sm font-lighter text-gray-500 mb-2 capitalize">{currentField}</label>
             <input
-              type="text"
+              type={currentField === 'password' && !showPassword ? 'password' : 'text'}
               id="newValue"
               value={newValue}
               onChange={(e) => setNewValue(e.target.value)}
