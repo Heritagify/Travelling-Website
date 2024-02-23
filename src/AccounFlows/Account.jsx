@@ -8,7 +8,7 @@ import { MdAccountCircle } from "react-icons/md";
 import { GoHistory } from "react-icons/go";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import UserAccount from "./UserAcoount";
-// import TicketBooking from "./history/TicketsBookings"
+import TicketBooking from "./history/TicketsBookings"
 import Footer from "../components/Footer";
 
 const Account = () => {
@@ -70,8 +70,8 @@ const Account = () => {
             <div className="w-full flex items-center gap-1 p-2 text-blackGreen font-semibold font-monts hover:bg-mintGreen hover:rounded-xl cursor-pointer"><span className="text-gray-300 text-5xl mr-2 font-light">|</span><RiSecurePaymentLine className="text-2xl text-emerald-800"/>Payment Methods</div>
         </div>
         <div className="">
-          <UserAccount/>
-          {/* <TicketBooking /> */}
+          {/* <UserAccount/> */}
+          <TicketBooking />
         </div>
       </div>
       {/* ------------FOOTER------------ */}
