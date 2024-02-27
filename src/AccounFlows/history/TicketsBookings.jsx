@@ -4,11 +4,11 @@ import { IoAirplane, IoBed } from 'react-icons/io5';
 import Emirate from "../../assets/emirates-airline.png"
 import Cvk from "../../assets/cvk.png";
 
-// import FlightTicket from './FlightTicket';
+import FlightTicket from './FlightTicket';
 import StayTicket from './StayTicket';
 
 const TicketsBookings = () => {
-  const flightTicketData = [  // Define flight ticket data here
+  const flightTicketData = [
     {
       image: Emirate,
       origin: 'Newark(EWR)',
@@ -43,9 +43,9 @@ const TicketsBookings = () => {
       seatNo: '224'
     },
 ];
-  const stayTicketData = [  // Define flight ticket data here
+  const stayTicketData = [
     {
-        image: Cvk,
+      image: Cvk,
       origin: 'Check-In',
       arrivalTime: 'Thur, Dec 6',
       leave: 'Check Out',
@@ -55,7 +55,7 @@ const TicketsBookings = () => {
       roomNo: 'On arrival'
     },
     {
-        image: Cvk,
+      image: Cvk,
       origin: 'Check-In',
       arrivalTime: 'Thur, Dec 6',
       leave: 'Check Out',
@@ -65,7 +65,7 @@ const TicketsBookings = () => {
       roomNo: 'On arrival'
     },
     {
-        image: Cvk,
+      image: Cvk,
       origin: 'Check-In',
       arrivalTime: 'Thur, Dec 6',
       leave: 'Check Out',
@@ -77,9 +77,9 @@ const TicketsBookings = () => {
 ];
 
   return (
-    <div className='mx-14 '>
-      <div className='flex justify-between mt-3'>
-        <h1 className=' text-2xl font-semibold font-monts text-blackGreen'>Tickets/Bookings</h1>
+    <div className='mx-20'>
+      <div className='flex justify-between mt-5'>
+        <h1 className=' text-2xl font-bold font-monts text-blackGreen'>Tickets/Bookings</h1>
         <button className='flex items-center gap-1 font-medium font-monts'>Upcoming <IoChevronDownSharp /></button>
       </div>
 
@@ -92,9 +92,9 @@ const TicketsBookings = () => {
         </div>
       </div>
 
-      {/* {flightTicketData.map((ticket, index) => (
+      {flightTicketData.map((ticket, index) => (
         <FlightTicket key={index} data={ticket} />
-      ))} */}
+      ))}
       {stayTicketData.map((ticket, index) => (
         <StayTicket key={index} data={ticket} />
       ))}

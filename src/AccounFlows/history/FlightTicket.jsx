@@ -9,51 +9,51 @@ import { FaChevronRight } from "react-icons/fa";
 function FlightTicket({ data }) {
   return (
     <div className="flex justify-between items-center px-6 rounded-lg shadow-gray-300 border shadow-sm mt-7 mx-6">
-      <div className='flex items-center space-x-8'>
-        <img src={data.image} className=' shadow-sm shadow-gray-400 p-2 w-12 h-12'/>
+      <div className='flex items-center space-x-6'>
+        <img src={data.image} className=' shadow-sm shadow-gray-400 p-2 w-16 h-14'/>
         <div className="ml-4">
-          <div className='flex gap-1 items-center'>
+          <div className='flex gap-2 items-center'>
             <div>
-              <h4 className='font-monts text-sm text-blackGreen font-medium'>{data.origin}</h4>
-              <p className='font-bold text-blackGreen font-monts border-2 border-red-500'>{data.departureTime}</p>
+              <h4 className='font-monts text-xs text-blackGreen font-medium'>{data.origin}</h4>
+              <p className='font-bold text-sm text-blackGreen font-monts'>{data.departureTime}</p>
             </div>
             <span className='flex items-center font-monts text-xl'>—</span>
             <div>
-              <h4 className='font-monts text-sm text-blackGreen font-medium'>{data.destination}</h4>
-              <p className='font-bold text-blackGreen font-monts'>{data.arrivalTime}</p>
+              <h4 className='font-monts text-xs text-blackGreen font-medium'>{data.destination}</h4>
+              <p className='font-bold text-sm text-blackGreen font-monts'>{data.arrivalTime}</p>
             </div>
           </div>
         </div>
-        <div className='flex gap-5 border-gray-200 border-l-2 pl-2'>
-          <div className='space-y-1'>
+        <div className='flex gap-5 border-gray-200 border-l-2 py-2 pl-5'>
+          <div className='space-y-2'>
             <div className='flex gap-1 items-center'>
-              <FaCalendarAlt className='text-mintGreen text-3xl'/>
+              <FaCalendarAlt className='text-mintGreen text-xl'/>
               <div className=''>
-                <h4 className='font-monts text-sm text-blackGreen font-medium'>Date</h4>
-                <p className='font-semibold text-blackGreen font-monts'>{data.date}</p>
+                <h4 className='font-monts text-xs text-blackGreen font-medium'>Date</h4>
+                <p className='font-semibold text-sm text-blackGreen font-monts'>{data.date}</p>
               </div>
             </div>
             <div className='flex gap-1 items-center'>
-              <IoTime className='text-mintGreen text-3xl'/>
+              <IoTime className='text-mintGreen text-xl'/>
               <div className=''>
-                <h4 className='font-monts text-blackGreen text-sm font-medium'>Flight time</h4>
-                <p className='font-semibold text-blackGreen text- font-monts'>{data.flightTime}</p>
+                <h4 className='font-monts text-blackGreen text-xs font-medium'>Flight time</h4>
+                <p className='font-semibold text-blackGreen text-sm font-monts'>{data.flightTime}</p>
               </div>
             </div>
           </div>
           <div className='space-y-1'>
             <div className='flex gap-1 items-center'>
-              <GiGate className='text-mintGreen text-3xl'/>
+              <GiGate className='text-mintGreen text-xl'/>
               <div>
-                <h4 className='font-monts text-blackGreen font-medium text-sm'>Gate</h4>
-                <p className='font-semibold text-blackGreen font-monts'>{data.gate}</p>
+                <h4 className='font-monts text-blackGreen font-medium text-xs'>Gate</h4>
+                <p className='font-semibold text-sm text-blackGreen font-monts'>{data.gate}</p>
               </div>
             </div>
             <div className='flex gap-1 items-center'>
-              <MdOutlineAirlineSeatReclineExtra className='text-mintGreen text-4xl'/>
+              <MdOutlineAirlineSeatReclineExtra className='text-mintGreen text-xl'/>
               <div>
-                <h4 className='font-monts text-blackGreen font-medium text-sm'>Seat no.</h4>
-                <p className='font-semibold text-blackGreen font-monts'>{data.seatNo}</p>
+                <h4 className='font-monts text-blackGreen font-medium text-xs'>Seat no.</h4>
+                <p className='font-semibold text-sm text-blackGreen font-monts'>{data.seatNo}</p>
               </div>
             </div>
           </div>

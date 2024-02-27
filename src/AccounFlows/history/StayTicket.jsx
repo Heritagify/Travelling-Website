@@ -8,7 +8,7 @@ function StayTicket({ data }) {
   return (
     <div className="flex justify-between items-center px-6 rounded-lg shadow-gray-400 border shadow-md mt-7 mx-6">
       <div className='flex items-center space-x-7'>
-        <img src={data.image} className=' shadow-sm shadow-gray-900 p-2 w-12 h-12'/>
+        <img src={data.image} className=' shadow-sm shadow-gray-900 p-2 w-20 h-16'/>
         <div className="ml-4">
           <div className='flex gap-2 items-center'>
             <div>
@@ -51,8 +51,8 @@ function StayTicket({ data }) {
         </div>
       </div>
       <div className='flex space-x-2 items-center'>
-        <button className='font-semibold font-monts rounded-md text-sm text-blackGreen bg-mintGreen items-center p-3 px-4'>Download Ticket</button>
-        <button className='border border-mintGreen p-3 items-center rounded-md'>
+        <button className='font-semibold font-monts rounded-md text-xs text-blackGreen bg-mintGreen hover:bg-blackGreen hover:text-mintGreen items-center p-3 px-4'>Download Ticket</button>
+        <button className='border border-mintGreen p-3 items-center rounded-md hover:bg-lightMint'>
           <FaChevronRight className='text-blackGreen'/>
         </button>
       </div>
