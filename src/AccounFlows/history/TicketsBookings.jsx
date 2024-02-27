@@ -2,8 +2,10 @@ import React from 'react';
 import { IoChevronDownSharp } from "react-icons/io5";
 import { IoAirplane, IoBed } from 'react-icons/io5';
 import Emirate from "../../assets/emirates-airline.png"
+import Cvk from "../../assets/cvk.png";
 
-import FlightTicket from './FlightTicket';
+// import FlightTicket from './FlightTicket';
+import StayTicket from './StayTicket';
 
 const TicketsBookings = () => {
   const flightTicketData = [  // Define flight ticket data here
@@ -41,6 +43,38 @@ const TicketsBookings = () => {
       seatNo: '224'
     },
 ];
+  const stayTicketData = [  // Define flight ticket data here
+    {
+        image: Cvk,
+      origin: 'Check-In',
+      arrivalTime: 'Thur, Dec 6',
+      leave: 'Check Out',
+      departureDate: 'Fri, Dec 11 ',
+      checkIn: '12:00 pm',
+      checkOut: '11:30 am',
+      roomNo: 'On arrival'
+    },
+    {
+        image: Cvk,
+      origin: 'Check-In',
+      arrivalTime: 'Thur, Dec 6',
+      leave: 'Check Out',
+      departureDate: 'Fri, Dec 11 ',
+      checkIn: '12:00 pm',
+      checkOut: '11:30 am',
+      roomNo: 'On arrival'
+    },
+    {
+        image: Cvk,
+      origin: 'Check-In',
+      arrivalTime: 'Thur, Dec 6',
+      leave: 'Check Out',
+      departureDate: 'Fri, Dec 11 ',
+      checkIn: '12:00 pm',
+      checkOut: '11:30 am',
+      roomNo: 'On arrival'
+    },
+];
 
   return (
     <div className='mx-14 '>
@@ -58,9 +92,13 @@ const TicketsBookings = () => {
         </div>
       </div>
 
-      {flightTicketData.map((ticket, index) => (
+      {/* {flightTicketData.map((ticket, index) => (
         <FlightTicket key={index} data={ticket} />
-      ))}    </div>
+      ))} */}
+      {stayTicketData.map((ticket, index) => (
+        <StayTicket key={index} data={ticket} />
+      ))}
+    </div>
   )
 }
 

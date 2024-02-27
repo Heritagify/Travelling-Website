@@ -15,7 +15,7 @@ function FlightTicket({ data }) {
           <div className='flex gap-1 items-center'>
             <div>
               <h4 className='font-monts text-sm text-blackGreen font-medium'>{data.origin}</h4>
-              <p className='font-bold text-blackGreen font-monts'>{data.departureTime}</p>
+              <p className='font-bold text-blackGreen font-monts border-2 border-red-500'>{data.departureTime}</p>
             </div>
             <span className='flex items-center font-monts text-xl'>—</span>
             <div>
