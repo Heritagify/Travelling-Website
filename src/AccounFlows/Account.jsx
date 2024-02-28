@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { Routes, Route } from 'react-router-dom';
-
 import AccountsNav from "../components/Headers/AccountsNav";
 import profilePicture from "../assets/user.png";
 import Profile from './Profile';
@@ -12,6 +10,7 @@ import { RiSecurePaymentLine } from "react-icons/ri";
 import UserAccount from "./UserAcoount";
 import TicketBooking from "./history/TicketsBookings"
 import Footer from "../components/Footer";
+import PaymentMethod from "./PaymentMethod";
 
 const Account = () => {
 
@@ -73,9 +72,8 @@ const Account = () => {
         </div>
         <div className="">
           {/* <UserAccount/> */}
-          <Routes>
-            <Route path="/ticketbooking" element={<TicketBooking />} /> {/* Render TicketBooking within Account */}
-          </Routes>
+          {/* <TicketBooking /> */}
+          <PaymentMethod />
         </div>
       </div>
       {/* ------------FOOTER------------ */}
