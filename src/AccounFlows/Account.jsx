@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Routes, Route } from 'react-router-dom';
+
 import AccountsNav from "../components/Headers/AccountsNav";
 import profilePicture from "../assets/user.png";
 import Profile from './Profile';
@@ -71,7 +73,9 @@ const Account = () => {
         </div>
         <div className="">
           {/* <UserAccount/> */}
-          <TicketBooking />
+          <Routes>
+            <Route path="./history/TicketsBookings.jsx" element={<TicketBooking />} /> {/* Render TicketBooking within Account */}
+          </Routes>
         </div>
       </div>
       {/* ------------FOOTER------------ */}
