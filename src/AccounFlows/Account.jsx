@@ -74,7 +74,7 @@ const Account = () => {
         <div className="">
           {/* <UserAccount/> */}
           <Routes>
-            <Route path="./history/TicketsBookings.jsx" element={<TicketBooking />} /> {/* Render TicketBooking within Account */}
+            <Route path="/ticketbooking" element={<TicketBooking />} /> {/* Render TicketBooking within Account */}
           </Routes>
         </div>
       </div>
