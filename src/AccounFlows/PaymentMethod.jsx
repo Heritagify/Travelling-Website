@@ -61,8 +61,8 @@ const PaymentMethod = () => {
       {/* Modal */}
       {showModal && (
         <div className='fixed inset-0 z-50 flex items-center justify-center backdrop-filter backdrop-blur-sm'>
-          <div className='bg-white rounded-lg p-8'>
-            <h2 className='text-lg font-semibold mb-4'>Add a new card</h2>
+          <div className=' bg-mintGreen rounded-lg px-5 py-4 w-1/3'>
+            <h2 className='text-center text-monts text-blackGreen text-xl font-semibold mb-4'>Add a new card</h2>
             <form onSubmit={(e) => {
               e.preventDefault();
               const form = e.target;
@@ -74,10 +74,10 @@ const PaymentMethod = () => {
                 brand: 'visa', // You might want to determine the brand dynamically
               });
             }} className='flex flex-col gap-4'>
-              <input type='text' name='cardNumber' placeholder='Card Number' className='input' />
-              <input type='text' name='lastFourDigits' placeholder='Last Four Digits' className='input' />
-              <input type='text' name='validThru' placeholder='Valid Thru' className='input' />
-              <button type='submit' className='btn btn-primary'>Add Card</button>
+              <input type='number' name='cardNumber' placeholder='Card Number' className='input text-sm italic focus:outline-none p-1 px-2 rounded-xl' />
+              <input type='number' name='lastFourDigits' placeholder='Last Four Digits' className='input italic text-sm focus:outline-none px-2 p-1 rounded-xl' />
+              <input type='number' name='validThru' placeholder='Valid Thru' className='input text-sm italic focus:outline-none p-1 px-2 rounded-xl ' />
+              <button type='submit' className='bg-blackGreen text-lightMint py-2 rounded-lg cursor-pointer my-2'>Add Card</button>
             </form>
             <button onClick={closeModal} className='btn btn-secondary ml-2'>Cancel</button>
           </div>
