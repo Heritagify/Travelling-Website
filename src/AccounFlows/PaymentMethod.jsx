@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { IoTrashBinSharp } from 'react-icons/io5';
+import { IoTrashBinSharp, IoClose } from 'react-icons/io5';
 import { CiCirclePlus } from 'react-icons/ci';
-import visa from '../assets/VISA-logo.png';
+import { FaCcVisa, FaCcMastercard, FaCcAmex, FaCcDiscover, FaCcJcb } from 'react-icons/fa';
+import * as Yup from 'yup';
+import visa from '../assets/VISA-logo.png'
 
 const PaymentMethod = () => {
   const [showModal, setShowModal] = useState(false);
@@ -14,6 +16,8 @@ const PaymentMethod = () => {
       brand: 'visa',
     }
   ]);
+  const [cardType, setCardType] = useState(null);
+  const [validationError, setValidationError] = useState('');
 
   const openModal = () => {
     setShowModal(true);
@@ -21,12 +25,55 @@ const PaymentMethod = () => {
 
   const closeModal = () => {
     setShowModal(false);
+    setValidationError('');
   };
 
   const handleAddCard = (newCard) => {
     // Add new card to the state
-    setCards([...cards, newCard]);
+    setCards([...cards, {
+      ...newCard,
+    brand: cardType,
+  }]);
     closeModal();
+  };
+
+  const validationSchema = Yup.object().shape({
+    cardNumber: Yup.string().required('Card number is required'),
+    expiryDate: Yup.string().required('Expiry date is required'),
+    cvc: Yup.string().required('CVC is required'),
+    nameOnCard: Yup.string().required('Name on card is required'),
+  });
+
+  const handleFormSubmit = async (formData) => {
+    try {
+      await validationSchema.validate(formData, { abortEarly: false });
+      handleAddCard({
+        number: formData.cardNumber,
+        lastFourDigits: formData.cardNumber.slice(-4),
+        validThru: formData.expiryDate,
+        name: formData.nameOnCard,
+        brand: cardType,
+      });
+    } catch (error) {
+      setValidationError(error.errors.join('\n'));
+    }
+  };
+
+  const handleCardNumberChange = (e) => {
+    const input = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
+    if (/^4/.test(input)) {
+      setCardType('visa');
+    } else if (/^5[1-5]/.test(input)) {
+      setCardType('mastercard');
+    } else if (/^3[47]/.test(input)) {
+      setCardType('amex');
+    } else if (/^6(?:011|5)/.test(input)) {
+      setCardType('discover');
+    } else if (/^506(1|2|3|4)/.test(input)) {
+      setCardType('verve');
+    } else {
+      setCardType(null);
+    }
   };
 
   return (
@@ -37,8 +84,7 @@ const PaymentMethod = () => {
           <div key={index} className='h-40 w-72 bg-mintGreen text-blackGreen rounded-2xl space-y-14'>
             <div className='flex justify-between m-4'>
               <div className='font-bold font-monts'>
-                <p>{card.number}</p>
-                <p>{card.lastFourDigits}</p>
+                <p>{'**** **** **** ' + card.lastFourDigits}</p>
               </div>
               <IoTrashBinSharp />
             </div>
@@ -47,7 +93,7 @@ const PaymentMethod = () => {
                 <p>Valid thru</p>
                 <p>{card.validThru}</p>
               </div>
-              <img src={visa} alt='visa Logo' className='w-8 bg-black rounded-lg p-1' />
+              {card.brand === 'jcb' ? <FaCcJcb /> : <img src={card.brand === 'visa' ? <FaCcVisa /> : card.brand === 'mastercard' ? <FaCcMastercard /> : card.brand === 'amex' ? <FaCcAmex /> : card.brand === 'discover' ? <FaCcDiscover /> : <FaCcJcb />} alt={`${card.brand} Logo`} className='w-8 bg-black rounded-lg p-1' />}
             </div>
           </div>
         ))}
@@ -61,25 +107,74 @@ const PaymentMethod = () => {
       {/* Modal */}
       {showModal && (
         <div className='fixed inset-0 z-50 flex items-center justify-center backdrop-filter backdrop-blur-sm'>
-          <div className=' bg-mintGreen rounded-lg px-5 py-4 w-1/3'>
+          <div className='bg-mintGreen rounded-lg px-5 py-4 w-1/3'>
+            <div className="flex justify-end">
+              <IoClose className="text-xl text-gray-500 cursor-pointer" onClick={closeModal} />
+            </div>
             <h2 className='text-center text-monts text-blackGreen text-xl font-semibold mb-4'>Add a new card</h2>
+            {validationError && <p className="text-red-500 mb-2 text-xs">{validationError}</p>}
             <form onSubmit={(e) => {
               e.preventDefault();
-              const form = e.target;
-              const formData = new FormData(form);
-              handleAddCard({
-                number: formData.get('cardNumber'),
-                lastFourDigits: formData.get('lastFourDigits'),
-                validThru: formData.get('validThru'),
-                brand: 'visa', // You might want to determine the brand dynamically
-              });
-            }} className='flex flex-col gap-4'>
-              <input type='number' name='cardNumber' placeholder='Card Number' className='input text-sm italic focus:outline-none p-1 px-2 rounded-xl' />
-              <input type='number' name='lastFourDigits' placeholder='Last Four Digits' className='input italic text-sm focus:outline-none px-2 p-1 rounded-xl' />
-              <input type='number' name='validThru' placeholder='Valid Thru' className='input text-sm italic focus:outline-none p-1 px-2 rounded-xl ' />
+              const formData = new FormData(e.target);
+              handleFormSubmit(Object.fromEntries(formData));
+            }}
+            className='flex flex-col gap-4'>
+              <fieldset className='border border-green-800 rounded-md'>
+                <legend className='mx-2 text-xs font-medium font-monts text-blackGreen'>Card number</legend>
+                <div className="flex items-center">
+                  <input
+                    type='text'
+                    name='cardNumber'
+                    placeholder='1234 4444 5567 8906'
+                    onChange={handleCardNumberChange}
+                    className='w-full input text- font-medium focus:outline-none p-1 px-2 bg-transparent text-blackGreen placeholder-gray-500 placeholder:text-xs'
+                  />
+                  {cardType && (
+                    <div className="ml-2">
+                      {cardType === 'visa' && <span className="text-blue-500"><FaCcVisa /></span>}
+                      {cardType === 'mastercard' && <span className="text-red-500"><FaCcMastercard /></span>}
+                      {cardType === 'amex' && <span className="text-yellow-500"><FaCcAmex /></span>}
+                      {cardType === 'discover' && <span className="text-green-500"><FaCcDiscover /></span>}
+                      {cardType === 'verve' && <span className="text-purple-500"><FaCcJcb /></span>}
+                    </div>
+                  )}
+                </div>
+              </fieldset>
+              <div className='flex justify-between gap-3'>
+                <fieldset className='w-1/2 border border-green-800 rounded-md'>
+                  <legend className='mx-2 text-xs font-medium font-monts text-blackGreen'>Expiry date</legend>
+                  <input
+                    type='text'
+                    name='expiryDate'
+                    placeholder='01/28'
+                    className='w-full input text- font-medium focus:outline-none p-1 px-2 bg-transparent text-blackGreen placeholder-gray-500 placeholder:text-xs'
+                  />
+                </fieldset>
+                <fieldset className='w-1/2 border border-green-800 rounded-md'>
+                  <legend className='mx-2 text-xs font-medium font-monts text-blackGreen'>CVC</legend>
+                  <input
+                    type='text'
+                    name='cvc'
+                    placeholder='123'
+                    className='w-full input text-sm italic focus:outline-none p-1 px-2 bg-transparent text-blackGreen'
+                  />
+                </fieldset>
+              </div>
+              <fieldset className='border border-green-800 rounded-md'>
+                <legend className='mx-2 text-xs font-medium font-monts text-blackGreen'>Name on card</legend>
+                <input
+                  type='text'
+                  name='nameOnCard'
+                  placeholder='John Doe'
+                  className='w-full input text- font-medium focus:outline-none p-1 px-2 bg-transparent text-blackGreen placeholder-gray-500 placeholder:text-xs'
+                />
+              </fieldset>
               <button type='submit' className='bg-blackGreen text-lightMint py-2 rounded-lg cursor-pointer my-2'>Add Card</button>
             </form>
-            <button onClick={closeModal} className='btn btn-secondary ml-2'>Cancel</button>
+            <p className='text-xs text-gray-500 py-4'>By confirming your subscription, you allow The Outdoor Inn Crowd Limited to charge your
+            card for this payment and future payments in accordance with their terms.
+            You can always cancel your subscription.
+          </p>
           </div>
         </div>
       )}
