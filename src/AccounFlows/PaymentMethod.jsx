@@ -12,6 +12,7 @@ const PaymentMethod = () => {
     {
       number: '**** **** **** *****',
       lastFourDigits: '1234',
+      nameOnCard: 'HERITAGE GREEN',
       validThru: '02/28',
       brand: 'visa',
     }
@@ -31,9 +32,9 @@ const PaymentMethod = () => {
   const handleAddCard = (newCard) => {
     // Add new card to the state
     setCards([...cards, {
-      ...newCard,
-    brand: cardType,
-  }]);
+      ...newCard,// Corrected to nameOnCard
+      brand: cardType,
+    }]);
     closeModal();
   };
 
@@ -50,10 +51,11 @@ const PaymentMethod = () => {
       handleAddCard({
         number: formData.cardNumber,
         lastFourDigits: formData.cardNumber.slice(-4),
+        nameOnCard: formData.nameOnCard,
         validThru: formData.expiryDate,
         name: formData.nameOnCard,
         brand: cardType,
-      });
+      }, cardType);
     } catch (error) {
       setValidationError(error.errors.join('\n'));
     }
@@ -80,23 +82,27 @@ const PaymentMethod = () => {
     <div className='mx-24 my-3'>
       <h1 className='text-2xl font-semibold font-monts text-blackGreen'>Payment methods</h1>
       <div className='flex gap-6 mt-4 mx-4'>
-        {cards.map((card, index) => (
-          <div key={index} className='h-40 w-72 bg-mintGreen text-blackGreen rounded-2xl space-y-14'>
-            <div className='flex justify-between m-4'>
-              <div className='font-bold font-monts'>
-                <p>{'**** **** **** ' + card.lastFourDigits}</p>
-              </div>
-              <IoTrashBinSharp />
+      {cards.map((card, index) => (
+        <div key={index} className='h-48 w-80 border-red-600 border-4 bg-mintGreen text-blackGreen rounded-2xl space-y-8'>
+          <div className='flex justify-between m-4'>
+            <div className='font-bold font-monts'>
+              <p>{'**** **** **** ' + card.lastFourDigits}</p>
             </div>
-            <div className='flex justify-between mx-4 items-center'>
-              <div className='text-xs font-monts font-semibold'>
-                <p>Valid thru</p>
-                <p>{card.validThru}</p>
-              </div>
-              {card.brand === 'jcb' ? <FaCcJcb /> : <img src={card.brand === 'visa' ? <FaCcVisa /> : card.brand === 'mastercard' ? <FaCcMastercard /> : card.brand === 'amex' ? <FaCcAmex /> : card.brand === 'discover' ? <FaCcDiscover /> : <FaCcJcb />} alt={`${card.brand} Logo`} className='w-8 bg-black rounded-lg p-1' />}
-            </div>
+            <IoTrashBinSharp />
           </div>
-        ))}
+          <div className=''>
+            <p className='font-bold text-lg ml-3 tracking-widest uppercase font-monts'>{card.nameOnCard}</p>
+          </div>
+          <div className='flex justify-between mx-4 items-center'>
+            <div className='text-xs font-monts font-semibold'>
+              <p>Valid thru</p>
+              <p>{card.validThru}</p>
+            </div>
+            {card.brand === 'jcb' ? <FaCcJcb /> : <img src={card.brand === 'visa' ? <FaCcVisa /> : card.brand === 'mastercard' ? <FaCcMastercard /> : card.brand === 'amex' ? <FaCcAmex /> : card.brand === 'discover' ? <FaCcDiscover /> : <FaCcJcb />} alt={`${card.brand} Logo`} className='w-8 bg-black rounded-lg p-1' />}
+          </div>
+        </div>
+      ))}
+
 
         <div className='flex flex-col justify-center font-monts items-center border-2 border-dashed border-mintGreen h-40 w-72 rounded-2xl '>
           <CiCirclePlus className='text-5xl text-mintGreen cursor-pointer' onClick={openModal} />
