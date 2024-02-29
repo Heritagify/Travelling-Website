@@ -3,12 +3,13 @@ import { IoTrashBinSharp, IoClose } from 'react-icons/io5';
 import { CiCirclePlus } from 'react-icons/ci';
 import { FaCcVisa, FaCcMastercard, FaCcAmex, FaCcDiscover, FaCcJcb } from 'react-icons/fa';
 import * as Yup from 'yup';
-import visa from '../assets/VISA-logo.png'
+import visaLogo from '../assets/VISA-logo.png'; 
 
 const PaymentMethod = () => {
   const [showModal, setShowModal] = useState(false);
   const [cards, setCards] = useState([
-    // Default card
+
+    // _____________Code FOR THE DEFAULT CARD__________------------
     {
       number: '**** **** **** *****',
       lastFourDigits: '1234',
@@ -30,12 +31,18 @@ const PaymentMethod = () => {
   };
 
   const handleAddCard = (newCard) => {
-    // Add new card to the state
+    // ---------------HOW I ADDED THE NEW CODES TO THE STATE-------------
     setCards([...cards, {
-      ...newCard,// Corrected to nameOnCard
+      ...newCard,
       brand: cardType,
     }]);
     closeModal();
+  };
+
+  const handleDeleteCard = (index) => {
+    const updatedCards = [...cards];
+    updatedCards.splice(index, 1);
+    setCards(updatedCards);
   };
 
   const validationSchema = Yup.object().shape({
@@ -53,27 +60,31 @@ const PaymentMethod = () => {
         lastFourDigits: formData.cardNumber.slice(-4),
         nameOnCard: formData.nameOnCard,
         validThru: formData.expiryDate,
-        name: formData.nameOnCard,
         brand: cardType,
-      }, cardType);
+      });
     } catch (error) {
       setValidationError(error.errors.join('\n'));
     }
   };
 
   const handleCardNumberChange = (e) => {
-    const input = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
+    const input = e.target.value.replace(/\D/g, ''); // -----(REMOVING NON-NUMERIC ITEMS)--------
     if (/^4/.test(input)) {
       setCardType('visa');
-    } else if (/^5[1-5]/.test(input)) {
+    }
+    else if (/^5[1-5]/.test(input)) {
       setCardType('mastercard');
-    } else if (/^3[47]/.test(input)) {
+    }
+    else if (/^3[47]/.test(input)) {
       setCardType('amex');
-    } else if (/^6(?:011|5)/.test(input)) {
+    }
+    else if (/^6(?:011|5)/.test(input)) {
       setCardType('discover');
-    } else if (/^506(1|2|3|4)/.test(input)) {
+    }
+    else if (/^506(1|2|3|4)/.test(input)) {
       setCardType('verve');
-    } else {
+    }
+    else {
       setCardType(null);
     }
   };
@@ -81,28 +92,34 @@ const PaymentMethod = () => {
   return (
     <div className='mx-24 my-3'>
       <h1 className='text-2xl font-semibold font-monts text-blackGreen'>Payment methods</h1>
-      <div className='flex gap-6 mt-4 mx-4'>
-      {cards.map((card, index) => (
-        <div key={index} className='h-48 w-80 border-red-600 border-4 bg-mintGreen text-blackGreen rounded-2xl space-y-8'>
-          <div className='flex justify-between m-4'>
-            <div className='font-bold font-monts'>
-              <p>{'**** **** **** ' + card.lastFourDigits}</p>
+      <div className='flex gap-3 mt-4 mx-3'>
+        {cards.map((card, index) => (
+          <div key={index} className='h-48 w-80 bg-mintGreen text-blackGreen rounded-2xl space-y-12'>
+            <div className='flex justify-between m-3'>
+              <div className='font-bold font-monts'>
+                <p>{'**** **** **** ' + card.lastFourDigits}</p>
+              </div>
+              {index !== 0 && ( // Render trash icon for added cards
+                <IoTrashBinSharp onClick={() => handleDeleteCard(index)} className='text-red-900'/>
+              )}
             </div>
-            <IoTrashBinSharp />
-          </div>
-          <div className=''>
-            <p className='font-bold text-lg ml-3 tracking-widest uppercase font-monts'>{card.nameOnCard}</p>
-          </div>
-          <div className='flex justify-between mx-4 items-center'>
-            <div className='text-xs font-monts font-semibold'>
-              <p>Valid thru</p>
-              <p>{card.validThru}</p>
+            <div className=''>
+              <p className='font-bold text-sm ml-3 tracking-widest uppercase font-monts'>{card.nameOnCard}</p>
             </div>
-            {card.brand === 'jcb' ? <FaCcJcb /> : <img src={card.brand === 'visa' ? <FaCcVisa /> : card.brand === 'mastercard' ? <FaCcMastercard /> : card.brand === 'amex' ? <FaCcAmex /> : card.brand === 'discover' ? <FaCcDiscover /> : <FaCcJcb />} alt={`${card.brand} Logo`} className='w-8 bg-black rounded-lg p-1' />}
+            <div className='flex justify-between mx-4 items-center'>
+              <div className='text-xs font-monts font-semibold'>
+                <p>Valid thru</p>
+                <p>{card.validThru}</p>
+              </div>
+              {/* Conditionally render the logo */}
+              {index === 0 ? ( // If it's the default card
+                <img src={visaLogo} alt="VISA Logo" className='w-8 bg-black rounded-lg p-1' />
+              ) : ( // If it's a newly added card
+                card.brand === 'visa' ? <FaCcVisa /> : card.brand === 'mastercard' ? <FaCcMastercard /> : card.brand === 'amex' ? <FaCcAmex /> : card.brand === 'discover' ? <FaCcDiscover /> : <FaCcJcb />
+              )}
+            </div>
           </div>
-        </div>
-      ))}
-
+        ))}
 
         <div className='flex flex-col justify-center font-monts items-center border-2 border-dashed border-mintGreen h-40 w-72 rounded-2xl '>
           <CiCirclePlus className='text-5xl text-mintGreen cursor-pointer' onClick={openModal} />
