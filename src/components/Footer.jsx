@@ -12,7 +12,7 @@ const Footer = () => {
     <div className=''>
         {/* --------Float------ */}
         <div className="absolute bg-lightMint lg:h-56 -mt-28 w-4/5 mb-44 rounded-xl mx-20 lg:mx-28 flex justify-between">
-            <div className="border-4 w-3/5 pl-2">
+            <div className="w-3/5 pl-2">
                 <h1 className="text-blackGreen font-monts font-bold text-4xl py-2 w-20">Subscribe Newsletter</h1>
                 <h3 className="font-monts font-bold text-xl text-blackGreen">The Travel</h3>
                 <p className="text-base font-medium font-monts">Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>

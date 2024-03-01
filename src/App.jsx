@@ -10,8 +10,9 @@ const ForgotPassword = React.lazy(() => import("./ForgotPassword"));
 const VerifyCode = React.lazy(() => import("./VerifyCode"));
 const SetPassword = React.lazy(() => import("./SetPassword"));
 const SignUp = React.lazy(() => import("./SignUp"));
-const PaymentForm = React.lazy(() => import("./PaymentForm"));
+// const PaymentForm = React.lazy(() => import("./PaymentForm"));
 const Account = React.lazy(() => import("./AccounFlows/Account"));
+const BookingDetail = React.lazy(() => import("./HotelFlows/BookingDetail"));
 
 function App() {
   return (
@@ -26,7 +27,8 @@ function App() {
           <Route path="/setPassword" element={<SetPassword />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/account" element={<Account />} />
-          <Route path="/paymentForm" element={<PaymentForm />} />
+          {/* <Route path="/paymentForm" element={<PaymentForm />} /> */}
+          <Route path="/bookingDetail" element={<BookingDetail />} />
         </Routes>
       </Suspense>
     </Router>

@@ -33,15 +33,15 @@ const FavoriteHeader = ({ user }) => {
                    <p className='text-sm'>Favourites</p>
                    <span className='text-2xl'>|</span>
                </div>
-                       {user && (
-                         <div className="flex items-center gap-1">
-                <img
-                  src={user.profilePicture}
-                  alt={`Profile picture of ${user.name}`}
-                  className="w-10 h-10 rounded-full mr-2"
-                />
-                <span className="text-blackGreen font-semibold">{user.name}</span>
-                         </div>
+                {user && (
+                  <div className="flex items-center gap-1">
+                    <img
+                      src={user.profilePicture}
+                      alt={`Profile picture of ${user.name}`}
+                      className="w-10 h-10 rounded-full mr-2"
+                    />
+                    <span className="text-blackGreen font-semibold">{user.name}</span>
+                  </div>
                        )}
            </div>
       </div>
