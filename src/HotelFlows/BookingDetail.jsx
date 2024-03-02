@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import AccountsNav from '../components/Headers/AccountsNav';
+import PhoneInput from 'react-phone-number-input'
+import 'react-phone-number-input/style.css'
 import profilePicture from "../assets/user.png";
 import cvk from "../assets/cvk.png"
 import { MdOutlineChevronRight } from "react-icons/md";
@@ -38,6 +40,8 @@ const BookingDetail = () => {
     setIsSelected2(!isSelected2);
     setIsSelected1(false); // Ensure only one item is selected at a time
   };
+
+  const [value, setValue] =useState()
 
   return (
     <div>
@@ -99,34 +103,36 @@ const BookingDetail = () => {
 
                   <div className='shadow-sm shadow-gray-300 rounded-xl text-blackGreen bg-white p-2 py-4 space-y-4'>
                     <p className='text-2xl font-monts font-semibold'>Login or sign up to book</p>
-                    <input
-                      type='number'
+                    <PhoneInput
                       placeholder='Phone Number'
-                      className='w-full p-2 rounded-md border-2 border-gray-300 focus:outline-none placeholder:text-sm'
+                      value={value}
+                      onChange={setValue}
+                      defaultCountry='US'
+                      className=' border-gray-400 p-2 rounded-md border-2 focus:border-none placeholder:text-sm'
                     />
                     <p className='text-xs text-black font-monts'>We will call or text you to confirm your number. Standard message and data rate applies.<span className='text-semibold'>Privacy policy</span></p>
                     <button className='rounded-md bg-mintGreen w-full p-2 text-semibold text-black hover:bg-lightMint hover:text-blackGreen'>Continue</button>
 
                   <div className="flex items-center py-3">
-                              <div className="w-1/2 border-t border-blue-300"></div>
-                              <div className="mx-2 text-md font-monts font-medium text-gray-400">or</div>
-                              <div className="w-1/2 border-t border-blue-300"></div>
-                          </div>
+                    <div className="w-1/2 border-t border-blue-300"></div>
+                    <div className="mx-2 text-md font-monts font-medium text-gray-400">or</div>
+                    <div className="w-1/2 border-t border-blue-300"></div>
+                  </div>
 
                     {/* -----------OTHER LOGIN OPTIONS----------- */}
                     <div className="flex justify-center space-x-9">
-                        <button
-                          className="text-blue-400 px-2 border rounded-xl border-blue-300">
-                          < FaFacebook  className="text-xl animate-bounce"/>
-                          </button>
-                        <button
-                          className="text-rainbow p-3 rounded-full border border-emerald-500">
-                            < FaGooglePlusG className="text-red-400 text-xl animate-bounce"/>
-                          </button>
-                        <button
-                          className=" p-3 border border-blue-300 rounded-full">
-                          <FaApple className="text-xl animate-bounce" />
+                      <button
+                        className="text-blue-400 px-2 border rounded-xl border-blue-300">
+                        < FaFacebook  className="text-xl animate-bounce"/>
                         </button>
+                      <button
+                        className="text-rainbow p-3 rounded-full border border-emerald-500">
+                          < FaGooglePlusG className="text-red-400 text-xl animate-bounce"/>
+                        </button>
+                      <button
+                        className=" p-3 border border-blue-300 rounded-full">
+                        <FaApple className="text-xl animate-bounce" />
+                      </button>
                     </div>
                     <button className='w-full flex items-center justify-center gap-2 rounded-md border border-mintGreen p-2 text-bold text-blackGreen hover:bg-blackGreen hover:text-mintGreen'><MdMarkEmailUnread className='text-2xl'/>Continue with Email</button>
                   </div>
