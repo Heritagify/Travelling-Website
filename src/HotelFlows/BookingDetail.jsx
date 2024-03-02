@@ -4,6 +4,7 @@ import PhoneInput from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
 import profilePicture from "../assets/user.png";
 import cvk from "../assets/cvk.png"
+import bosphorus from '../assets/bosphorus.png'
 import { MdOutlineChevronRight } from "react-icons/md";
 import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
@@ -44,18 +45,18 @@ const BookingDetail = () => {
   const [value, setValue] =useState()
 
   return (
-    <div>
+    <div className='bg-gray-100'>
       <AccountsNav user={user} />
-      <div className='bg-gray-100 pt-24'>
+      <div className=' pt-24 mb-10'>
         <p className='flex items-center mx-20 space-x-1 font-monts font-medium text-sm'>
           <span className='text-red-400'>Turkey</span> <MdOutlineChevronRight />
           <span className='text-red-400'>Istanbul </span> <MdOutlineChevronRight />
           CVK Park Bosphorus Hotel Istanbul
         </p>
-        <div className='flex bder-2 border-red-500 mx- my-4'>
+        <div className='flex mx-12 mt-4 pb-14'>
         {/* ---------1-------- */}
           <div className='w-3/5 px-16 space-y-5'>
-            <div className='bg-white shadow-sm p-4 py-7 shadow-gray-400 rounded-lg text-blackGreen space-y-2'>
+            <div className='bg-white shadow-sm p-4 py-7 rounded-lg text-blackGreen space-y-2'>
               <div className='flex justify-between items-center font-monts'>
                 <p className='font-semibold text-xl text-blackGreen w-2/3'>Superior room - 1 double bed or 2 twin beds</p>
                 <p className='text-red-500 font-semibold text-xl'>$240<span className='text-xs'>/night</span></p>
@@ -101,7 +102,7 @@ const BookingDetail = () => {
                   </div>
                   </div>
 
-                  <div className='shadow-sm shadow-gray-300 rounded-xl text-blackGreen bg-white p-2 py-4 space-y-4'>
+                  <div className='shadow-md rounded-2xl text-blackGreen bg-white p-6 py-4 space-y-4'>
                     <p className='text-2xl font-monts font-semibold'>Login or sign up to book</p>
                     <PhoneInput
                       placeholder='Phone Number'
@@ -139,11 +140,36 @@ const BookingDetail = () => {
                 </div>
 
                 {/* ---------------2----------- */}
-                <div className=''>
+                <div className='w-2/6 h-1/2 shadow-md bg-white p-4 rounded-xl'>
+                  <div className='flex space-x-5 pb-4 border-b border-gray-200 text-blackGreen'>
+                    <img
+                      src={bosphorus}
+                      alt='an hotel with pool and blue sky'
+                      className='w-1/4 rounded-md '
+                    />
+                    <div className=' text-blackGreen'>
+                      <p className=''>CVK Park Bosphorus...</p>
+                      <h1 className='font-bold font-monts mb-2'>Superior room -1 double bed or 2 twin beds</h1>
+                      <div className='flex'>
+                        <p className='border-2 border-lightMint rounded-md p-1 px-3 text-xs'>4.2</p>
+                        <p className=''><span className='font-semibold text-sm px-2'>Very good</span>reviews</p>
+                      </div>
+                    </div>
+
+                  </div>
+                  <h1 className='py-2 text-sm font-monts font-medium'>Your booking is provided by globe</h1>
+                  <div className='border-t border-gray-200'>
+                    <p className='text-blackGreen font-monts font-semibold py-2'>Price Details</p>
+                    <p className='flex justify-between text-blackGreen text-sm py-1 font-medium font-monts'>Base Fare<span className='font-semibold'>$240</span></p>
+                    <p className='flex justify-between text-blackGreen text-sm py-1 font-medium font-monts'>Discount<span className='font-semibold'>$0</span></p>
+                    <p className='flex justify-between text-blackGreen text-sm py-1 font-medium font-monts'>Taxes<span className='font-semibold'>$20</span></p>
+                    <p className='flex justify-between text-blackGreen text-sm py-1 font-medium font-monts pb-1'>Service Fee<span className='font-semibold'>$5</span></p>
+                    <p className='flex justify-between text-blackGreen text-sm py-1 font-medium font-monts border-t-2 border-gray-200 pt-1'>Total<span className='font-semibold'>$265</span></p>
+                  </div>
                 </div>
               </div>
-        <Footer />
       </div>
+        <Footer />
     </div>
   );
 };
