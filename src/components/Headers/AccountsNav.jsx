@@ -10,14 +10,14 @@ const AccountsNav = ({ user }) => {
     <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-10">
       <div className="flex justify-between items-center mx-8">
         <div className='flex justify-between space-x-5'>
-            <h1 className="flex py-4 text-blackGreen text-lg">
+            <li className="flex py-4 text-blackGreen text-lg">
               <IoAirplane className="mr-1 text-2xl" />
               Find Flight
-            </h1>
-            <h1 className="flex py-4 text-blackGreen text-lg border-b-4 border-emerald-300">
+            </li>
+            <li className="flex py-4 text-blackGreen text-lg">
               <IoBed className="mr-1 text-2xl" />
               Find Stays
-            </h1>
+            </li>
         </div>
 
         <Link to="/">
@@ -27,7 +27,7 @@ const AccountsNav = ({ user }) => {
         <div className='flex items-center space-x-3'>
           <div className='flex space-x-1 items-center'>
             <FaHeart className='text-xl text-blackGreen' />
-            <p className='text-sm'>Favourites</p>
+            <ul className='text-sm'>Favourites</ul>
             <span className='text-2xl'>|</span>
           </div>
           {user && (
