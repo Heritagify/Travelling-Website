@@ -50,7 +50,7 @@ const SignUp = ({ addUserToDatabase}) => {
   }, []);
 
   return (
-    <div className={`flex border-2 border-red-500 px-40 h-screen bg-gradient-to-r from-blue-100 to-green-200 transition duration-500 ease-in-out ${fadeIn ? 'opacity-100' : 'opacity-0'}`}>
+    <div className={`flex px-40 h-screen bg-gradient-to-r from-blue-100 to-green-200 transition duration-500 ease-in-out ${fadeIn ? 'opacity-100' : 'opacity-0'}`}>
       <div className="w-1/2 flex justify-center">
         <img
           src={myImage}
