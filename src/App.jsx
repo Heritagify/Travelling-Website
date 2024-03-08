@@ -14,6 +14,10 @@ const SignUp = React.lazy(() => import("./SignUp"));
 const Account = React.lazy(() => import("./AccounFlows/Account"));
 const BookingDetail = React.lazy(() => import("./HotelFlows/BookingDetail"));
 const Favorites = React.lazy(() => import("./HotelFlows/Favorite"));
+const HotelListing = React.lazy(() => import("./HotelFlows/HotelListing"));
+
+
+
 
 function App() {
   return (
@@ -31,6 +35,7 @@ function App() {
           {/* <Route path="/paymentForm" element={<PaymentForm />} /> */}
           <Route path="/bookingDetail" element={<BookingDetail />} />
           <Route path="/favorites" element={<Favorites />} />
+          <Route path="/hotelListing" element={<HotelListing />} />
         </Routes>
       </Suspense>
     </Router>

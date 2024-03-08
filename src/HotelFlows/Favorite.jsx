@@ -31,16 +31,16 @@ const Favourite = () => {
         </ul>
           <div className='space-y-4 pb-10'>
             {/* ----------1_-------- */}
-            <div className='flex bg-white mx-32  rounded-lg'>
+            <div className='flex bg-white mx-32 rounded-lg'>
               <img
                 src={bosphorus}
                 alt='an hotel'
-                className="w-80"
+                className="w-72 h-fill"
               />
-              <div className='w-full p-3 space-y-4 shadow-sm shadow-gray-300 rounded-lg'>
-                <div className='py-3 border-b-2 text-blackGreen leading-9 w-full'>
+              <div className='w-full p-3 space-y-2 shadow-sm shadow-gray-300 rounded-lg'>
+                <div className='pb-3 border-b-2 text-blackGreen leading-9 w-full'>
                   <div className='flex justify-between'>
-                    <div className='space-y-3'>
+                    <div className='space-y-2'>
                       <h1 className='font-semibold font-monts text-lg tracking-wider'>CVK Park Bolder Hotel Istanbul</h1>
                       <span className='flex font-medium font-monts items-center text-xs gap-1'><FaLocationDot />Mokola main way Cad. No8, Istanbul 322237</span>
                       <div className='flex space-x-1 items-center'>
@@ -72,16 +72,16 @@ const Favourite = () => {
               </div>
             </div>
                     {/* -----------2------------ */}
-            <div className='flex bg-white mx-32  rounded-lg'>
+            <div className='flex bg-white mx-32 shadow-sm shadow-gray-300 rounded-lg'>
               <img
                 src={Eresin}
                 alt='an hotel'
-                className="w-80"
+                className="w-72 h-fill"
               />
-              <div className='w-full p-3 space-y-4 shadow-sm shadow-gray-300 rounded-lg'>
-                <div className='py-3 border-b-2 text-blackGreen leading-9 w-full'>
+              <div className='w-full p-3 space-y-4 rounded-lg'>
+                <div className='border-b-2 text-blackGreen leading-9 w-full'>
                   <div className='flex justify-between'>
-                    <div className='space-y-3'>
+                    <div className='space-y-2'>
                       <h1 className='font-semibold font-monts text-lg tracking-wider'>CVK Park Bolder Hotel Istanbul</h1>
                       <span className='flex font-medium font-monts items-center text-xs gap-1'><FaLocationDot />Mokola main way Cad. No8, Istanbul 322237</span>
                       <div className='flex space-x-1 items-center'>
@@ -113,16 +113,16 @@ const Favourite = () => {
               </div>
             </div>
                     {/* ---------------------3---------------- */}
-            <div className='flex bg-white mx-32  rounded-lg'>
+            <div className='flex bg-white mx-32 shadow-sm shadow-gray-300 rounded-lg'>
               <img
                 src={Eresin2}
                 alt='an hotel'
-                className="w-80"
+                className="w-72 h-fill"
               />
-              <div className='w-full p-3 space-y-4 shadow-sm shadow-gray-300 rounded-lg'>
-                <div className='py-3 border-b-2 text-blackGreen leading-9 w-full'>
+              <div className='w-full p-3 py-2 space-y-4 rounded-lg'>
+                <div className='pb-3 border-b-2 text-blackGreen leading-9 w-full'>
                   <div className='flex justify-between'>
-                    <div className='space-y-3'>
+                    <div className='space-y-1'>
                       <h1 className='font-semibold font-monts text-lg tracking-wider'>Eresin Hotels Sultanahmet - Boutique Class</h1>
                       <span className='flex font-medium font-monts items-center text-xs gap-1'><FaLocationDot />Mokola main way Cad. No8, Istanbul 322237</span>
                       <div className='flex space-x-1 items-center'>
