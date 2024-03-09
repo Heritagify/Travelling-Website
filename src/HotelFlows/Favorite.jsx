@@ -26,13 +26,13 @@ const Favourite = () => {
           <span className="text-gray-100 font-lighter text-4xl">|</span>
           <li className="w-full font-monts p-3 font-semibold text-md">Places</li>
         </ul>
-        <div className="flex flex-col space-y-4 pb-10 mx-3 md:mx-32 border-2 border-red-700">
+        <div className="flex flex-col space-y-4 pb-10 mx-3 md:mx-32">
           {/* ----------1_-------- */}
-          <div className="flex bg-white rounded-lg">
+          <div className="md:flex bg-white rounded-lg">
             <img
               src={bosphorus}
               alt="CVK Park Bolder Hotel Istanbul"
-              className="w-72 h-fill"
+              className="md:w-72 md:h-fill"
             />
             <div className="w-full p-3 space-y-2 shadow-sm shadow-gray-300 rounded-lg">
               <div className="pb-3 border-b-2 text-blackGreen leading-9 w-full">
