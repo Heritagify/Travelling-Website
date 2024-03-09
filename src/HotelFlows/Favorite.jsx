@@ -32,7 +32,7 @@ const Favourite = () => {
             <img
               src={bosphorus}
               alt="CVK Park Bolder Hotel Istanbul"
-              className="md:w-72 md:h-fill"
+              className="md:w-72 md:h-fill rounded-lg md:rounded"
             />
             <div className="w-full p-3 space-y-2 shadow-sm shadow-gray-300 rounded-lg">
               <div className="pb-3 border-b-2 text-blackGreen leading-9 w-full">
@@ -40,13 +40,15 @@ const Favourite = () => {
                   <div className="space-y-2">
                     <h1 className="font-semibold font-monts text-lg tracking-wider">CVK Park Bolder Hotel Istanbul</h1>
                     <span className="flex font-medium font-monts items-center text-xs gap-1"><FaLocationDot />Mokola main way Cad. No8, Istanbul 322237</span>
-                    <div className="flex space-x-1 items-center">
-                      <div className="flex text-xs text-red-400">
-                        <IoIosStar /><IoIosStar /><IoIosStar /><IoIosStar /><IoIosStar />
+                    <div className="sm:flex space-x-1 items-center">
+                      <div className='flex gap-2 items-center'>
+                        <div className="flex text-xs text-red-400">
+                          <IoIosStar /><IoIosStar /><IoIosStar /><IoIosStar /><IoIosStar />
+                        </div>
+                        <p className="text-sm font-medium">5 star hotel</p>
                       </div>
-                      <p className="text-sm font-medium">5 star hotel</p>
-                      <p className="flex gap-1 text-sm mx-5">
-                        <span className="flex ml-2 font-semibold gap-1 items-center"><RiCupFill /> 20+</span>Amenities
+                      <p className="flex gap-2 text-sm mx-5">
+                        <span className="flex sm:ml-2 font-semibold gap-1 items-center"><RiCupFill /> 20+</span>Amenities
                       </p>
                     </div>
                     <div className="flex text-blackGreen items-center space-x-1 ">
