@@ -19,14 +19,14 @@ const Favourite = () => {
   return (
     <div className="bg-gray-100">
       <AccountsNav user={user} />
-      <div className="pt-20">
+      <div className="pt-24 lg:pt-20">
         <h1 className="text-3xl mx-5 md:mx-24 font-bold font-monts text-blackGreen">Favourites</h1>
-        <ul className="flex justify-between items-center my-4 mx-6 md:mx-32 bg-white shadow-sm md:shadow-sm shadow-gray-500 text-blackGreen rounded-lg">
+        <ul className="flex justify-between items-center my-4 mx-6 lg:mx-32 bg-white shadow-sm md:shadow-sm shadow-gray-500 text-blackGreen rounded-lg">
           <li className="w-full font-monts p-2 font-semibold text-md">Flights</li>
           <span className="text-gray-100 font-lighter text-4xl">|</span>
           <li className="w-full font-monts p-3 font-semibold text-md">Places</li>
         </ul>
-        <div className="flex flex-col space-y-4 pb-10 mx-3 md:mx-32">
+        <div className="flex flex-col space-y-4 pb-10 mx-3 lg:mx-32">
           {/* ----------1_-------- */}
           <div className="md:flex bg-white rounded-lg">
             <img
