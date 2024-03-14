@@ -29,7 +29,7 @@ const AccountsNav = ({ user }) => {
               Find Stays
             </Link>
           </div>
-          
+
           <Link to="/">
             <img src={logo} className="w-24 md:w-28" alt="Logo" />
           </Link>
@@ -40,7 +40,7 @@ const AccountsNav = ({ user }) => {
               <span className="text-sm md:text-base">Favourites</span>
               <span className="text-lg">|</span>
             </div>
-  
+
             {user && (
               <div className="flex items-center gap-1">
                 <img
