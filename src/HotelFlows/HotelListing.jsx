@@ -1,5 +1,6 @@
 import React from 'react'
 import AccountNav from "../components/Headers/AccountsNav"
+import RoomItem from '../HotelFlows/RoomItems'
 import Footer from '../components/Footer';
 
 // Icons---------
@@ -19,14 +20,35 @@ import hotelRoom3 from "../../src/assets/hotelRoom3.png"
 import hotelRoom4 from "../../src/assets/hotelRoom4.png"
 
 
-
+const rooms = [
+  {
+    image: hotelRoom1,
+    name: 'Superior room - 1 double bed or 2 twin beds',
+    price: 240,
+  },
+  {
+    image: hotelRoom2,
+    name: 'Superior room - 1 double bed or 2 twin beds',
+    price: 280,
+  },
+  {
+    image: hotelRoom3,
+    name: 'Superior room - 1 double bed or 2 twin beds',
+    price: 300,
+  },
+  {
+    image: hotelRoom4,
+    name: 'Superior room - 1 double bed or 2 twin beds',
+    price: 350,
+  },
+];
 
 const HotelListing = () => {
   return (
     <div className='bg-gray-300 md:bg-gray-100 pt-20'>
       <AccountNav />
       <div className=''>
-        <p className='flex items-center mx-4 md:mx-20 space-x-1 font-monts text-sm md:text-sm font-semibold md:font-medium'>
+        <p className='flex items-center mx-4 md:mx-20 space-x-2 md:space-x-1 font-monts text-sm md:text-sm font-semibold md:font-medium'>
           <span className='text-red-400'>Turkey</span> <MdOutlineChevronRight />
           <span className='text-red-400'>Istanbul </span> <MdOutlineChevronRight />
           CVK Park Bosporus Hotel Istanbul
@@ -126,65 +148,12 @@ const HotelListing = () => {
         </div>
       </div>
 
-      <div className=' space-y-2'>
-        <h1 className='text-3xl md:text-2xl text-center text-blackGreen font-semibold'>Available rooms</h1>
-        <div className='md:flex md:justify-between font-monts text-blackGreen border-b-2 py-2 items-center mx-8 md:mx-20 space-y-1 md:space-y-0'>
-          <div className='flex space-x-3 items-center'>
-            <img
-              src={hotelRoom1}
-              alt=''
-              className='w-20 md:w-14'
-            />
-            <p className='font-semibold text-sm'>Superior room - 1 double bed or 2 twin beds</p>
-          </div>
-          <div className='flex space-x-5 md:space-x-12 ml-16 md:ml-0 items-center'>
-            <p className="text-blackGreen font-semibold text-xl tracking-wider text-end">$240<span className="text-xs">/night</span></p>
-            <button className=' bg-mintGreen px-7 text-xs p-3 font-semibold rounded-md hover:bg-blackGreen hover:text-mintGreen'>Book Now</button>
-          </div>
-        </div>
-        <div className='flex justify-between font-monts text-blackGreen border-b-2 py-2  items-center mx-20'>
-          <div className='flex space-x-3 items-center'>
-            <img
-              src={hotelRoom2}
-              alt=''
-              className='w-14'
-            />
-            <p className='font-semibold text-sm'>Superior room - 1 double bed or 2 twin beds</p>
-          </div>
-          <div className='flex space-x-12 items-center'>
-            <p className="text-blackGreen font-semibold text-xl tracking-wider text-end">$280<span className="text-xs">/night</span></p>
-            <button className=' bg-mintGreen px-7 text-xs p-3 font-semibold rounded-md hover:bg-blackGreen hover:text-mintGreen'>Book Now</button>
-          </div>
-        </div>
-        <div className='flex justify-between font-monts text-blackGreen border-b-2 py-2 items-center mx-20'>
-          <div className='flex space-x-3 items-center'>
-            <img
-              src={hotelRoom3}
-              alt=''
-              className='w-14'
-            />
-            <p className='font-semibold text-sm'>Superior room - 1 double bed or 2 twin beds</p>
-          </div>
-          <div className='flex space-x-12 items-center'>
-            <p className="text-blackGreen font-semibold text-xl tracking-wider text-end">$300<span className="text-xs">/night</span></p>
-            <button className=' bg-mintGreen px-7 text-xs p-3 font-semibold rounded-md hover:bg-blackGreen hover:text-mintGreen'>Book Now</button>
-          </div>
-        </div>
-        <div className='flex justify-between font-monts text-blackGreen border-b-2 py-2 items-center mx-20'>
-          <div className='flex space-x-3 items-center'>
-            <img
-              src={hotelRoom4}
-              alt=''
-              className='w-14'
-            />
-            <p className='font-semibold text-sm'>Superior room - 1 double bed or 2 twin beds</p>
-          </div>
-          <div className='flex space-x-12 items-center'>
-            <p className="text-blackGreen font-semibold text-xl tracking-wider text-end">$350<span className="text-xs">/night</span></p>
-            <button className=' bg-mintGreen px-7 text-xs p-3 font-semibold rounded-md hover:bg-blackGreen hover:text-mintGreen'>Book Now</button>
-          </div>
-        </div>
-      </div>
+      <div className='space-y-2'>
+      <h1 className='text-3xl md:text-2xl text-center text-blackGreen font-semibold'>Available rooms</h1>
+      {rooms.map((room, index) => (
+        <RoomItem key={index} room={room} />
+      ))}
+    </div>
       <Footer/>
     </div>
   )
