@@ -10,6 +10,19 @@ import { IoIosStar } from 'react-icons/io';
 import { IoShareSocial } from "react-icons/io5";
 import { FaHeart } from 'react-icons/fa';
 import { BsStars } from "react-icons/bs";
+import { MdPool } from "react-icons/md";
+import { GiWineBottle } from "react-icons/gi";
+import { MdSpa } from "react-icons/md";
+import { IoRestaurant } from "react-icons/io5";
+import { MdRoomService } from "react-icons/md";
+import { MdFitnessCenter } from "react-icons/md";
+import { IoWifi } from "react-icons/io5";
+import { GiCoffeeCup } from "react-icons/gi";
+
+
+
+
+
 
 
 // images
@@ -148,12 +161,31 @@ const HotelListing = () => {
         </div>
       </div>
 
-      <div className='space-y-2'>
-      <h1 className='text-3xl md:text-2xl text-center text-blackGreen font-semibold'>Available rooms</h1>
-      {rooms.map((room, index) => (
-        <RoomItem key={index} room={room} />
-      ))}
-    </div>
+      <div className='space-y-2 border-b-2 border-gray-300 pb-10'>
+        <h1 className='text-3xl md:text-2xl text-center text-blackGreen font-semibold'>Available rooms</h1>
+        {rooms.map((room, index) => (
+          <RoomItem key={index} room={room} />
+        ))}
+      </div>
+      
+      <div className='mx-4 md:mx-24 pt-8'>
+      <h2 className='text-3xl md:text-2xl text-blackGreen font-semibold'>Amenities</h2>
+      <div className='md:grid grid-cols-2 text-blackGreen md:space-y-0 text-lg md:text-sm font-monts font-semibold'>
+        <button className='flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-24 md:hover:px-16 md:mr-44'><MdPool />Outdoor pool</button>
+        <button className='flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-8 md:hover:px-16 md:mr-44'><MdPool />Indoor pool</button>
+        <button className='flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-8 md:hover:px-16 md:mr-44'> <MdFitnessCenter />Fitness Center</button>
+        <button className='flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-8 md:hover:px-16 md:mr-44'> <GiWineBottle />Bar/Lounge</button>
+        <button className='flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-8 md:hover:px-16 md:mr-44'> <MdSpa />Spa and Wellness center</button>
+        <button className='flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-8 md:hover:px-16 md:mr-44'><IoWifi />Free Wifi</button>
+        <button className='flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-8 md:hover:px-16 md:mr-44'><IoRestaurant />Restaurant</button>
+        <button className='flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-8 md:hover:px-16 md:mr-44'> <GiCoffeeCup />Tea/ coffee machine </button>
+        <button className='flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-8 md:hover:px-16 md:mr-44'> <MdRoomService />Room Service</button>
+        <button className='flex gap-1 font-medium text-red-500p-1 py-2'>+24 more.....</button>
+
+      </div>
+
+      </div>
+
       <Footer/>
     </div>
   )
