@@ -180,7 +180,7 @@ const HotelListing = () => {
         <button className='flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-8 md:hover:px-16 md:mr-44'><IoRestaurant />Restaurant</button>
         <button className='flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-8 md:hover:px-16 md:mr-44'> <GiCoffeeCup />Tea/ coffee machine </button>
         <button className='flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-8 md:hover:px-16 md:mr-44'> <MdRoomService />Room Service</button>
-        <button className='flex gap-1 font-medium text-red-500p-1 py-2'>+24 more.....</button>
+        <button className='flex gap-1 font-medium text-red-500 p-1 py-2'>+24 more.....</button>
 
       </div>
 
