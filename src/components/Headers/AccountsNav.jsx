@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import logo from "../../assets/footLogo.png";
-import { FaHeart, FaBars, FaTimes } from 'react-icons/fa';
+import { FaHeart, FaBars, FaTimes, FaUser } from 'react-icons/fa';
 import { IoAirplane, IoBed } from 'react-icons/io5';
-import { Link } from 'react-router-dom';
+import { MdPayments } from "react-icons/md";
+import { RiUserSettingsFill } from "react-icons/ri";
+import { FcCustomerSupport } from "react-icons/fc";
+import { RiLogoutCircleFill } from "react-icons/ri";
 
-const AccountsNav = ({ user }) => {
+
+const AccountsNav = ({ user, logout }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -42,13 +47,24 @@ const AccountsNav = ({ user }) => {
             </div>
 
             {user && (
-              <div className="flex items-center gap-1">
-                <img
-                  src={user.profilePicture}
-                  alt={`Profile of ${user.name}`}
-                  className="w-10 h-10 rounded-full mr-2"
-                />
-                <span className="text-blackGreen font-semibold hidden md:flex">{user.name}</span>
+              <div className="relative">
+                <button className="flex items-center gap-1 cursor-pointer" onClick={toggleMenu}>
+                  <img
+                    src={user.profilePicture}
+                    alt={`Profile of ${user.name}`}
+                    className="w-10 h-10 rounded-full mr-2"
+                  />
+                  <span className="text-blackGreen font-semibold hidden md:flex">{user.name}</span>
+                </button>
+                {isMenuOpen && (
+                  <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-md shadow-lg">
+                    <Link to="/my-account" className="flex items-center gap-1 py-2 px-4 text-sm text-gray-800 hover:bg-gray-100"><FaUser />My Account</Link>
+                    <Link to="/payments" className="flex items-center gap-1 py-2 px-4 text-sm text-gray-800 hover:bg-gray-100"><MdPayments />Payments</Link>
+                    <Link to="/settings" className="flex items-center gap-1 py-2 px-4 text-sm text-gray-800 hover:bg-gray-100"><RiUserSettingsFill />Settings</Link>
+                    <Link to="/support" className="flex items-center gap-1 py-2 px-4 text-sm text-gray-800 hover:bg-gray-100"><FcCustomerSupport />Support</Link>
+                    <button className="flex items-center gap-1 w-full text-left py-2 px-4 text-sm text-gray-800 hover:bg-gray-100 focus:outline-none" onClick={logout}><RiLogoutCircleFill />Logout</button>
+                  </div>
+                )}
               </div>
             )}
           </div>
@@ -86,6 +102,7 @@ AccountsNav.propTypes = {
     name: PropTypes.string.isRequired,
     profilePicture: PropTypes.string.isRequired,
   }),
+  logout: PropTypes.func.isRequired,
 };
 
 export default AccountsNav;
