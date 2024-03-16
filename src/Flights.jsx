@@ -15,7 +15,7 @@ import lanka4 from "./assets/lanka4.png"
 
 const Flights = () => {
   return (
-    <div>
+    <div className="bg-gray-200">
         {/* Navigation */}
         <FlightNav />
             {/* Hero Section */}

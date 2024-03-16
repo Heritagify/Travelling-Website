@@ -22,7 +22,7 @@ const MobileNav = ({ isOpen, toggle }) => (
         Find Stays
       </h1>
       <div className=" font-bold space-x-5 items-center space-y-2">
-        <button className="text-white px-8 text-center border-2 rounded-3xl py-2 cursor-pointer">LOGIN</button>
+        <button className="text-white px-8 text-center rounded-3xl py-2 cursor-pointer">LOGIN</button>
         <button className="text-blackGreen bg-white rounded-3xl px-10 py-2">Sign Up</button>
       </div>
     </div>
@@ -35,7 +35,7 @@ const FlightNav = () => {
   const toggleMobileNav = () => setMobileNavOpen(!mobileNavOpen);
 
   return (
-    <div className="relative">
+    <div className="relative bg-white">
       {/* Mobile Navigation */}
       <div className="sm:hidden absolute flex justify-between w-96 top-5 left-5">
         <img src={logo} alt="Logo" />
@@ -43,7 +43,7 @@ const FlightNav = () => {
       </div>
 
       {/* Desktop Navigation */}
-      <nav className="hidden sm:flex justify-between p-4 items-center px-5 ">
+      <nav className="hidden sm:flex justify-between p-3 items-center px-5 ">
         <div className="flex space-x- text-blackGreen">
           <h1 className="flex space-x-3">
             <IoAirplane className="text-blackGreen text-2xl" />Find Flight
@@ -57,7 +57,7 @@ const FlightNav = () => {
         </div>
         <div className="flex font-bold space-x-6 items-center mr-20">
           <Link to="../Login.jsx">
-            <button className="cursor-pointer font-monts border-4  text-blackGreen ">LOGIN</button>
+            <button className="cursor-pointer font-monts text-blackGreen ">LOGIN</button>
           </Link>
           <button className="text-white font-bold bg-blackGreen text-sm rounded-md px-5 p-3">Sign Up</button>
         </div>
