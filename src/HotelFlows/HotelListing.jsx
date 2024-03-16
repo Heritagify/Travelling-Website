@@ -7,17 +7,11 @@ import Footer from '../components/Footer';
 import { MdOutlineChevronRight } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoIosStar } from 'react-icons/io';
-import { IoShareSocial } from "react-icons/io5";
+import { IoShareSocial, IoRestaurant, IoWifi } from "react-icons/io5";
 import { FaHeart } from 'react-icons/fa';
 import { BsStars } from "react-icons/bs";
-import { MdPool } from "react-icons/md";
-import { GiWineBottle } from "react-icons/gi";
-import { MdSpa } from "react-icons/md";
-import { IoRestaurant } from "react-icons/io5";
-import { MdRoomService } from "react-icons/md";
-import { MdFitnessCenter } from "react-icons/md";
-import { IoWifi } from "react-icons/io5";
-import { GiCoffeeCup } from "react-icons/gi";
+import { MdRoomService, MdFitnessCenter , MdPool, MdSpa } from "react-icons/md";
+import { GiWineBottle, GiCoffeeCup} from "react-icons/gi";
 
 
 
@@ -167,7 +161,7 @@ const HotelListing = () => {
           <RoomItem key={index} room={room} />
         ))}
       </div>
-      
+
       <div className='mx-4 md:mx-24 pt-8'>
       <h2 className='text-3xl md:text-2xl text-blackGreen font-semibold'>Amenities</h2>
       <div className='md:grid grid-cols-2 text-blackGreen md:space-y-0 text-lg md:text-sm font-monts font-semibold'>
