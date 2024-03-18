@@ -6,7 +6,7 @@ import DateSelector from './components/Dateselector.jsx';
 import TripOption from './components/TripOption.jsx';
 import Passenger from './components/Passenger.jsx';
 import Places from './Places.jsx';
-import Navbar1 from './components/Navbar1.jsx';
+import HomeNav from './components/HomeNav.jsx';
 import Footer from './components/Footer.jsx';
 
 
@@ -21,7 +21,7 @@ const Home = () => {
         <div className="rounded-3xl absolute inset-0 bg-black bg-opacity-30"></div>
 
         {/* Navigation */}
-        <Navbar1 />
+        <HomeNav />
 
 
         {/* Introduction */}

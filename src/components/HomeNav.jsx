@@ -32,7 +32,7 @@ const MobileNav = ({ isOpen, toggle }) => (
   </div>
 );
 
-const Navbar1 = () => {
+const HomeNav = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   const toggleMobileNav = () => setMobileNavOpen(!mobileNavOpen);
@@ -73,4 +73,4 @@ const Navbar1 = () => {
   );
 };
 
-export default Navbar1;
+export default HomeNav;
