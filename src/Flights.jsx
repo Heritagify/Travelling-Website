@@ -6,6 +6,7 @@ import TripOption from './components/TripOption.jsx';
 import Passenger from './components/Passenger.jsx';
 import { FaPaperPlane } from "react-icons/fa6";
 import bgmap from "./assets/bgMap.png"
+import PriceRangeSlider from "./components/PriceRangeSlider"
 
 // ---------Images-------
 import lanka1 from "./assets/lanka1.png"
@@ -167,7 +168,7 @@ const Flights = () => {
         </div>
           </div>
       </div>
-
+<PriceRangeSlider />
       <Footer/>
  </div>
   )
