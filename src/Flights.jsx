@@ -6,7 +6,6 @@ import TripOption from './components/TripOption.jsx';
 import Passenger from './components/Passenger.jsx';
 import { FaPaperPlane } from "react-icons/fa6";
 import bgmap from "./assets/bgMap.png"
-import PriceRangeSlider from "./components/PriceRangeSlider"
 
 // ---------Images-------
 import lanka1 from "./assets/lanka1.png"
@@ -68,7 +67,7 @@ const Flights = () => {
           <button className="border rounded-lg p-3 font-monts font-medium text-base">See All</button>
         </div>
       </div>
-      
+
         <div className="block md:flex md:shrink-0 mx-24 h-96 space-x-4">
 
             <div className="flex items-end h-full p-2 py-3 text-white font-monts md:bg-cover w-3/5 bg-center rounded-xl" style={{ backgroundImage: 'url("/src/assets/melbourne.png")' }}>
@@ -168,7 +167,6 @@ const Flights = () => {
         </div>
           </div>
       </div>
-<PriceRangeSlider />
       <Footer/>
  </div>
   )

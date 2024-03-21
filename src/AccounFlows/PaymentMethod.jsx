@@ -92,7 +92,7 @@ const PaymentMethod = () => {
   return (
     <div className='mx-2 md:mx-24 my-3'>
       <h1 className='text-2xl font-semibold font-monts text-blackGreen'>Payment methods</h1>
-      <div className='flex gap-3 mt-4 mx-3'>
+      <div className='border-8 md:flex md:gap-3 mt-4 mx-3'>
         {cards.map((card, index) => (
           <div key={index} className='h-48 w-80 bg-mintGreen text-blackGreen rounded-2xl space-y-12'>
             <div className='flex justify-between m-3'>
