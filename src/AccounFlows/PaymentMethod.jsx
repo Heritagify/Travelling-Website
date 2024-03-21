@@ -90,7 +90,7 @@ const PaymentMethod = () => {
   };
 
   return (
-    <div className='mx-24 my-3'>
+    <div className='mx-2 md:mx-24 my-3'>
       <h1 className='text-2xl font-semibold font-monts text-blackGreen'>Payment methods</h1>
       <div className='flex gap-3 mt-4 mx-3'>
         {cards.map((card, index) => (
