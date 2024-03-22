@@ -57,7 +57,7 @@ const AccountsNav = ({ user, logout }) => {
                   <span className="text-blackGreen font-semibold hidden md:flex">{user.name}</span>
                 </button>
                 {isMenuOpen && (
-                  <div className="absolute right-0 md:-right-3 lg:right-0 top-full mt-2 w-52 md:w-64 lg:w-48 bg-mintGreen shadow shadow-green-700 rounded-lg">
+                  <div className="absolute right-0 sm:right-5 lg:right-0 top-full mt-2 w-52 md:w-64 lg:w-48 bg-mintGreen shadow shadow-green-700 rounded-lg">
                     <div className="flex items-center justify-between p-4">
                       <div className='flex items-center'>
                         <img src={user.profilePicture} alt={`Profile of ${user.name}`} className="w-14 lg:w-10 h-14 lg:h-10 rounded-full mr-2" />
