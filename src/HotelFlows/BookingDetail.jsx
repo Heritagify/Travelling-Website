@@ -93,7 +93,6 @@ const BookingDetail = () => {
                   </h1>
                   <FaCheckCircle className={`text-lg ${isSelected1 ? 'text-green-500' : 'text-gray-300'}`} />
                 </div>
-              
                   <div className={`flex justify-between items-center p-3 text-blackGreen font-monts rounded-lg ${isSelected2 ? 'bg-mintGreen' : ''}`} onClick={handleClick2}>
                     <h1 className='w-4/5 font-medium'>Pay part now, part later
                       <span className='block text-xs font-monts font-medium'>Pay $207.43 now, and the rest ($207.43) will be automatically charged to the same payment method on Nov 14, 2022. No extra fees.</span>

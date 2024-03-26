@@ -3,7 +3,7 @@ import { IoTrashBinSharp, IoClose } from 'react-icons/io5';
 import { CiCirclePlus } from 'react-icons/ci';
 import { FaCcVisa, FaCcMastercard, FaCcAmex, FaCcDiscover, FaCcJcb } from 'react-icons/fa';
 import * as Yup from 'yup';
-import visaLogo from '../assets/VISA-logo.png'; 
+import visaLogo from '../assets/VISA-logo.png';
 
 const PaymentMethod = () => {
   const [showModal, setShowModal] = useState(false);
