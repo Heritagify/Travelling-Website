@@ -1,11 +1,11 @@
 import FlightNav from "./components/FlightNav";
 import Footer from "./components/Footer";
 import SwapInput from './components/SwapInput.jsx';
-import DateSelector from './components/Dateselector.jsx';
+import DateSelector from './components/DateSelector.jsx';
 import TripOption from './components/TripOption.jsx';
 import Passenger from './components/Passenger.jsx';
 import { FaPaperPlane } from "react-icons/fa6";
-import bgmap from "./assets/bgMap.png"
+import bgMap from "./assets/bgMap.png"
 
 // ---------Images-------
 import lanka1 from "./assets/lanka1.png"
@@ -55,7 +55,7 @@ const Flights = () => {
       </div>
 
       <div>
-        <img src={bgmap}/>
+        <img src={bgMap}/>
       </div>
 
       <div className="mx-24 mt-16 flex justify-between mb-10">
