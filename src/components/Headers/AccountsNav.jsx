@@ -7,10 +7,11 @@ import { IoAirplane, IoBed } from 'react-icons/io5';
 import { MdPayments } from "react-icons/md";
 import { RiUserSettingsFill } from "react-icons/ri";
 import { FcCustomerSupport } from "react-icons/fc";
-import { RiLogoutCircleFill } from "react-icons/ri";
+// import { RiLogoutCircleFill } from "react-icons/ri";
 
 
-const AccountsNav = ({ user, logout }) => {
+// const AccountsNav = ({ user, logout }) => {
+const AccountsNav = ({ user}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -69,7 +70,7 @@ const AccountsNav = ({ user, logout }) => {
                     <Link to="/payments" className="flex items-center gap-1 py-2 px-3 text-sm md:text-lg lg:text-xs font-medium md:font-semibold lg:font-medium font-monts hover:bg-blackGreen hover:text-mintGreen hover:px-9"><MdPayments className='md:text-xl lg:text-sm'/>Payments</Link>
                     <Link to="/settings" className="flex items-center gap-1 py-2 px-3 text-sm md:text-lg lg:text-xs font-medium md:font-semibold lg:font-medium font-monts hover:bg-blackGreen hover:text-mintGreen hover:px-9"><RiUserSettingsFill className='md:text-xl lg:text-sm'/>Settings</Link>
                     <Link to="/support" className="flex items-center gap-1 py-2 px-3 text-sm md:text-lg lg:text-xs font-medium md:font-semibold lg:font-medium font-monts hover:bg-blackGreen hover:text-mintGreen hover:px-9"><FcCustomerSupport className='md:text-xl lg:text-sm'/>Support</Link>
-                    <button className="flex items-center gap-1 w-full text-left py-2 px-3 text-sm md:text-lg lg:text-xs font-medium md:font-semibold lg:font-medium font-monts hover:bg-blackGreen hover:text-mintGreen hover:px-9 focus:outline-none" onClick={logout}><RiLogoutCircleFill className='md:text-xl lg:text-sm'/>Logout</button>
+                    {/* <button className="flex items-center gap-1 w-full text-left py-2 px-3 text-sm md:text-lg lg:text-xs font-medium md:font-semibold lg:font-medium font-monts hover:bg-blackGreen hover:text-mintGreen hover:px-9 focus:outline-none" onClick={logout}><RiLogoutCircleFill className='md:text-xl lg:text-sm'/>Logout</button> */}
                   </div>
                 )}
               </div>
@@ -109,7 +110,7 @@ AccountsNav.propTypes = {
     name: PropTypes.string.isRequired,
     profilePicture: PropTypes.string.isRequired,
   }),
-  logout: PropTypes.func.isRequired,
+  // logout: PropTypes.func.isRequired,
 };
 
 export default AccountsNav;
