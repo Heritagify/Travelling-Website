@@ -14,6 +14,11 @@ import { FaFacebook } from "react-icons/fa6";
 import { FaGooglePlusG } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
 import { MdMarkEmailUnread } from "react-icons/md";
+import { IoFastFood } from "react-icons/io5";<IoFastFood />
+import { IoWifi } from "react-icons/io5";<IoWifi />
+import { GiAirplaneDeparture } from "react-icons/gi";<GiAirplaneDeparture />
+import { MdAirlineSeatReclineExtra } from "react-icons/md";<MdAirlineSeatReclineExtra />
+import { RiTimerFill } from "react-icons/ri";<RiTimerFill />
 import Footer from '../components/Footer';
 
 
@@ -58,8 +63,12 @@ const FlightBooking = () => {
           <div className='w-3/5 px-16 space-y-5'>
             <div className='bg-white shadow-sm p-4 py-7 rounded-lg text-blackGreen space-y-2'>
               <div className='flex justify-between items-center font-monts'>
-                <p className='font-semibold text-xl text-blackGreen w-2/3'>Superior room - 1 double bed or 2 twin beds</p>
+                <p className='font-semibold text-xl text-blackGreen w-2/3'>Emirates A380 Airbus</p>
                 <p className='text-red-500 font-semibold text-xl'>$240<span className='text-xs'>/night</span></p>
+              </div>
+              <div className='flex justify-between'>
+                <p className='font-monts text-sm text-blackGreen font-medium'>Return Thur, Jul 10</p>
+                <p className='font-monts text-sm text-blackGreen font-medium'>2h 25m</p>
               </div>
               <div className='flex border border-mintGreen space-x-2 rounded-lg'>
                 <img
