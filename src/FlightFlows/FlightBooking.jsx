@@ -3,10 +3,9 @@ import AccountsNav from '../components/Headers/AccountsNav';
 import PhoneInput from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
 import profilePicture from "../assets/user.png";
-import cvk from "../assets/cvk.png"
+import emirate from "../assets/emirates-airline.png"
 import bosphorus from '../assets/bosphorus.png'
 import { MdOutlineChevronRight } from "react-icons/md";
-import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
 import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaCheckCircle } from 'react-icons/fa';
@@ -14,11 +13,12 @@ import { FaFacebook } from "react-icons/fa6";
 import { FaGooglePlusG } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
 import { MdMarkEmailUnread } from "react-icons/md";
-import { IoFastFood } from "react-icons/io5";<IoFastFood />
-import { IoWifi } from "react-icons/io5";<IoWifi />
-import { GiAirplaneDeparture } from "react-icons/gi";<GiAirplaneDeparture />
-import { MdAirlineSeatReclineExtra } from "react-icons/md";<MdAirlineSeatReclineExtra />
-import { RiTimerFill } from "react-icons/ri";<RiTimerFill />
+import { IoFastFood } from "react-icons/io5";
+import { IoWifi } from "react-icons/io5";
+import { GiAirplaneDeparture } from "react-icons/gi";
+import { MdAirlineSeatReclineExtra } from "react-icons/md";
+import { IoAirplane } from "react-icons/io5";
+import { RiTimerFill } from "react-icons/ri";
 import Footer from '../components/Footer';
 
 
@@ -70,27 +70,36 @@ const FlightBooking = () => {
                 <p className='font-monts text-sm text-blackGreen font-medium'>Return Thur, Jul 10</p>
                 <p className='font-monts text-sm text-blackGreen font-medium'>2h 25m</p>
               </div>
-              <div className='flex border border-mintGreen space-x-2 rounded-lg'>
-                <img
-                  src={cvk}
-                  alt='Cvk park'
-                />
-                <div className=''>
-                  <h1 className='font-semibold font-monts'>CVK Park Bolder Hotel Istanbul
-                    <span className='flex font-medium items-center text-xs gap-1'><FaLocationDot />Mokola main way Cad. No8, Istanbul 322237</span>
-                  </h1>
+                <div className='flex justify-between rounded-lg p-2'>
+                    <div className='flex p-1 px-4 gap-4 border border-mintGreen rounded'>
+                        <img
+                        src={emirate}
+                        alt='Emirates'
+                        className='w-9 h-9 '
+                        />
+                        <div className=''>
+                            <h1 className='font-medium tracking-wider font-monts text-lg'>Emirates</h1>
+                            <span className='flex items-center font-sans text-xs gap-1'><FaLocationDot />Airbus CV237</span>
+                        </div>
+                    </div>
+                    <div className='flex border-2 border-dotted border-blue-500 items-center space-x-6 text-lg p-1'>
+                        <GiAirplaneDeparture />
+                        <IoWifi />
+                        <RiTimerFill />
+                        <IoFastFood />
+                        <MdAirlineSeatReclineExtra />
+                    </div>
                 </div>
-              </div>
                 <div className='flex justify-between'>
-                  <h1 className='font-monts font-semibold'>Thursday, Nov 5
+                  <h1 className='flex items-center font-monts font-semibold'>12pm
                   <span className='block text-gray-500 text-sm font-normal'>Check-in</span>
                   </h1>
                       <div className='flex items-center text-4xl gap-2'>
                         <HiArrowLongLeft />
-                        <HiOutlineBuildingOffice2 />
+                        <IoAirplane />
                         <HiArrowLongRight />
                       </div>
-                  <h1 className='font-monts font-semibold'>Thursday, Nov 10
+                  <h1 className='flex items-center font-monts font-semibold'>Thursday, Nov 10
                   <span className='block text-gray-500 text-sm font-normal'>Check-Out</span>
                   </h1>
                 </div>
