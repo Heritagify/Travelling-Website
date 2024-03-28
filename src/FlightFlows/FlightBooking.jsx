@@ -50,7 +50,7 @@ const FlightBooking = () => {
   const [value, setValue] =useState()
 
   return (
-    <div className='bg-gray-100'>
+    <div className='bg-gray-200'>
       <AccountsNav user={user} />
       <div className=' pt-24 mb-10'>
         <p className='flex items-center mx-20 space-x-1 font-monts font-medium text-sm'>
@@ -82,30 +82,30 @@ const FlightBooking = () => {
                             <span className='flex items-center font-sans text-xs gap-1'><FaLocationDot />Airbus CV237</span>
                         </div>
                     </div>
-                    <div className='flex border-2 border-dotted border-blue-500 items-center space-x-6 text-lg p-1'>
-                        <GiAirplaneDeparture />
-                        <IoWifi />
-                        <RiTimerFill />
-                        <IoFastFood />
-                        <MdAirlineSeatReclineExtra />
+                    <div className='flex border-2 border-dotted border-blue-500 items-center space-x- p-1'>
+                        <button><GiAirplaneDeparture className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
+                        <button><IoWifi className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
+                        <button><RiTimerFill className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
+                        <button><IoFastFood className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
+                        <button><MdAirlineSeatReclineExtra className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
                     </div>
                 </div>
                 <div className='flex justify-between'>
-                  <h1 className='flex items-center font-monts font-semibold'>12pm
-                  <span className='block text-gray-500 text-sm font-normal'>Check-in</span>
+                  <h1 className='flex items-center font-monts font-semibold gap-2'>12:00 pm
+                  <span className='block text-gray-500 text-xs font-normal'>Newark(EWR)</span>
                   </h1>
-                      <div className='flex items-center text-4xl gap-2'>
-                        <HiArrowLongLeft />
+                      <div className='flex items-center text-4xl gap-5'>
+                        <HiArrowLongLeft className='text-3xl font-lighter'/>
                         <IoAirplane />
-                        <HiArrowLongRight />
+                        <HiArrowLongRight className='text-3xl font-lighter'/>
                       </div>
-                  <h1 className='flex items-center font-monts font-semibold'>Thursday, Nov 10
-                  <span className='block text-gray-500 text-sm font-normal'>Check-Out</span>
+                  <h1 className='flex items-center font-monts font-semibold gap-1'>04:00 pm
+                  <span className='block text-gray-500 text-xs font-normal'>Newark(EWR)</span>
                   </h1>
                 </div>
             </div>
               <div className='shadow-sm shadow-gray-300 rounded-xl text-blackGreen bg-white p-2 py-4 space-y-2'>
-                <div className={`flex justify-between items-center p-3 font-monts rounded-xl ${isSelected1 ? 'bg-lightMint' : ''}`} onClick={handleClick1}>
+                <div className={`flex justify-between items-center p-3 font-monts rounded-xl ${isSelected1 ? 'bg-mintGreen' : ''}`} onClick={handleClick1}>
                   <h1 className='2/3 font-medium gap'>Pay in full
                     <span className='block text-sm font-normal'>Pay the total and you are all set</span>
                   </h1>
@@ -113,7 +113,7 @@ const FlightBooking = () => {
                 </div>
                   <div className={`flex justify-between items-center p-3 text-blackGreen font-monts rounded-lg ${isSelected2 ? 'bg-mintGreen' : ''}`} onClick={handleClick2}>
                     <h1 className='w-4/5 font-medium'>Pay part now, part later
-                      <span className='block text-xs font-monts font-medium'>Pay $207.43 now, and the rest ($207.43) will be automatically charged to the same payment method on Nov 14, 2022. No extra fees.</span>
+                      <span className='block text-xs font-serif font-medium'>Pay $207.43 now, and the rest ($207.43) will be automatically charged to the same payment method on Nov 14, 2022. No extra fees.</span>
                     </h1>
                     <FaCheckCircle className={`text-lg ${isSelected2 ? 'text-green-500' : 'text-gray-300'}`} />
                   </div>
@@ -129,7 +129,7 @@ const FlightBooking = () => {
                       className=' border-gray-400 p-2 rounded-md border-2 focus:border-none placeholder:text-sm'
                     />
                     <p className='text-xs text-black font-monts'>We will call or text you to confirm your number. Standard message and data rate applies.<span className='text-semibold'>Privacy policy</span></p>
-                    <button className='rounded-md bg-mintGreen w-full p-2 text-semibold text-black hover:bg-lightMint hover:text-blackGreen'>Continue</button>
+                    <button className='rounded-md bg-mintGreen w-full p-2 text-bold text-black hover:bg-blackGreen hover:text-lightMint'>Continue</button>
 
                   <div className="flex items-center py-3">
                     <div className="w-1/2 border-t border-blue-300"></div>
@@ -174,13 +174,13 @@ const FlightBooking = () => {
                     </div>
 
                   </div>
-                  <h1 className='py-2 text-sm font-monts font-medium'>Your booking is provided by globe</h1>
+                  <h1 className='py-2 text-sm font-monts font-medium'>Your booking is protected by Heritagify</h1>
                   <div className='border-t border-gray-200'>
                     <p className='text-blackGreen font-monts font-semibold py-2'>Price Details</p>
-                    <p className='flex justify-between text-blackGreen text-sm py-1 font-medium font-monts'>Base Fare<span className='font-semibold'>$240</span></p>
-                    <p className='flex justify-between text-blackGreen text-sm py-1 font-medium font-monts'>Discount<span className='font-semibold'>$0</span></p>
-                    <p className='flex justify-between text-blackGreen text-sm py-1 font-medium font-monts'>Taxes<span className='font-semibold'>$20</span></p>
-                    <p className='flex justify-between text-blackGreen text-sm py-1 font-medium font-monts pb-1'>Service Fee<span className='font-semibold'>$5</span></p>
+                    <p className='flex justify-between text-blackGreen text-sm py-1 font-medium font-monts'>Base Fare<span className='font-semibold'>$600</span></p>
+                    <p className='flex justify-between text-blackGreen text-sm py-1 font-medium font-monts'>Discount<span className='font-semibold'>%10</span></p>
+                    <p className='flex justify-between text-blackGreen text-sm py-1 font-medium font-monts'>Taxes<span className='font-semibold'>%20</span></p>
+                    <p className='flex justify-between text-blackGreen text-sm py-1 font-medium font-monts pb-1'>Service Fee<span className='font-semibold'>$150</span></p>
                     <p className='flex justify-between text-blackGreen text-sm py-1 font-medium font-monts border-t-2 border-gray-200 pt-1'>Total<span className='font-semibold'>$265</span></p>
                   </div>
                 </div>
