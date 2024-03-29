@@ -11,18 +11,18 @@ const Footer = () => {
   return (
     <div className=''>
         {/* --------Float------ */}
-        <div className="absolute bg-lightMint lg:h-56 -mt-28 w-4/5 mb-44 rounded-xl mx-20 lg:mx-28 flex justify-between">
-            <div className="w-3/5 pl-2">
-                <h1 className="text-blackGreen font-monts font-bold text-4xl py-2 w-20">Subscribe Newsletter</h1>
+        <div className=" absolute bg-emerald-900 md:bg-lightMint lg:h-56 -mt-28 md:w-4/5 mb-44 rounded-xl px-2 md:px-0 mx-4 md:mx-20 lg:mx-28 flex justify-between">
+            <div className="md:w-3/5 pl-2 space-y-1 pb-3 md:pb-0 md:space-y-0">
+                <h1 className="text-mintGreen md:text-blackGreen font-monts font-bold text-2xl md:text-4xl py-2 md:w-20">Subscribe Newsletter</h1>
                 <h3 className="font-monts font-bold text-xl text-blackGreen">The Travel</h3>
-                <p className="text-base font-medium font-monts">Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
-                <div className="py-2">
+                <p className="text-base font-medium font-monts text-gray-300 md:text-blackGreen">Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
+                <div className="py-2 space-x-2 md:space-x-0">
                     <input
                         className="bg-white p-3 lg:w-3/4 outline-none"
                         placeholder="Your email address"
                     />
                     <button
-                        className="bg-blackGreen align-middle p-3 px-4 text-white text-sm rounded-lg outline-none">Subscribe
+                        className="bg-blackGreen align-middle p-3 px-4 text-white text-sm rounded-lg outline-none cursor-pointer">Subscribe
                     </button>
                 </div>
             </div>
@@ -31,11 +31,11 @@ const Footer = () => {
         </div>
         {/* ----------Float Ends--------------- */}
         
-        <div className=' bg-emerald-200 mt-40 pt-44 pb-10'>
+        <div className=' bg-emerald-200 mt-40 pt-32 md:pt-44 pb-10'>
           <div className='mt-30'>
-              <div className="justify-center space-y-5 lg:space-y-0 grid md:grid-cols-2 lg:grid-cols-6 lg:space-x-3 mx-3 md:mx-6 lg:mx-20 text-blackGreen">
+              <div className=" md:justify-center space-y-5 lg:space-y-0 grid md:grid-cols-2 lg:grid-cols-6 lg:space-x-3 mx-6 md:mx-6 lg:mx-20 text-blackGreen">
                 <div className="space-y-5">
-                <img src={logo} alt="logo" className='w-52 lg:w-28 py-2 rounded-lg'/>
+                <img src={logo} alt="logo" className='w-44 md:w-52 lg:w-28 py-2 rounded-lg'/>
                     <div className="flex text-blackGreen space-x-4 md:space-x-1 text-4xl lg:text-xl">
                         <FaFacebook/>
                         <FaTwitter/>
