@@ -30,7 +30,7 @@ const Footer = () => {
             <Vector/>
         </div>
         {/* ----------Float Ends--------------- */}
-        
+
         <div className=' bg-emerald-200 mt-40 pt-32 md:pt-44 pb-10'>
           <div className='mt-30'>
               <div className=" md:justify-center space-y-5 lg:space-y-0 grid md:grid-cols-2 lg:grid-cols-6 lg:space-x-3 mx-6 md:mx-6 lg:mx-20 text-blackGreen">
