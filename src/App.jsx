@@ -14,6 +14,7 @@ const SignUp = React.lazy(() => import("./SignUp"));
 const Account = React.lazy(() => import("./AccounFlows/Account"));
 const BookingDetail = React.lazy(() => import("./HotelFlows/BookingDetail"));
 const FlightBooking = React.lazy(() => import("./FlightFlows/FlightBooking"));
+const FlightDetail = React.lazy(() => import("./FlightFlows/FlightDetail"));
 const Favorites = React.lazy(() => import("./HotelFlows/Favorite"));
 const HotelListing = React.lazy(() => import("./HotelFlows/HotelListing"));
 
@@ -36,6 +37,7 @@ function App() {
           {/* <Route path="/paymentForm" element={<PaymentForm />} /> */}
           <Route path="/bookingDetail" element={<BookingDetail />} />
           <Route path="/flightBooking" element={<FlightBooking />} />
+          <Route path="/flightDetail" element={<FlightDetail />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/hotelListing" element={<HotelListing />} />
         </Routes>
