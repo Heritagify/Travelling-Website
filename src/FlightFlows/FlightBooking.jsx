@@ -165,8 +165,8 @@ const FlightBooking = () => {
                       className='w-1/4 rounded-md '
                     />
                     <div className=' text-blackGreen'>
-                      <p className=''>CVK Park Bosphorus...</p>
-                      <h1 className='font-bold font-monts mb-2'>Superior room -1 double bed or 2 twin beds</h1>
+                      <p className=''>Economy</p>
+                      <h1 className='font-bold font-monts mb-2'>Emirates A380 Airbus</h1>
                       <div className='flex'>
                         <p className='border-2 border-lightMint rounded-md p-1 px-3 text-xs'>4.2</p>
                         <p className=''><span className='font-semibold text-sm px-2'>Very good</span>reviews</p>
