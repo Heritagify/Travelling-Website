@@ -3,6 +3,9 @@ import AccountNav from "../components/Headers/AccountsNav"
 import Footer from '../components/Footer';
 
 import airbus from '../assets/Airbus.png'
+import pilot from '../assets/pilot.png'
+import passage from '../assets/passage.png'
+import planeWindow from '../assets/planeWindow.png'
 
 
 // Icons---------
@@ -22,7 +25,7 @@ const FlightDetail = () => {
   return (
     <div className='bg-gray-300 md:bg-gray-100 pt-20'>
       <AccountNav />
-        <div className=''>
+        <div className='border-red-500 border-2'>
             <p className='flex items-center mx-4 md:mx-20 space-x-2 md:space-x-1 font-monts text-sm md:text-sm font-semibold md:font-medium'>
             <span className='text-red-400'>Turkey</span> <MdOutlineChevronRight />
             <span className='text-red-400'>Istanbul </span> <MdOutlineChevronRight />
@@ -58,8 +61,31 @@ const FlightDetail = () => {
         <img
             src={airbus}
             alt='airbus'
-            className=''
+            className='mx-20 h-60 w-5/6 rounded-lg shadow-md'
         />
+        <div className=''></div>
+        <div className='flex gap-2 mx-20'>
+            <img
+                src={pilot}
+                alt='pilot getting set'
+                className='w-20 h-20'
+            />
+            <img
+                src={passage}
+                alt='plane passage'
+                className='w-20 h-20'
+            />
+            <img
+                src={planeWindow}
+                alt='A plane window'
+                className='w-20 h-20'
+            />
+            {/* <img
+                src={}
+                alt=''
+                className=''
+            /> */}
+        </div>
         </div>
     </div>
   )
