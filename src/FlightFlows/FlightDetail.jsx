@@ -6,6 +6,7 @@ import airbus from '../assets/Airbus.png'
 import pilot from '../assets/pilot.png'
 import passage from '../assets/passage.png'
 import planeWindow from '../assets/planeWindow.png'
+import passenger from '../assets/passengers.png'
 
 
 // Icons---------
@@ -80,11 +81,11 @@ const FlightDetail = () => {
                 alt='A plane window'
                 className='w-20 h-20'
             />
-            {/* <img
-                src={}
-                alt=''
-                className=''
-            /> */}
+            <img
+                src={passenger}
+                alt='Passenger'
+                className='w-20 h-20'
+            />
         </div>
         </div>
     </div>
