@@ -7,6 +7,13 @@ import pilot from '../assets/pilot.png'
 import passage from '../assets/passage.png'
 import planeWindow from '../assets/planeWindow.png'
 import passenger from '../assets/passengers.png'
+import planeSeat from '../assets/planeSeat.png'
+import attendant from '../assets/attendant.png'
+import businessClass from '../assets//businessClass.jpeg'
+import economy from '../assets/economy.jpeg'
+import firstClass from '../assets/firstClass.jpeg'
+import hostess from '../assets/hostess.jpeg'
+import windowView from '../assets/windowView.jpeg'
 
 
 // Icons---------
@@ -26,7 +33,7 @@ const FlightDetail = () => {
   return (
     <div className='bg-gray-300 md:bg-gray-100 pt-20'>
       <AccountNav />
-        <div className='border-red-500 border-2'>
+        <div className=''>
             <p className='flex items-center mx-4 md:mx-20 space-x-2 md:space-x-1 font-monts text-sm md:text-sm font-semibold md:font-medium'>
             <span className='text-red-400'>Turkey</span> <MdOutlineChevronRight />
             <span className='text-red-400'>Istanbul </span> <MdOutlineChevronRight />
@@ -59,33 +66,89 @@ const FlightDetail = () => {
                 </div>
             </div>
         </div>
-        <img
-            src={airbus}
-            alt='airbus'
-            className='mx-20 h-60 w-5/6 rounded-lg shadow-md'
-        />
-        <div className=''></div>
-        <div className='flex gap-2 mx-20'>
+        <div className='mx-20'>
             <img
-                src={pilot}
-                alt='pilot getting set'
-                className='w-20 h-20'
+                src={airbus}
+                alt='airbus'
+                className='h-60 w-full rounded-lg shadow-md'
             />
-            <img
-                src={passage}
-                alt='plane passage'
-                className='w-20 h-20'
-            />
-            <img
-                src={planeWindow}
-                alt='A plane window'
-                className='w-20 h-20'
-            />
-            <img
-                src={passenger}
-                alt='Passenger'
-                className='w-20 h-20'
-            />
+            <div className='flex justify-between my-5'>
+                <h1 className='font-monts text-blackGreen font-semibold'>Basic Economy Features</h1>
+                <div className='flex gap-3'>
+                    <h1 className='flex gap-1'>
+                        <input
+                            type='checkbox'
+                        /> Economy
+                    </h1>
+                    <h1 className='flex gap-1'>
+                        <input
+                            type='checkbox'
+                        /> First Class
+                    </h1>
+                    <h1 className='flex gap-1'>
+                        <input
+                            type='checkbox'
+                        /> Business Class
+                    </h1>
+                </div>
+            </div>
+            <div className='flex gap-2'>
+                <img
+                    src={pilot}
+                    alt='pilot getting set'
+                    className='w-20 h-20'
+                />
+                <img
+                    src={passage}
+                    alt='plane passage'
+                    className='w-20 h-20'
+                />
+                <img
+                    src={planeWindow}
+                    alt='A plane window'
+                    className='w-20 h-20'
+                />
+                <img
+                    src={passenger}
+                    alt='Passenger'
+                    className='w-20 h-20'
+                />
+                <img
+                    src={planeSeat}
+                    alt='Passenger'
+                    className='w-20 h-20'
+                />
+                <img
+                    src={businessClass}
+                    alt='Passenger'
+                    className='w-20 h-20'
+                />
+                <img
+                    src={attendant}
+                    alt='Passenger'
+                    className='w-20 h-20'
+                />
+                <img
+                    src={economy}
+                    alt='Passenger'
+                    className='w-20 h-20'
+                />
+                <img
+                    src={hostess}
+                    alt='Passenger'
+                    className='w-20 h-20'
+                />
+                <img
+                    src={firstClass}
+                    alt='Passenger'
+                    className='w-20 h-20'
+                />
+                <img
+                    src={windowView}
+                    alt='Passenger'
+                    className='w-20 h-20'
+                />
+            </div>
         </div>
         </div>
     </div>
