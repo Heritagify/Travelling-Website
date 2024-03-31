@@ -15,6 +15,7 @@ import firstClass from '../assets/firstClass.jpeg'
 import hostess from '../assets/hostess.jpeg'
 import windowView from '../assets/windowView.jpeg'
 import ticket from "../assets/ticket.jpeg";
+import emirate from "../assets/emirates-airline.png"
 
 
 // Icons---------
@@ -24,9 +25,10 @@ import { IoIosStar } from 'react-icons/io';
 import { IoShareSocial, IoRestaurant, IoWifi } from "react-icons/io5";
 import { BiSolidAlarm } from "react-icons/bi";
 import { FaHeart } from 'react-icons/fa';
-import { BsStars } from "react-icons/bs";
-import { MdRoomService, MdFitnessCenter , MdPool, MdSpa } from "react-icons/md";
-import { GiWineBottle, GiCoffeeCup} from "react-icons/gi";
+import { IoFastFood } from "react-icons/io5";
+import { GiAirplaneDeparture } from "react-icons/gi";
+import { RiTimerFill } from "react-icons/ri";
+import { MdAirlineSeatReclineExtra } from "react-icons/md";
 
 
 
@@ -157,10 +159,34 @@ const FlightDetail = () => {
                 />
             </div>
             <div className='bg-lightMint my-5 p-3 rounded-lg space-y-2'>
-            <h1 className='font-monts text-blackGreen font-bold'>Emirates Airlines Policies</h1>
+                <h1 className='font-monts text-blackGreen font-bold'>Emirates Airlines Policies</h1>
                 <div className='flex justify-between text-sm font-monts text-blackGreen font-medium'>
                     <p className='flex items-center gap-3'><BiSolidAlarm/>Pre-flight cleaning, installation of cabin HEPA filters.</p>
                     <p className='flex items-center gap-3'><BiSolidAlarm/>Pre-flight health screening questions.</p>
+                </div>
+            </div>
+            <div className='flex justify-between'>
+                <p className='font-monts text-sm text-blackGreen font-medium'>Return Thur, Jul 10</p>
+                <p className='font-monts text-sm text-blackGreen font-medium'>2h 25m</p>
+              </div>
+            <div className='flex justify-between rounded-lg p-2'>
+                <div className='flex p-1 px-4 gap-4 border border-mintGreen rounded'>
+                    <img
+                    src={emirate}
+                    alt='Emirates'
+                    className='w-9 h-9 '
+                    />
+                    <div className=''>
+                        <h1 className='font-medium tracking-wider font-monts text-lg'>Emirates</h1>
+                        <span className='flex items-center font-sans text-xs gap-1'><FaLocationDot />Airbus CV237</span>
+                    </div>
+                </div>
+                <div className='flex border-2 border-dotted border-blue-500 items-center space-x- p-1'>
+                    <button><GiAirplaneDeparture className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
+                    <button><IoWifi className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
+                    <button><RiTimerFill className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
+                    <button><IoFastFood className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
+                    <button><MdAirlineSeatReclineExtra className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
                 </div>
             </div>
         </div>
