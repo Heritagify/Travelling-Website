@@ -22,13 +22,15 @@ import emirate from "../assets/emirates-airline.png"
 import { MdOutlineChevronRight } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoIosStar } from 'react-icons/io';
-import { IoShareSocial, IoRestaurant, IoWifi } from "react-icons/io5";
+import { IoShareSocial, IoWifi } from "react-icons/io5";
 import { BiSolidAlarm } from "react-icons/bi";
 import { FaHeart } from 'react-icons/fa';
 import { IoFastFood } from "react-icons/io5";
 import { GiAirplaneDeparture } from "react-icons/gi";
 import { RiTimerFill } from "react-icons/ri";
 import { MdAirlineSeatReclineExtra } from "react-icons/md";
+import { IoAirplane } from "react-icons/io5";
+import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 
 
 
@@ -158,35 +160,93 @@ const FlightDetail = () => {
                     className='w-20 h-20 rounded-lg'
                 />
             </div>
-            <div className='bg-lightMint my-5 p-3 rounded-lg space-y-2'>
+            <div className='bg-lightMint my-10 p-3 rounded-lg space-y-2'>
                 <h1 className='font-monts text-blackGreen font-bold'>Emirates Airlines Policies</h1>
                 <div className='flex justify-between text-sm font-monts text-blackGreen font-medium'>
                     <p className='flex items-center gap-3'><BiSolidAlarm/>Pre-flight cleaning, installation of cabin HEPA filters.</p>
                     <p className='flex items-center gap-3'><BiSolidAlarm/>Pre-flight health screening questions.</p>
                 </div>
             </div>
-            <div className='flex justify-between'>
-                <p className='font-monts text-sm text-blackGreen font-medium'>Return Thur, Jul 10</p>
-                <p className='font-monts text-sm text-blackGreen font-medium'>2h 25m</p>
-              </div>
-            <div className='flex justify-between rounded-lg p-2'>
-                <div className='flex p-1 px-4 gap-4 border border-mintGreen rounded'>
-                    <img
-                    src={emirate}
-                    alt='Emirates'
-                    className='w-9 h-9 '
-                    />
-                    <div className=''>
-                        <h1 className='font-medium tracking-wider font-monts text-lg'>Emirates</h1>
-                        <span className='flex items-center font-sans text-xs gap-1'><FaLocationDot />Airbus CV237</span>
+
+            {/* ----------------1-------- */}
+            <div className=' my-5 p-3 shadow shadow-gray-400'>
+                <div className='flex justify-between'>
+                    <p className='font-monts text-sm text-blackGreen font-medium'>Return Thur, Jul 10</p>
+                    <p className='font-monts text-sm text-blackGreen font-medium'>2h 25m</p>
+                  </div>
+                <div className='flex justify-between rounded-lg p-2'>
+                    <div className='flex p-1 px-4 gap-4 border border-mintGreen rounded '>
+                        <img
+                        src={emirate}
+                        alt='Emirates'
+                        className='w-9 h-9 '
+                        />
+                        <div className=''>
+                            <h1 className='font-medium tracking-wider font-monts text-lg'>Emirates</h1>
+                            <span className='flex items-center font-sans text-xs gap-1'><FaLocationDot />Airbus CV237</span>
+                        </div>
+                    </div>
+                    <div className='flex border-2 border-dotted border-blue-500 items-center space-x- p-1'>
+                        <button><GiAirplaneDeparture className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
+                        <button><IoWifi className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
+                        <button><RiTimerFill className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
+                        <button><IoFastFood className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
+                        <button><MdAirlineSeatReclineExtra className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
                     </div>
                 </div>
-                <div className='flex border-2 border-dotted border-blue-500 items-center space-x- p-1'>
-                    <button><GiAirplaneDeparture className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
-                    <button><IoWifi className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
-                    <button><RiTimerFill className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
-                    <button><IoFastFood className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
-                    <button><MdAirlineSeatReclineExtra className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
+
+                <div className='flex justify-between mx-60'>
+                  <h1 className='flex items-center font-monts font-semibold gap-2'>12:00 pm
+                  <span className='block text-gray-500 text-xs font-normal'>Newark(EWR)</span>
+                  </h1>
+                      <div className='flex items-center text-4xl gap-5'>
+                        <HiArrowLongLeft className='text-3xl font-lighter'/>
+                        <IoAirplane />
+                        <HiArrowLongRight className='text-3xl font-lighter'/>
+                      </div>
+                  <h1 className='flex items-center font-monts font-semibold gap-1'>04:00 pm
+                  <span className='block text-gray-500 text-xs font-normal'>Newark(EWR)</span>
+                  </h1>
+                </div>
+            </div>
+            {/* -------------2----------- */}
+            <div className=' my-5 p-3 shadow shadow-gray-400'>
+                <div className='flex justify-between'>
+                    <p className='font-monts text-sm text-blackGreen font-medium'>Return Thur, Jul 10</p>
+                    <p className='font-monts text-sm text-blackGreen font-medium'>2h 25m</p>
+                </div>
+                <div className='flex justify-between rounded-lg p-2'>
+                    <div className='flex p-1 px-4 gap-4 border border-mintGreen rounded'>
+                        <img
+                        src={emirate}
+                        alt='Emirates'
+                        className='w-9 h-9 '
+                        />
+                        <div className=''>
+                            <h1 className='font-medium tracking-wider font-monts text-lg'>Emirates</h1>
+                            <span className='flex items-center font-sans text-xs gap-1'><FaLocationDot />Airbus CV237</span>
+                        </div>
+                    </div>
+                    <div className='flex border-2 border-dotted border-blue-500 items-center space-x- p-1'>
+                        <button><GiAirplaneDeparture className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
+                        <button><IoWifi className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
+                        <button><RiTimerFill className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
+                        <button><IoFastFood className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
+                        <button><MdAirlineSeatReclineExtra className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
+                    </div>
+                </div>
+                <div className='flex justify-between mx-60'>
+                  <h1 className='flex items-center font-monts font-semibold gap-2'>12:00 pm
+                  <span className='block text-gray-500 text-xs font-normal'>Newark(EWR)</span>
+                  </h1>
+                      <div className='flex items-center text-4xl gap-5'>
+                        <HiArrowLongLeft className='text-3xl font-lighter'/>
+                        <IoAirplane />
+                        <HiArrowLongRight className='text-3xl font-lighter'/>
+                      </div>
+                  <h1 className='flex items-center font-monts font-semibold gap-1'>04:00 pm
+                  <span className='block text-gray-500 text-xs font-normal'>Newark(EWR)</span>
+                  </h1>
                 </div>
             </div>
         </div>
