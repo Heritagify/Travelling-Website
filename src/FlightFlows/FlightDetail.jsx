@@ -14,6 +14,7 @@ import economy from '../assets/economy.jpeg'
 import firstClass from '../assets/firstClass.jpeg'
 import hostess from '../assets/hostess.jpeg'
 import windowView from '../assets/windowView.jpeg'
+import ticket from "../assets/ticket.jpeg";
 
 
 // Icons---------
@@ -21,6 +22,7 @@ import { MdOutlineChevronRight } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoIosStar } from 'react-icons/io';
 import { IoShareSocial, IoRestaurant, IoWifi } from "react-icons/io5";
+import { BiSolidAlarm } from "react-icons/bi";
 import { FaHeart } from 'react-icons/fa';
 import { BsStars } from "react-icons/bs";
 import { MdRoomService, MdFitnessCenter , MdPool, MdSpa } from "react-icons/md";
@@ -70,7 +72,7 @@ const FlightDetail = () => {
             <img
                 src={airbus}
                 alt='airbus'
-                className='h-60 w-full rounded-lg shadow-md'
+                className='h-72 w-full rounded-lg shadow-md'
             />
             <div className='flex justify-between my-5'>
                 <h1 className='font-monts text-blackGreen font-semibold'>Basic Economy Features</h1>
@@ -92,7 +94,7 @@ const FlightDetail = () => {
                     </h1>
                 </div>
             </div>
-            <div className='flex gap-2'>
+            <div className='flex justify-between'>
                 <img
                     src={pilot}
                     alt='pilot getting set'
@@ -119,35 +121,47 @@ const FlightDetail = () => {
                     className='w-20 h-20'
                 />
                 <img
+                    src={hostess}
+                    alt='Passenger'
+                    className='w-20 h-20 rounded-lg'
+                />
+                <img
+                    src={ticket}
+                    alt='Passenger'
+                    className='w-20 h-20 rounded-lg'
+                />
+                <img
                     src={businessClass}
                     alt='Passenger'
-                    className='w-20 h-20'
+                    className='w-20 h-20 rounded-lg'
                 />
                 <img
                     src={attendant}
                     alt='Passenger'
-                    className='w-20 h-20'
+                    className='w-20 h-20 rounded-lg'
                 />
                 <img
                     src={economy}
                     alt='Passenger'
-                    className='w-20 h-20'
-                />
-                <img
-                    src={hostess}
-                    alt='Passenger'
-                    className='w-20 h-20'
+                    className='w-20 h-20 rounded-lg'
                 />
                 <img
                     src={firstClass}
                     alt='Passenger'
-                    className='w-20 h-20'
+                    className='w-20 h-20 rounded-lg'
                 />
                 <img
                     src={windowView}
                     alt='Passenger'
-                    className='w-20 h-20'
+                    className='w-20 h-20 rounded-lg'
                 />
+            </div>
+            <div className='bg-lightMint my-5 p-3 rounded-lg space-y-2'>
+            <h1 className='font-monts text-blackGreen font-bold'>Emirates Airlines Policies</h1>
+                <div className='flex justify-between text-sm font-monts text-blackGreen font-medium'>
+                    <p className='flex items-center gap-3'><BiSolidAlarm/>Pre-flight cleaning, installation of cabin HEPA filters.</p>
+                    <p className='flex items-center gap-3'><BiSolidAlarm/>Pre-flight health screening questions.</p>
+                </div>
             </div>
         </div>
         </div>
