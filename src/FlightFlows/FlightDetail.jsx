@@ -72,11 +72,11 @@ const FlightDetail = () => {
                 </div>
             </div>
         </div>
-        <div className='mx-20'>
+        <div className='mx-2 md:mx-20'>
             <img
                 src={airbus}
                 alt='airbus'
-                className='h-72 w-full rounded-lg shadow-md'
+                className='h-44 md:h-72 w-full rounded-lg shadow-md'
             />
             <div className='flex justify-between my-5'>
                 <h1 className='font-monts text-blackGreen font-semibold'>Basic Economy Features</h1>
@@ -98,66 +98,66 @@ const FlightDetail = () => {
                     </h1>
                 </div>
             </div>
-            <div className='flex justify-between'>
+            <div className='grid grid-cols-3 gap-4 md:gap-0 md:flex justify-between'>
                 <img
                     src={pilot}
                     alt='pilot getting set'
-                    className='w-20 h-20'
+                    className='border-4 border-emerald-600 rounded-xl md:w-20 md:h-20'
                 />
                 <img
                     src={passage}
                     alt='plane passage'
-                    className='w-20 h-20'
+                    className='border-4 border-emerald-600 rounded-xl md:w-20 md:h-20'
                 />
                 <img
                     src={planeWindow}
                     alt='A plane window'
-                    className='w-20 h-20'
+                    className='md:w-20 md:h-20'
                 />
                 <img
                     src={passenger}
                     alt='Passenger'
-                    className='w-20 h-20'
+                    className='md:w-20 md:h-20'
                 />
                 <img
                     src={planeSeat}
                     alt='Passenger'
-                    className='w-20 h-20'
+                    className='md:w-20 md:h-20'
                 />
                 <img
                     src={hostess}
                     alt='Passenger'
-                    className='w-20 h-20 rounded-lg'
+                    className='md:w-20 h-28 md:h-20 rounded-lg'
                 />
                 <img
                     src={ticket}
                     alt='Passenger'
-                    className='w-20 h-20 rounded-lg'
+                    className='md:w-20 h-28 md:h-20 rounded-lg'
                 />
                 <img
                     src={businessClass}
                     alt='Passenger'
-                    className='w-20 h-20 rounded-lg'
+                    className='md:w-20 h-28 md:h-20 rounded-lg'
                 />
                 <img
                     src={attendant}
                     alt='Passenger'
-                    className='w-20 h-20 rounded-lg'
+                    className='md:w-20 h-28 md:h-20 rounded-lg'
                 />
                 <img
                     src={economy}
                     alt='Passenger'
-                    className='w-20 h-20 rounded-lg'
+                    className='md:w-20 h-28 md:h-20 rounded-lg'
                 />
                 <img
                     src={firstClass}
                     alt='Passenger'
-                    className='w-20 h-20 rounded-lg'
+                    className='md:w-20 h-28 md:h-20 rounded-lg'
                 />
                 <img
                     src={windowView}
                     alt='Passenger'
-                    className='w-20 h-20 rounded-lg'
+                    className='md:w-20 h-28 md:h-20 rounded-lg'
                 />
             </div>
             <div className='bg-lightMint my-10 p-3 rounded-lg space-y-2'>
