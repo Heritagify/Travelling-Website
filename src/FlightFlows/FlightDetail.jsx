@@ -78,9 +78,9 @@ const FlightDetail = () => {
                 alt='airbus'
                 className='h-44 md:h-72 w-full rounded-lg shadow-md'
             />
-            <div className='flex justify-between my-5'>
-                <h1 className='font-monts text-blackGreen font-semibold'>Basic Economy Features</h1>
-                <div className='flex gap-3'>
+            <div className='md:flex justify-between my-8 md:my-5'>
+                <h1 className='font-monts text-blackGreen text-xl md:text-sm font-semibold my-2 md:my-0'>Basic Economy Features</h1>
+                <div className='md:flex gap-5 md:gap-3'>
                     <h1 className='flex gap-1'>
                         <input
                             type='checkbox'
@@ -112,52 +112,52 @@ const FlightDetail = () => {
                 <img
                     src={planeWindow}
                     alt='A plane window'
-                    className='md:w-20 md:h-20'
+                    className='border-4 border-emerald-600 rounded-xl md:w-20 md:h-20'
                 />
                 <img
                     src={passenger}
                     alt='Passenger'
-                    className='md:w-20 md:h-20'
+                    className='border-4 border-emerald-600 rounded-xl md:w-20 md:h-20'
                 />
                 <img
                     src={planeSeat}
                     alt='Passenger'
-                    className='md:w-20 md:h-20'
+                    className='border-4 border-emerald-600 rounded-xl md:w-20 md:h-20'
                 />
                 <img
                     src={hostess}
                     alt='Passenger'
-                    className='md:w-20 h-28 md:h-20 rounded-lg'
+                    className='md:w-20 h-28 md:h-20 border-4 border-emerald-600 rounded-xl'
                 />
                 <img
                     src={ticket}
                     alt='Passenger'
-                    className='md:w-20 h-28 md:h-20 rounded-lg'
+                    className='md:w-20 h-28 md:h-20 border-4 border-emerald-600 rounded-xl'
                 />
                 <img
                     src={businessClass}
                     alt='Passenger'
-                    className='md:w-20 h-28 md:h-20 rounded-lg'
+                    className='md:w-20 h-28 md:h-20 border-4 border-emerald-600 rounded-xl'
                 />
                 <img
                     src={attendant}
                     alt='Passenger'
-                    className='md:w-20 h-28 md:h-20 rounded-lg'
+                    className='md:w-20 h-28 md:h-20 border-4 border-emerald-600 rounded-xl'
                 />
                 <img
                     src={economy}
                     alt='Passenger'
-                    className='md:w-20 h-28 md:h-20 rounded-lg'
+                    className='md:w-20 h-28 md:h-20 border-4 border-emerald-600 rounded-xl'
                 />
                 <img
                     src={firstClass}
                     alt='Passenger'
-                    className='md:w-20 h-28 md:h-20 rounded-lg'
+                    className='md:w-20 h-28 md:h-20 border-4 border-emerald-600 rounded-xl'
                 />
                 <img
                     src={windowView}
                     alt='Passenger'
-                    className='md:w-20 h-28 md:h-20 rounded-lg'
+                    className='w-28 md:w-20 h-28 md:h-20 border-4 border-emerald-600 rounded-xl'
                 />
             </div>
             <div className='bg-lightMint my-10 p-3 rounded-lg space-y-2'>
