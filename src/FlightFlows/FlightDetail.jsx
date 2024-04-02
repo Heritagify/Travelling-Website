@@ -162,7 +162,7 @@ const FlightDetail = () => {
             </div>
             <div className='bg-lightMint my-10 p-3 rounded-lg space-y-2'>
                 <h1 className='font-monts text-blackGreen font-bold'>Emirates Airlines Policies</h1>
-                <div className='flex justify-between text-sm font-monts text-blackGreen font-medium'>
+                <div className='md:flex space-y-2 justify-between text-sm font-monts text-blackGreen font-medium'>
                     <p className='flex items-center gap-3'><BiSolidAlarm/>Pre-flight cleaning, installation of cabin HEPA filters.</p>
                     <p className='flex items-center gap-3'><BiSolidAlarm/>Pre-flight health screening questions.</p>
                 </div>
