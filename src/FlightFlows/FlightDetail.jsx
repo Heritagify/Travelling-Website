@@ -163,18 +163,18 @@ const FlightDetail = () => {
             <div className='bg-lightMint my-10 p-3 rounded-lg space-y-2'>
                 <h1 className='font-monts text-blackGreen font-bold'>Emirates Airlines Policies</h1>
                 <div className='md:flex space-y-2 justify-between text-sm font-monts text-blackGreen font-medium'>
-                    <p className='flex items-center gap-3'><BiSolidAlarm/>Pre-flight cleaning, installation of cabin HEPA filters.</p>
-                    <p className='flex items-center gap-3'><BiSolidAlarm/>Pre-flight health screening questions.</p>
+                    <p className='flex items-center gap-3'><BiSolidAlarm className='text-3xl sm:text-sm'/>Pre-flight cleaning, installation of cabin HEPA filters.</p>
+                    <p className='flex items-center gap-3'><BiSolidAlarm className='text-3xl sm:text-sm'/>Pre-flight health screening questions.</p>
                 </div>
             </div>
 
             {/* ----------------1-------- */}
-            <div className=' my-5 p-3 shadow shadow-gray-400'>
+            <div className=' my-5 p-3 border-4 shadow shadow-gray-600'>
                 <div className='flex justify-between'>
                     <p className='font-monts text-sm text-blackGreen font-medium'>Return Thur, Jul 10</p>
                     <p className='font-monts text-sm text-blackGreen font-medium'>2h 25m</p>
                   </div>
-                <div className='flex justify-between rounded-lg p-2'>
+                <div className='sm:flex justify-between rounded-lg p-2'>
                     <div className='flex p-1 px-4 gap-4 border border-mintGreen rounded '>
                         <img
                         src={emirate}
@@ -186,7 +186,7 @@ const FlightDetail = () => {
                             <span className='flex items-center font-sans text-xs gap-1'><FaLocationDot />Airbus CV237</span>
                         </div>
                     </div>
-                    <div className='flex border-2 border-dotted border-blue-500 items-center space-x- p-1'>
+                    <div className='flex border-2 border-dotted border-blue-500 items-center space-x-1 p-1'>
                         <button><GiAirplaneDeparture className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
                         <button><IoWifi className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
                         <button><RiTimerFill className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
@@ -195,28 +195,29 @@ const FlightDetail = () => {
                     </div>
                 </div>
 
-                <div className='flex justify-between mx-60'>
-                  <h1 className='flex items-center font-monts font-semibold gap-2'>12:00 pm
-                  <span className='block text-gray-500 text-xs font-normal'>Newark(EWR)</span>
+                <div className='flex justify-between my-5 md:mx-60'>
+                  <h1 className='md:flex items-center font-monts font-semibold gap-2'>12:00 pm
+                  <span className='block md:text-gray-500 text-sm md:text-xs font-normal'>Newark(EWR)</span>
                   </h1>
-                      <div className='flex items-center text-4xl gap-5'>
+                      <div className='flex items-center text-4xl gap-3 md:gap-5'>
                         <HiArrowLongLeft className='text-3xl font-lighter'/>
-                        <IoAirplane />
+                        <IoAirplane className='text-2xl md:hidden'/>
+                        <IoAirplane className='hidden md:block'/>
                         <HiArrowLongRight className='text-3xl font-lighter'/>
                       </div>
-                  <h1 className='flex items-center font-monts font-semibold gap-1'>04:00 pm
-                  <span className='block text-gray-500 text-xs font-normal'>Newark(EWR)</span>
+                  <h1 className='md:flex items-center font-monts font-semibold gap-1'>04:00 pm
+                  <span className='block md:text-gray-500 text-sm md:text-xs font-normal'>Newark(EWR)</span>
                   </h1>
                 </div>
             </div>
             {/* -------------2----------- */}
-            <div className=' my-5 p-3 shadow shadow-gray-400'>
+            <div className=' my-5 p-3 border-4 shadow shadow-gray-600'>
                 <div className='flex justify-between'>
                     <p className='font-monts text-sm text-blackGreen font-medium'>Return Thur, Jul 10</p>
                     <p className='font-monts text-sm text-blackGreen font-medium'>2h 25m</p>
-                </div>
-                <div className='flex justify-between rounded-lg p-2'>
-                    <div className='flex p-1 px-4 gap-4 border border-mintGreen rounded'>
+                  </div>
+                <div className='sm:flex justify-between rounded-lg p-2'>
+                    <div className='flex p-1 px-4 gap-4 border border-mintGreen rounded '>
                         <img
                         src={emirate}
                         alt='Emirates'
@@ -227,7 +228,7 @@ const FlightDetail = () => {
                             <span className='flex items-center font-sans text-xs gap-1'><FaLocationDot />Airbus CV237</span>
                         </div>
                     </div>
-                    <div className='flex border-2 border-dotted border-blue-500 items-center space-x- p-1'>
+                    <div className='flex border-2 border-dotted border-blue-500 items-center space-x-1 p-1'>
                         <button><GiAirplaneDeparture className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
                         <button><IoWifi className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
                         <button><RiTimerFill className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
@@ -235,17 +236,19 @@ const FlightDetail = () => {
                         <button><MdAirlineSeatReclineExtra className='tex-xl w-14 h-8 p-2 border-r-2 border-gray-100'/></button>
                     </div>
                 </div>
-                <div className='flex justify-between mx-60'>
-                  <h1 className='flex items-center font-monts font-semibold gap-2'>12:00 pm
-                  <span className='block text-gray-500 text-xs font-normal'>Newark(EWR)</span>
+
+                <div className='flex justify-between my-5 md:mx-60'>
+                  <h1 className='md:flex items-center font-monts font-semibold gap-2'>12:00 pm
+                  <span className='block md:text-gray-500 text-sm md:text-xs font-normal'>Newark(EWR)</span>
                   </h1>
-                      <div className='flex items-center text-4xl gap-5'>
+                      <div className='flex items-center text-4xl gap-3 md:gap-5'>
                         <HiArrowLongLeft className='text-3xl font-lighter'/>
-                        <IoAirplane />
+                        <IoAirplane className='text-2xl md:hidden'/>
+                        <IoAirplane className='hidden md:block'/>
                         <HiArrowLongRight className='text-3xl font-lighter'/>
                       </div>
-                  <h1 className='flex items-center font-monts font-semibold gap-1'>04:00 pm
-                  <span className='block text-gray-500 text-xs font-normal'>Newark(EWR)</span>
+                  <h1 className='md:flex items-center font-monts font-semibold gap-1'>04:00 pm
+                  <span className='block md:text-gray-500 text-sm md:text-xs font-normal'>Newark(EWR)</span>
                   </h1>
                 </div>
             </div>
