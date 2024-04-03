@@ -58,10 +58,10 @@ const FlightBooking = () => {
             <span className='text-red-400'>Istanbul </span> <MdOutlineChevronRight />
             CVK Park Bosporus Hotel Istanbul
             </p>
-        <div className='flex mx-12 mt-4 pb-14'>
+        <div className='md:flex mx-2 md:mx-12 mt-4 pb-14'>
         {/* ---------1-------- */}
-          <div className='w-3/5 px-16 space-y-5'>
-            <div className='bg-white shadow-sm p-4 py-7 rounded-lg text-blackGreen space-y-2'>
+          <div className='md:w-3/5 md:px-16 space-y-5'>
+            <div className='md:bg-white bg-blackGreen text-mintGreen md:text-blackGreen md:p-0 md:rounded-none shadow-sm p-4 py-7 rounded-lg space-y-2'>
               <div className='flex justify-between items-center font-monts'>
                 <p className='font-semibold text-xl text-blackGreen w-2/3'>Emirates A380 Airbus</p>
                 <p className='text-red-500 font-semibold text-xl'>$240<span className='text-xs'>/night</span></p>

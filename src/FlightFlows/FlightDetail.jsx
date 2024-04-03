@@ -48,13 +48,8 @@ const FlightDetail = () => {
             <div className='md:flex justify-between mx-2 md:mx-20 my-5 bg-blackGreen text-mintGreen md:text-blackGreen md:bg-gray-100 p-4 md:p-0 rounded-lg md:rounded-none'>
             <div className='space-y-2'>
                 <div className='md:flex gap-3'>
-                <h1 className='font-semibold text-xl font-monts'>CVK Park Bolder Hotel Istanbul</h1>
-                <div className='flex gap-2 items-center'>
-                    <div className="flex text-xs text-red-400">
-                    <IoIosStar /><IoIosStar /><IoIosStar /><IoIosStar /><IoIosStar />
-                    </div>
-                    <p className="text-sm font-medium">5 star hotel</p>
-                </div>
+                <h1 className='font-semibold text-xl font-monts'>Emirates A380 Airbus</h1>
+                
                 </div>
                 <span className='flex font-medium items-center text-sm gap-1'><FaLocationDot />Mokola main way Cad. No8, Istanbul 322237</span>
                 <div className="flex md:text-blackGreen items-center space-x-3 md:space-x-1 py-2 md:py-0">
