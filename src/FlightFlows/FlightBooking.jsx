@@ -53,11 +53,11 @@ const FlightBooking = () => {
     <div className='bg-gray-200'>
       <AccountsNav user={user} />
       <div className=' pt-24 mb-10'>
-        <p className='flex items-center mx-20 space-x-1 font-monts font-medium text-sm'>
-          <span className='text-red-400'>Turkey</span> <MdOutlineChevronRight />
-          <span className='text-red-400'>Istanbul </span> <MdOutlineChevronRight />
-          CVK Park Bosphorus Hotel Istanbul
-        </p>
+      <p className='flex items-center mx-4 md:mx-20 space-x-2 md:space-x-1 font-monts text-sm md:text-sm font-semibold md:font-medium'>
+            <span className='text-red-400'>Turkey</span> <MdOutlineChevronRight />
+            <span className='text-red-400'>Istanbul </span> <MdOutlineChevronRight />
+            CVK Park Bosporus Hotel Istanbul
+            </p>
         <div className='flex mx-12 mt-4 pb-14'>
         {/* ---------1-------- */}
           <div className='w-3/5 px-16 space-y-5'>
