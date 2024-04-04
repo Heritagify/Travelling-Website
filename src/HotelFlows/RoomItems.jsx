@@ -2,7 +2,7 @@ import React from 'react';
 
 const RoomItem = ({ room }) => {
   return (
-    <div className='flex justify-between font-monts text-blackGreen border-b-2 py-2 items-center mx-3 md:mx-20'>
+    <div className='flex justify-between font-monts text-blackGreen border-b-2 py-2 items-center mx-3 md:mx-10 lg:mx-20'>
       <div className='flex space-x-3 items-center'>
         <img
           src={room.image}

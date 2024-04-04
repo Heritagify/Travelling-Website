@@ -55,12 +55,12 @@ const HotelListing = () => {
     <div className='bg-gray-300 md:bg-gray-100 pt-20'>
       <AccountNav />
       <div className=''>
-        <p className='flex items-center mx-4 md:mx-20 space-x-2 md:space-x-1 font-monts text-sm md:text-sm font-semibold md:font-medium'>
+        <p className='flex items-center mx-4 md:mx-10 lg:mx-20 space-x-2 md:space-x-1 font-monts text-sm md:text-sm font-semibold md:font-medium'>
           <span className='text-red-400'>Turkey</span> <MdOutlineChevronRight />
           <span className='text-red-400'>Istanbul </span> <MdOutlineChevronRight />
           CVK Park Bosporus Hotel Istanbul
         </p>
-        <div className='md:flex justify-between mx-2 md:mx-20 my-5 bg-blackGreen text-mintGreen md:text-blackGreen md:bg-gray-100 p-4 md:p-0 rounded-lg md:rounded-none'>
+        <div className='md:flex justify-between mx-2 md:mx-10 lg:mx-20 my-5 bg-blackGreen text-mintGreen md:text-blackGreen md:bg-gray-100 p-4 md:p-0 rounded-lg md:rounded-none'>
           <div className='space-y-2'>
             <div className='md:flex gap-3'>
               <h1 className='font-semibold text-xl font-monts'>CVK Park Bolder Hotel Istanbul</h1>
@@ -88,11 +88,11 @@ const HotelListing = () => {
             </div>
         </div>
 
-        <div className='md:flex justify-center md:gap-2 mx-4 md:mx-20'>
+        <div className='md:flex justify-center md:gap-2 mx-4 md:mx-10 lg:mx-20'>
             <img
               src={bosphorus}
               alt=''
-              className='mb-2 md:mb-0'
+              className='mb-2 md:mb-0 md:w-2/4 '
             />
           <div className='grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-2'>
             <img
@@ -119,7 +119,7 @@ const HotelListing = () => {
         </div>
 
       </div>
-      <div className='mx-5 md:mx-20 my-7 border-b-2 border-gray-300 pb-12'>
+      <div className='mx-5 md:mx-10 lg:mx-20 my-7 border-b-2 border-gray-300 pb-12'>
         <h2 className='text-3xl md:text-2xl text-center text-blackGreen font-semibold'>Overview</h2>
         <p className='my-3 font-mont text-md md:text-xs font-medium'>Located in Taksim Gmsuyu, the heart of Istanbul, the CVK Park Bosphorus Hotel Istanbul has risen from 
           the ashes of the historic Park Hotel, which also served as Foreign Affairs Palace 120 years ago and
@@ -156,15 +156,15 @@ const HotelListing = () => {
       </div>
 
       <div className='space-y-2 border-b-2 border-gray-300 pb-10'>
-        <h1 className='text-3xl md:text-2xl text-center text-blackGreen font-semibold'>Available rooms</h1>
+        <h1 className='text-3xl md:text-3xl lg:text-2xl text-center text-blackGreen font-semibold'>Available rooms</h1>
         {rooms.map((room, index) => (
           <RoomItem key={index} room={room} />
         ))}
       </div>
 
-      <div className='mx-4 md:mx-24 pt-8'>
-      <h2 className='text-3xl md:text-2xl text-blackGreen font-semibold'>Amenities</h2>
-      <div className='md:grid grid-cols-2 text-blackGreen md:space-y-0 text-lg md:text-sm font-monts font-semibold'>
+      <div className='mx-4 md:mx-10 lg:mx-24 pt-8'>
+      <h2 className='text-3xl md:text-3xl lg:text-2xl text-blackGreen font-semibold'>Amenities</h2>
+      <div className='md:grid grid-cols-2 text-blackGreen md:space-y-0 text-lg lg:text-sm font-monts font-semibold'>
         <button className='flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-24 md:hover:px-16 md:mr-44'><MdPool />Outdoor pool</button>
         <button className='flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-8 md:hover:px-16 md:mr-44'><MdPool />Indoor pool</button>
         <button className='flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-8 md:hover:px-16 md:mr-44'> <MdFitnessCenter />Fitness Center</button>

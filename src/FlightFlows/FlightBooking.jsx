@@ -156,7 +156,7 @@ const FlightBooking = () => {
                   </div>
                   </div>
 
-                  <div className='shadow-md rounded-2xl text-blackGreen bg-white p-6 py-4 space-y-4'>
+                  <div className='md:hidden lg:block shadow-md rounded-2xl text-blackGreen bg-white p-6 py-4 space-y-4'>
                     <p className='text-2xl font-monts font-semibold'>Login or sign up to book</p>
                     <PhoneInput
                       placeholder='Phone Number'
@@ -222,6 +222,45 @@ const FlightBooking = () => {
                   </div>
                 </div>
               </div>
+
+
+
+
+              <div className='hidden md:block lg:hidden shadow-md rounded-2xl mx-10 text-blackGreen bg-white p-6 py-4 space-y-4'>
+                    <p className='text-2xl font-monts font-semibold'>Login or sign up to book</p>
+                    <PhoneInput
+                      placeholder='Phone Number'
+                      value={value}
+                      onChange={setValue}
+                      defaultCountry='US'
+                      className=' border-gray-400 p-2 rounded-md border-2 focus:border-none placeholder:text-sm'
+                    />
+                    <p className='text-xs text-black font-monts'>We will call or text you to confirm your number. Standard message and data rate applies.<span className='text-semibold'>Privacy policy</span></p>
+                    <button className='rounded-md bg-mintGreen w-full p-2 text-bold text-black hover:bg-blackGreen hover:text-lightMint'>Continue</button>
+
+                  <div className="flex items-center py-3">
+                    <div className="w-1/2 border-t border-blue-300"></div>
+                    <div className="mx-2 text-md font-monts font-medium text-gray-400">or</div>
+                    <div className="w-1/2 border-t border-blue-300"></div>
+                  </div>
+
+                    {/* -----------OTHER LOGIN OPTIONS----------- */}
+                    <div className="flex justify-center space-x-9">
+                      <button
+                        className="text-blue-400 px-2 border rounded-xl border-blue-300">
+                        < FaFacebook  className="text-xl animate-bounce"/>
+                        </button>
+                      <button
+                        className="text-rainbow p-3 rounded-full border border-emerald-500">
+                          < FaGooglePlusG className="text-red-400 text-xl animate-bounce"/>
+                        </button>
+                      <button
+                        className=" p-3 border border-blue-300 rounded-full">
+                        <FaApple className="text-xl animate-bounce" />
+                      </button>
+                    </div>
+                    <button className='w-full flex items-center justify-center gap-2 rounded-md border border-mintGreen p-2 text-bold text-blackGreen hover:bg-blackGreen hover:text-mintGreen'><MdMarkEmailUnread className='text-2xl'/>Continue with Email</button>
+                  </div>
       </div>
         <Footer />
     </div>
