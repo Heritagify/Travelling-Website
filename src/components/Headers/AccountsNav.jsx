@@ -54,7 +54,7 @@ const AccountsNav = ({ user}) => {
 
             {user && (
               <div className="relative">
-                <button className="flex items-center gap-1 cursor-pointer" onClick={toggleMenu}>
+                <button className="flex items-center gap-1 cursor-pointer" onClick={toggleUserOptions}>
                   <img
                     src={user.profilePicture}
                     alt={`Profile of ${user.name}`}
