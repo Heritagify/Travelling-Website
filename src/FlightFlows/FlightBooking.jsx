@@ -52,15 +52,15 @@ const FlightBooking = () => {
   return (
     <div className='bg-gray-200'>
       <AccountsNav user={user} />
-      <div className=' pt-24 mb-10'>
-      <p className='flex items-center mx-4 md:mx-20 space-x-2 md:space-x-1 font-monts text-sm md:text-sm font-semibold md:font-medium'>
+      <div className='pt-24 mb-10'>
+      <p className='flex items-center mx-4 lg:mx-20 space-x-2 md:space-x-1 font-monts text-sm md:text-sm font-semibold md:font-medium'>
             <span className='text-red-400'>Turkey</span> <MdOutlineChevronRight />
             <span className='text-red-400'>Istanbul </span> <MdOutlineChevronRight />
             CVK Park Bosporus Hotel Istanbul
             </p>
-        <div className='md:flex mx-2 md:mx-12 mt-4 pb-14'>
+        <div className='md:flex justify-between gap-4 mx-2 lg:mx-12 mt-4 pb-14'>
         {/* ---------1-------- */}
-          <div className='md:w-3/5 md:px-16 space-y-5'>
+          <div className='md:w-5/5 lg:w-3/5 lg:px-16 space-y-5'>
             <div className='md:bg-white bg-blackGreen text-mintGreen md:text-blackGreen md:rounded-none shadow-sm p-4 py-7 rounded-lg space-y-2'>
               <div className='flex justify-between items-center font-monts'>
                 <p className='font-semibold text-xl w-2/3'>Emirates A380 Airbus</p>
@@ -70,12 +70,12 @@ const FlightBooking = () => {
                 <p className='font-monts text-sm text-blackGreen font-medium'>Return Thur, Jul 10</p>
                 <p className='font-monts text-sm text-blackGreen font-medium'>2h 25m</p>
               </div>
-                <div className='flex justify-between rounded-lg p-2'>
+                <div className='lg:flex justify-between rounded-lg p-2'>
                     <div className='flex p-1 px-4 gap-4 border border-mintGreen rounded'>
                         <img
                         src={emirate}
                         alt='Emirates'
-                        className='w-9 h-9 '
+                        className='w-9 h-9'
                         />
                         <div className=''>
                             <h1 className='font-medium tracking-wider font-monts text-lg'>Emirates</h1>
@@ -91,19 +91,56 @@ const FlightBooking = () => {
                     </div>
                 </div>
                 <div className='flex justify-between'>
-                  <h1 className='flex items-center font-monts font-semibold gap-2'>12:00 pm
+                  <h1 className='lg:flex items-center font-monts font-semibold gap-2'>12:00 pm
                   <span className='block text-gray-500 text-xs font-normal'>Newark(EWR)</span>
                   </h1>
-                      <div className='flex items-center text-4xl gap-5'>
+                      <div className='flex items-center text-4xl gap-2 md:gap-5'>
                         <HiArrowLongLeft className='text-3xl font-lighter'/>
                         <IoAirplane />
                         <HiArrowLongRight className='text-3xl font-lighter'/>
                       </div>
-                  <h1 className='flex items-center font-monts font-semibold gap-1'>04:00 pm
+                  <h1 className='lg:flex items-center font-monts font-semibold gap-1'>04:00 pm
                   <span className='block text-gray-500 text-xs font-normal'>Newark(EWR)</span>
                   </h1>
                 </div>
             </div>
+
+
+
+ {/* ---------------2----------- */}
+ <div className='md:hidden md:w-2/6 h-1/2 shadow-md bg-white p-4 rounded-xl'>
+                  <div className='flex space-x-5 pb-4 border-b border-gray-200 text-blackGreen'>
+                    <img
+                      src={bosphorus}
+                      alt='an hotel with pool and blue sky'
+                      className='w-1/4 rounded-md '
+                    />
+                    <div className=' text-blackGreen'>
+                      <p className=''>Economy</p>
+                      <h1 className='font-bold font-monts mb-2'>Emirates A380 Airbus</h1>
+                      <div className='flex'>
+                        <p className='border-2 border-lightMint rounded-md p-1 px-3 text-xs'>4.2</p>
+                        <p className=''><span className='font-semibold text-sm px-2'>Very good</span>reviews</p>
+                      </div>
+                    </div>
+
+                  </div>
+                  <h1 className='py-2 text-sm font-monts font-medium'>Your booking is protected by Heritagify</h1>
+                  <div className='border-t border-gray-200'>
+                    <p className='text-blackGreen font-monts font-semibold py-2'>Price Details</p>
+                    <p className='flex justify-between text-blackGreen text-sm py-1 font-medium font-monts'>Base Fare<span className='font-semibold'>$600</span></p>
+                    <p className='flex justify-between text-blackGreen text-sm py-1 font-medium font-monts'>Discount<span className='font-semibold'>%10</span></p>
+                    <p className='flex justify-between text-blackGreen text-sm py-1 font-medium font-monts'>Taxes<span className='font-semibold'>%20</span></p>
+                    <p className='flex justify-between text-blackGreen text-sm py-1 font-medium font-monts pb-1'>Service Fee<span className='font-semibold'>$150</span></p>
+                    <p className='flex justify-between text-blackGreen text-sm py-1 font-medium font-monts border-t-2 border-gray-200 pt-1'>Total<span className='font-semibold'>$265</span></p>
+                  </div>
+                </div>
+
+
+
+
+
+
               <div className='shadow-sm shadow-gray-300 rounded-xl text-blackGreen bg-white p-2 py-4 space-y-2'>
                 <div className={`flex justify-between items-center p-3 font-monts rounded-xl ${isSelected1 ? 'bg-mintGreen' : ''}`} onClick={handleClick1}>
                   <h1 className='2/3 font-medium gap'>Pay in full
@@ -157,7 +194,7 @@ const FlightBooking = () => {
                 </div>
 
                 {/* ---------------2----------- */}
-                <div className='w-2/6 h-1/2 shadow-md bg-white p-4 rounded-xl'>
+                <div className='hidden md:block lg:w-2/6 h-1/2 shadow-md bg-white p-4 rounded-xl'>
                   <div className='flex space-x-5 pb-4 border-b border-gray-200 text-blackGreen'>
                     <img
                       src={bosphorus}

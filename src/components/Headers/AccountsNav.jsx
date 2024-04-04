@@ -13,9 +13,14 @@ import { FcCustomerSupport } from "react-icons/fc";
 // const AccountsNav = ({ user, logout }) => {
 const AccountsNav = ({ user}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isUserOptionsOpen, setIsUserOptionsOpen] = useState(false);
+
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+  const toggleUserOptions = () => {
+    setIsUserOptionsOpen(!isUserOptionsOpen);
   };
 
   return (
@@ -57,7 +62,7 @@ const AccountsNav = ({ user}) => {
                   />
                   <span className="text-blackGreen font-semibold hidden md:flex">{user.name}</span>
                 </button>
-                {isMenuOpen && (
+                {isUserOptionsOpen && (
                   <div className="absolute right-0 sm:right-5 lg:right-0 top-full mt-2 w-52 md:w-64 lg:w-48 bg-mintGreen shadow shadow-green-700 rounded-lg">
                     <div className="flex items-center justify-between p-4">
                       <div className='flex items-center'>
