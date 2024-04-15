@@ -15,6 +15,8 @@ const Account = React.lazy(() => import("./AccounFlows/Account"));
 import UserAccount from "./AccounFlows/UserAcoount";
 import PaymentMethod from "./AccounFlows/PaymentMethod";
 import TicketsBookings from "./AccounFlows/history/TicketsBookings";
+import FlightTicket from "./AccounFlows/history/FlightTicket";
+import StayTicket from "./AccounFlows/history/StayTicket";
 
 const BookingDetail = React.lazy(() => import("./HotelFlows/BookingDetail"));
 const FlightBooking = React.lazy(() => import("./FlightFlows/FlightBooking"));
@@ -34,14 +36,14 @@ function App() {
           <Route path="/verifyCode" element={<VerifyCode />} />
           <Route path="/setPassword" element={<SetPassword />} />
           <Route path="/signUp" element={<SignUp />} />
-
-          <Route path="account" element={<Account />}>
+          <Route path="account" element={<Account />} />
             <Route path="userAccount" element={<UserAccount />} />
-            <Route path="history" element={<TicketsBookings />} />
+            <Route path="history" element={<TicketsBookings />}>
+              <Route path="flightTicket" element={<FlightTicket />} />
+              <Route path="stayTicket" element={<StayTicket />} />
+            </Route>
             <Route path="paymentMethod" element={<PaymentMethod />} >
           </Route>
-         
-    
           {/* <Route path="/paymentForm" element={<PaymentForm />} /> */}
           <Route path="/bookingDetail" element={<BookingDetail />} />
           <Route path="/flightBooking" element={<FlightBooking />} />

@@ -3,6 +3,7 @@ import { IoChevronDownSharp } from "react-icons/io5";
 import { IoAirplane, IoBed } from 'react-icons/io5';
 import Emirate from "../../assets/emirates-airline.png"
 import Cvk from "../../assets/cvk.png";
+import {Link, Outlet } from "react-router-dom"
 
 import FlightTicket from './FlightTicket';
 import StayTicket from './StayTicket';
@@ -84,10 +85,10 @@ const TicketsBookings = () => {
       </div>
 
       <div className='flex mx-6 shadow-sm shadow-mintGreen font-semibold font-monts'>
-        <Link to='' className="w-1/2 flex py-4 text-blackGreen text-lg border-b-4 border-emerald-300">
+        <Link to='/history/flightTicket' className="w-1/2 flex py-4 text-blackGreen text-lg border-b-4 border-emerald-300">
           <IoAirplane className="mr-1 text-2xl" />Flights
         </Link>
-        <Link to='' className="w-1/2 ml-10 flex py-4 text-blackGreen text-lg">
+        <Link to='/history/stayTicket' className="w-1/2 ml-10 flex py-4 text-blackGreen text-lg">
           <IoBed className="mr-1 text-2xl" />Stays
         </Link>
       </div>
@@ -98,6 +99,7 @@ const TicketsBookings = () => {
       {stayTicketData.map((ticket, index) => (
         <StayTicket key={index} data={ticket} />
       ))}
+      <Outlet/>
     </div>
   )
 }

@@ -8,10 +8,10 @@ import { MdAccountCircle } from "react-icons/md";
 import { GoHistory } from "react-icons/go";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import UserAccount from "./UserAcoount";
-import TicketBooking from "./history/TicketsBookings"
-import Footer from "../components/Footer";
-import PaymentMethod from "./PaymentMethod";
+// import TicketBooking from "./history/TicketsBookings"
+// import PaymentMethod from "./PaymentMethod";
 import { Link, Outlet } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const Account = () => {
 
@@ -85,7 +85,7 @@ const Account = () => {
       </div>
 
         <div className="">
-          {/* <UserAccount/> */}
+          <UserAccount/>
           {/* <TicketBooking /> */}
           {/* <PaymentMethod /> */}
         </div>
