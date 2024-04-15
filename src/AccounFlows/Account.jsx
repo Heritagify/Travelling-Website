@@ -11,6 +11,7 @@ import UserAccount from "./UserAcoount";
 import TicketBooking from "./history/TicketsBookings"
 import Footer from "../components/Footer";
 import PaymentMethod from "./PaymentMethod";
+import { Link, Outlet } from "react-router-dom";
 
 const Account = () => {
 
@@ -66,28 +67,29 @@ const Account = () => {
       </div>
       <div className="pt-36"> {/* Add padding to the top */}
       <div className="flex flex-col md:flex-row items-center justify-between shadow-sm shadow-gray-300 mx-4 md:mx-14">
-        <div className="w-full flex items-center gap-1 p-2 text-blackGreen font-semibold font-monts hover:bg-mintGreen hover:rounded-xl cursor-pointer">
+        <Link to='/account/userAccount' className="w-full flex items-center gap-1 p-2 text-blackGreen font-semibold font-monts hover:bg-mintGreen hover:rounded-xl cursor-pointer">
             <span className="hidden md:inline-block text-gray-100 text-5xl ml-2 font-light">|</span>
             <MdAccountCircle className="text-2xl text-emerald-800"/>
             <span className="ml-2">Account</span>
-        </div>
-        <div className="w-full flex items-center gap-1 p-2 text-blackGreen font-semibold font-monts hover:bg-mintGreen hover:rounded-xl cursor-pointer">
+        </Link>
+        <Link to='/account/history' className="w-full flex items-center gap-1 p-2 text-blackGreen font-semibold font-monts hover:bg-mintGreen hover:rounded-xl cursor-pointer">
         <span className="hidden md:inline-block text-gray-100 text-5xl ml-2 font-light">|</span>
             <GoHistory className="text-2xl text-emerald-800"/>
             <span className="ml-2">History</span>
-        </div>
-        <div className="w-full flex items-center gap-1 p-2 text-blackGreen font-semibold font-monts hover:bg-mintGreen hover:rounded-xl cursor-pointer">
+        </Link>
+        <Link to='/account/paymentMethod' className="w-full flex items-center gap-1 p-2 text-blackGreen font-semibold font-monts hover:bg-mintGreen hover:rounded-xl cursor-pointer">
             <span className="hidden md:inline-block text-gray-300 text-5xl ml-2 font-light">|</span>
             <RiSecurePaymentLine className="text-2xl text-emerald-800"/>
             <span className="ml-2">Payment Methods</span>
-        </div>
+        </Link>
       </div>
 
         <div className="">
           {/* <UserAccount/> */}
           {/* <TicketBooking /> */}
-          <PaymentMethod />
+          {/* <PaymentMethod /> */}
         </div>
+      <Outlet />
       </div>
       {/* ------------FOOTER------------ */}
       <div className="mt-48">

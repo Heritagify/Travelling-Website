@@ -84,12 +84,12 @@ const TicketsBookings = () => {
       </div>
 
       <div className='flex mx-6 shadow-sm shadow-mintGreen font-semibold font-monts'>
-        <div className="w-1/2 flex py-4 text-blackGreen text-lg border-b-4 border-emerald-300">
+        <Link to='' className="w-1/2 flex py-4 text-blackGreen text-lg border-b-4 border-emerald-300">
           <IoAirplane className="mr-1 text-2xl" />Flights
-        </div>
-        <div className="w-1/2 ml-10 flex py-4 text-blackGreen text-lg">
+        </Link>
+        <Link to='' className="w-1/2 ml-10 flex py-4 text-blackGreen text-lg">
           <IoBed className="mr-1 text-2xl" />Stays
-        </div>
+        </Link>
       </div>
 
       {flightTicketData.map((ticket, index) => (

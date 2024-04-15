@@ -164,15 +164,15 @@ const HotelListing = () => {
 
       <div className='mx-4 md:mx-10 lg:mx-24 pt-8'>
       <h2 className='text-3xl md:text-3xl lg:text-2xl text-blackGreen font-semibold'>Amenities</h2>
-      <div className='md:grid grid-cols-2 text-blackGreen md:space-y-0 text-lg lg:text-sm font-monts font-semibold'>
+      <div className='md:grid grid-cols-2 text-blackGreen md:space-y-0 text-lg md:text-xl lg:text-sm font-monts font-semibold'>
         <button className='flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-24 md:hover:px-16 md:mr-44'><MdPool />Outdoor pool</button>
         <button className='flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-8 md:hover:px-16 md:mr-44'><MdPool />Indoor pool</button>
         <button className='flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-8 md:hover:px-16 md:mr-44'> <MdFitnessCenter />Fitness Center</button>
         <button className='flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-8 md:hover:px-16 md:mr-44'> <GiWineBottle />Bar/Lounge</button>
-        <button className='flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-8 md:hover:px-16 md:mr-44'> <MdSpa />Spa and Wellness center</button>
+        <button className='w-full flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-8 md:hover:px-16 md:mr-44'> <MdSpa />Spa and Wellness center</button>
         <button className='flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-8 md:hover:px-16 md:mr-44'><IoWifi />Free Wifi</button>
         <button className='flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-8 md:hover:px-16 md:mr-44'><IoRestaurant />Restaurant</button>
-        <button className='flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-8 md:hover:px-16 md:mr-44'> <GiCoffeeCup />Tea/ coffee machine </button>
+        <button className='w-full flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-8 md:hover:px-16 md:mr-44'> <GiCoffeeCup />Tea/ coffee machine </button>
         <button className='flex gap-1 hover:bg-blackGreen hover:text-mintGreen items-center p-1 py-2 rounded-xl hover:px-8 md:hover:px-16 md:mr-44'> <MdRoomService />Room Service</button>
         <button className='flex gap-1 font-medium text-red-500 p-1 py-2'>+24 more.....</button>
 
