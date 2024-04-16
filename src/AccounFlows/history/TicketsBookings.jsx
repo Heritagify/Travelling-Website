@@ -3,7 +3,7 @@ import { IoChevronDownSharp } from "react-icons/io5";
 import { IoAirplane, IoBed } from 'react-icons/io5';
 import Emirate from "../../assets/emirates-airline.png"
 import Cvk from "../../assets/cvk.png";
-import {Link, Outlet } from "react-router-dom"
+
 
 import FlightTicket from './FlightTicket';
 import StayTicket from './StayTicket';
@@ -99,7 +99,7 @@ const TicketsBookings = () => {
       {stayTicketData.map((ticket, index) => (
         <StayTicket key={index} data={ticket} />
       ))}
-      <Outlet/>
+
     </div>
   )
 }

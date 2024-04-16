@@ -54,7 +54,7 @@ const Footer = () => {
                 </div>
                 {/* .........2.... */}
                  <div className="space-y-1 ">
-                    <h1 className="font-bold text-2xl lg:text-xl">Our Acvtivities</h1>
+                    <h1 className="font-bold text-2xl lg:text-lg">Our Acvtivities</h1>
                     <p className="text-lg font-medium lg:text-sm  font-monts">Northern lights</p>
                     <p className="font-monts text-sm ">Cruising & Sailing</p>
                     <p className="font-monts text-sm">Multi-activities</p>
@@ -62,7 +62,7 @@ const Footer = () => {
                 </div>
                 {/* .........3.... */}
                  <div className="space-y-1 ">
-                    <h1 className="font-bold text-2xl lg:text-xl">Travel Blogs</h1>
+                    <h1 className="font-bold text-2xl lg:text-lg">Travel Blogs</h1>
                     <p className="text-sm  font-monts">Bali Travel Guide</p>
                     <p className="font-monts text-sm">Sri lanks Travel Guide</p>
                     <p className="font-monts text-sm">Peru Travel Guide</p>
@@ -70,13 +70,13 @@ const Footer = () => {
                 </div>
                 {/* .........4.... */}
                  <div className=" space-y-1 ">
-                    <h1 className="font-bold text-2xl lg:text-xl">About Us</h1>
+                    <h1 className="font-bold text-2xl lg:text-lg">About Us</h1>
                     <p className="text-sm  font-monts">Our Story</p>
                     <p className="font-monts text-sm">Work with us</p>
                 </div>
                 {/* .........5.... */}
                  <div className="space-y-1 ">
-                    <h1 className="font-bold text-2xl lg:text-xl">Contact Us</h1>
+                    <h1 className="font-bold text-2xl lg:text-lg">Contact Us</h1>
                     <p className="text-sm  font-monts">Our Story</p>
                     <p className="font-monts text-sm">Work with us</p>
                 </div>

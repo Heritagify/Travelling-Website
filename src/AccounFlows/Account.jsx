@@ -7,7 +7,7 @@ import { IoCloudUploadSharp } from "react-icons/io5";
 import { MdAccountCircle } from "react-icons/md";
 import { GoHistory } from "react-icons/go";
 import { RiSecurePaymentLine } from "react-icons/ri";
-import UserAccount from "./UserAcoount";
+// import UserAccount from "./UserAcoount";
 // import TicketBooking from "./history/TicketsBookings"
 // import PaymentMethod from "./PaymentMethod";
 import { Link, Outlet } from "react-router-dom";
@@ -84,11 +84,6 @@ const Account = () => {
         </Link>
       </div>
 
-        <div className="">
-          <UserAccount/>
-          {/* <TicketBooking /> */}
-          {/* <PaymentMethod /> */}
-        </div>
       <Outlet />
       </div>
       {/* ------------FOOTER------------ */}
