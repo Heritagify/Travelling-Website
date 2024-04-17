@@ -8,15 +8,15 @@ const TicketsBookings = () => {
   return (
     <div className='mx-20'>
       <div className='flex justify-between mt-5'>
-        <h1 className=' text-2xl font-bold font-monts text-blackGreen'>Tickets/Bookings</h1>
+        <h1 className=' text-xl font-bold font-monts text-blackGreen'>Tickets/Bookings</h1>
         <button className='flex items-center gap-1 font-medium font-monts'>Upcoming <IoChevronDownSharp /></button>
       </div>
 
       <div className='flex mx-6 shadow-sm shadow-mintGreen font-semibold font-monts'>
-        <Link to='/account/ticketBookings/flightTickets' className="w-1/2 flex py-4 text-blackGreen text-lg border-b-4 border-emerald-300">
+        <Link to='/account/ticketBookings/flightTickets' className="w-1/2 flex px-2 py-4 text-blackGreen text-sm border-b-4 border-emerald-300">
           <IoAirplane className="mr-1 text-2xl" />Flights
         </Link>
-        <Link to='/account/ticketBookings/stayTicket' className="w-1/2 ml-10 flex py-4 text-blackGreen text-lg">
+        <Link to='/account/ticketBookings/stayTicket' className="w-1/2 ml-10 flex py-4 text-blackGreen text-sm">
           <IoBed className="mr-1 text-2xl" />Stays
         </Link>
       </div>
