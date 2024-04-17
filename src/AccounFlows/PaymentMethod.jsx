@@ -93,9 +93,9 @@ const PaymentMethod = () => {
 
     <div className='mx-2 md:mx-24 my-3'>
       <h1 className='text-2xl font-semibold font-monts text-blackGreen'>Payment methods</h1>
-      <div className='border-8 md:flex md:gap-3 mt-4 mx-3'>
+      <div className='md:flex border-8 space-y-4 md:space-y-0 md:gap-3 mt-4 md:mx-3'>
         {cards.map((card, index) => (
-          <div key={index} className='h-48 w-80 bg-mintGreen text-blackGreen rounded-2xl space-y-12'>
+          <div key={index} className='md:h-48 md:w-80 bg-mintGreen text-blackGreen rounded-2xl py-3 md:py-0 space-y-12'>
             <div className='flex justify-between m-3'>
               <div className='font-bold font-monts'>
                 <p>{'**** **** **** ' + card.lastFourDigits}</p>
@@ -122,7 +122,7 @@ const PaymentMethod = () => {
           </div>
         ))}
 
-        <div className='flex flex-col justify-center font-monts items-center border-2 border-dashed border-mintGreen h-40 w-72 rounded-2xl '>
+        <div className='flex flex-col justify-center font-monts items-center border-2 border-dashed border-mintGreen h-48 md:h-40 md:w-72 rounded-2xl '>
           <CiCirclePlus className='text-5xl text-mintGreen cursor-pointer' onClick={openModal} />
           <p className='text-xs font-semibold'>Add a new card</p>
         </div>
@@ -130,12 +130,12 @@ const PaymentMethod = () => {
 
       {/* Modal */}
       {showModal && (
-        <div className='fixed inset-0 z-50 flex items-center justify-center backdrop-filter backdrop-blur-sm'>
-          <div className='bg-mintGreen rounded-lg px-5 py-4 w-1/3'>
+        <div className='fixed inset-0 z-50 flex items-center justify-center backdrop-filter backdrop-blur-sm md:backdrop-blur-sm'>
+          <div className='bg-mintGreen rounded-lg border-4 border-green-700 px-5 py-4 mx-2 md:mx-0 md:w-2/3 lg:w-1/3'>
             <div className="flex justify-end">
               <IoClose className="text-xl text-gray-500 cursor-pointer" onClick={closeModal} />
             </div>
-            <h2 className='text-center text-monts text-blackGreen text-xl font-semibold mb-4'>Add a new card</h2>
+            <h2 className='text-center text-monts text-blackGreen text-2xl md:text-xl font-semibold mb-4'>Add a new card</h2>
             {validationError && <p className="text-red-500 mb-2 text-xs">{validationError}</p>}
             <form onSubmit={(e) => {
               e.preventDefault();
@@ -144,14 +144,14 @@ const PaymentMethod = () => {
             }}
             className='flex flex-col gap-4'>
               <fieldset className='border border-green-800 rounded-md'>
-                <legend className='mx-2 text-xs font-medium font-monts text-blackGreen'>Card number</legend>
+                <legend className='mx-2 md:text-xs font-medium font-monts text-blackGreen'>Card number</legend>
                 <div className="flex items-center">
                   <input
                     type='text'
                     name='cardNumber'
                     placeholder='1234 4444 5567 8906'
                     onChange={handleCardNumberChange}
-                    className='w-full input text- font-medium focus:outline-none p-1 px-2 bg-transparent text-blackGreen placeholder-gray-500 placeholder:text-xs'
+                    className='w-full input font-medium focus:outline-none p-1 px-2 bg-transparent text-blackGreen placeholder-gray-500 md:placeholder:text-xs'
                   />
                   {cardType && (
                     <div className="ml-2">
@@ -166,16 +166,16 @@ const PaymentMethod = () => {
               </fieldset>
               <div className='flex justify-between gap-3'>
                 <fieldset className='w-1/2 border border-green-800 rounded-md'>
-                  <legend className='mx-2 text-xs font-medium font-monts text-blackGreen'>Expiry date</legend>
+                  <legend className='mx-2 md:text-xs font-medium font-monts text-blackGreen'>Expiry date</legend>
                   <input
                     type='text'
                     name='expiryDate'
                     placeholder='01/28'
-                    className='w-full input text- font-medium focus:outline-none p-1 px-2 bg-transparent text-blackGreen placeholder-gray-500 placeholder:text-xs'
+                    className='w-full input text- font-medium focus:outline-none p-1 px-2 bg-transparent text-blackGreen placeholder-gray-500 md:placeholder:text-xs'
                   />
                 </fieldset>
                 <fieldset className='w-1/2 border border-green-800 rounded-md'>
-                  <legend className='mx-2 text-xs font-medium font-monts text-blackGreen'>CVC</legend>
+                  <legend className='mx-2 md:text-xs font-medium font-monts text-blackGreen'>CVC</legend>
                   <input
                     type='text'
                     name='cvc'
@@ -185,17 +185,17 @@ const PaymentMethod = () => {
                 </fieldset>
               </div>
               <fieldset className='border border-green-800 rounded-md'>
-                <legend className='mx-2 text-xs font-medium font-monts text-blackGreen'>Name on card</legend>
+                <legend className='mx-2 md:text-xs font-medium font-monts text-blackGreen'>Name on card</legend>
                 <input
                   type='text'
                   name='nameOnCard'
                   placeholder='John Doe'
-                  className='w-full input text- font-medium focus:outline-none p-1 px-2 bg-transparent text-blackGreen placeholder-gray-500 placeholder:text-xs'
+                  className='w-full input text- font-medium focus:outline-none p-1 px-2 bg-transparent text-blackGreen placeholder-gray-500 md:placeholder:text-xs'
                 />
               </fieldset>
               <button type='submit' className='bg-blackGreen text-lightMint py-2 rounded-lg cursor-pointer my-2'>Add Card</button>
             </form>
-            <p className='text-xs text-gray-500 py-4'>By confirming your subscription, you allow The Outdoor Inn Crowd Limited to charge your
+            <p className='text-sm md:text-xs text-gray-500 py-4'>By confirming your subscription, you allow The Outdoor Inn Crowd Limited to charge your
             card for this payment and future payments in accordance with their terms.
             You can always cancel your subscription.
           </p>

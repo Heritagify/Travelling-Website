@@ -41,7 +41,7 @@ const Account = () => {
   return (
     <div className="bg-gray-100">
       <AccountsNav user={user} />
-      <div className="h-56 mt-20 rounded-lg mx-14 my-5 relative bg-cover bg-center" style={{ backgroundImage: `url(${coverPhoto})` }}>
+      <div className="h-56 mt-20 rounded-lg mx-3 md:mx-14 my-5 relative bg-cover bg-center" style={{ backgroundImage: `url(${coverPhoto})` }}>
         <input
           type="file"
           id="coverPhotoInput"
