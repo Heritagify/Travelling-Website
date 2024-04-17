@@ -1,12 +1,14 @@
 import React from 'react';
 import { IoChevronDownSharp } from "react-icons/io5";
 import { IoAirplane, IoBed } from 'react-icons/io5';
-import Emirate from "../../assets/emirates-airline.png"
-import Cvk from "../../assets/cvk.png";
+import Emirate from "../../src/assets/emirates-airline.png"
+import Cvk from "../../src/assets/cvk.png";
+import { Link, Outlet } from "react-router-dom";
 
 
-import FlightTicket from './FlightTicket';
-import StayTicket from './StayTicket';
+
+import FlightTicket from './history/FlightTicket';
+import StayTicket from './history/StayTicket';
 
 const TicketsBookings = () => {
   const flightTicketData = [

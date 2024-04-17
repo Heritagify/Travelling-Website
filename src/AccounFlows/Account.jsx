@@ -7,9 +7,6 @@ import { IoCloudUploadSharp } from "react-icons/io5";
 import { MdAccountCircle } from "react-icons/md";
 import { GoHistory } from "react-icons/go";
 import { RiSecurePaymentLine } from "react-icons/ri";
-// import UserAccount from "./UserAcoount";
-// import TicketBooking from "./history/TicketsBookings"
-// import PaymentMethod from "./PaymentMethod";
 import { Link, Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
 
@@ -72,8 +69,8 @@ const Account = () => {
             <MdAccountCircle className="text-2xl text-emerald-800"/>
             <span className="ml-2">Account</span>
         </Link>
-        <Link to='/account/history' className="w-full flex items-center gap-1 p-2 text-blackGreen font-semibold font-monts hover:bg-mintGreen hover:rounded-xl cursor-pointer">
-        <span className="hidden md:inline-block text-gray-100 text-5xl ml-2 font-light">|</span>
+        <Link to='/account/ticketBookings' className="w-full flex items-center gap-1 p-2 text-blackGreen font-semibold font-monts hover:bg-mintGreen hover:rounded-xl cursor-pointer">
+            <span className="hidden md:inline-block text-gray-100 text-5xl ml-2 font-light">|</span>
             <GoHistory className="text-2xl text-emerald-800"/>
             <span className="ml-2">History</span>
         </Link>
@@ -84,8 +81,8 @@ const Account = () => {
         </Link>
       </div>
 
-      <Outlet />
       </div>
+      <Outlet />
       {/* ------------FOOTER------------ */}
       <div className="mt-48">
         <Footer/>
