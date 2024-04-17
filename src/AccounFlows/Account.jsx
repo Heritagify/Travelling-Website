@@ -52,7 +52,7 @@ const Account = () => {
         />
         <label
           htmlFor="coverPhotoInput"
-          className="absolute flex items-center bottom-4 right-4 px-3 py-2 bg-mintGreen text-xs text-blackGreen rounded-lg hover:bg-blackGreen hover:text-mintGreen cursor-pointer"
+          className="absolute flex items-center bottom-4 right-1 md:right-4 px-3 py-2 bg-mintGreen text-xs text-blackGreen rounded-lg hover:bg-blackGreen hover:text-mintGreen cursor-pointer"
           style={{ zIndex: 1 }} // Ensure label covers the entire parent container
         >
           <IoCloudUploadSharp style={{ marginRight: '0.5rem' }} />Upload new cover

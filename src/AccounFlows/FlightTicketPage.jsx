@@ -41,7 +41,7 @@ const FlightTicketPage = () => {
 
 
   return (
-    <div className="mx-20">
+    <div className="md:mx-20">
       {flightTicketData.map((ticket, index) => (
         <FlightTicket key={index} data={ticket} />
       ))}

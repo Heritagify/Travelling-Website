@@ -6,7 +6,7 @@ import { Link, Outlet } from "react-router-dom";
 
 const TicketsBookings = () => {
   return (
-    <div className='mx-20'>
+    <div className=' mx-3 md:mx-20'>
       <div className='flex justify-between mt-5'>
         <h1 className=' text-xl font-bold font-monts text-blackGreen'>Tickets/Bookings</h1>
         <button className='flex items-center gap-1 font-medium font-monts'>Upcoming <IoChevronDownSharp /></button>

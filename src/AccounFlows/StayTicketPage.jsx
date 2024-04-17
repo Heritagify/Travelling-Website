@@ -37,7 +37,7 @@ const StayTicketPage = () => {
     ];
 
   return (
-    <div className="mx-20">
+    <div className="md:mx-20">
       {stayTicketData.map((ticket, index) => (
         <StayTicket key={index} data={ticket} />
       ))}
