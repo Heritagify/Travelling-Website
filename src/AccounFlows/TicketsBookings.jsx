@@ -13,7 +13,7 @@ const TicketsBookings = () => {
       </div>
 
       <div className='flex mx-6 shadow-sm shadow-mintGreen font-semibold font-monts'>
-        <Link to='/account/ticketBookings/flightTickets' className="w-1/2 flex px-2 py-4 text-blackGreen text-sm border-b-4 border-emerald-300">
+        <Link to='/account/ticketBookings' className="w-1/2 flex px-2 py-4 text-blackGreen text-sm border-b-4 border-emerald-300">
           <IoAirplane className="mr-1 text-2xl" />Flights
         </Link>
         <Link to='/account/ticketBookings/stayTicket' className="w-1/2 ml-10 flex py-4 text-blackGreen text-sm">

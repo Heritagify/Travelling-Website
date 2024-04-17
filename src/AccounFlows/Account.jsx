@@ -64,7 +64,7 @@ const Account = () => {
       </div>
       <div className="pt-36"> {/* Add padding to the top */}
       <div className="flex flex-col md:flex-row items-center justify-between shadow-sm shadow-gray-300 mx-4 md:mx-14">
-        <Link to='/account/userAccount' className="w-full flex items-center gap-1 p-2 text-blackGreen font-semibold font-monts hover:bg-mintGreen hover:rounded-xl cursor-pointer">
+        <Link to='/account' className="w-full flex items-center gap-1 p-2 text-blackGreen font-semibold font-monts hover:bg-mintGreen hover:rounded-xl cursor-pointer">
             <span className="hidden md:inline-block text-gray-100 text-5xl ml-2 font-light">|</span>
             <MdAccountCircle className="text-2xl text-emerald-800"/>
             <span className="ml-2">Account</span>
