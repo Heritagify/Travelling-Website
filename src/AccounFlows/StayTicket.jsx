@@ -1,5 +1,5 @@
 import React from 'react';
-import Cvk from "../../assets/cvk.png";
+import Cvk from "../../src/assets/cvk.png";
 import { IoTime } from "react-icons/io5";
 import { MdSensorDoor } from "react-icons/md";
 import { FaChevronRight } from "react-icons/fa";

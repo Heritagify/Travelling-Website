@@ -15,8 +15,8 @@ const Account = React.lazy(() => import("./AccounFlows/Account"));
 import UserAccount from "./AccounFlows/UserAcoount";
 import PaymentMethod from "./AccounFlows/PaymentMethod";
 import TicketsBookings from "./AccounFlows/TicketsBookings";
-// import FlightTicket from "./AccounFlows/history/FlightTicket";
-// import StayTicket from "./AccounFlows/history/StayTicket";
+import FlightTicketPage from "./AccounFlows/FlightTicketPage";
+import StayTicketPage from "./AccounFlows/StayTicketPage";
 
 const BookingDetail = React.lazy(() => import("./HotelFlows/BookingDetail"));
 const FlightBooking = React.lazy(() => import("./FlightFlows/FlightBooking"));
@@ -38,8 +38,11 @@ function App() {
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/account" element={<Account />} >
             <Route path="/account/userAccount" element={<UserAccount />} />
-            <Route path="/account/ticketBookings" element={<TicketsBookings />} />
-            <Route path="paymentMethod" element={<PaymentMethod />} />
+            <Route path="/account/ticketBookings" element={<TicketsBookings />}>
+              <Route path="/account/ticketBookings/flightTickets" element={<FlightTicketPage />} />
+              <Route path="/account/ticketBookings/stayTicket" element={<StayTicketPage />} />
+            </Route>
+            <Route path="/account/paymentMethod" element={<PaymentMethod />} />
           </Route>
           {/* <Route path="/paymentForm" element={<PaymentForm />} /> */}
           <Route path="/bookingDetail" element={<BookingDetail />} />

@@ -1,5 +1,5 @@
 import React from 'react';
-import Emirate from "../../assets/emirates-airline.png"
+import Emirate from "../../src/assets/emirates-airline.png"
 import { FaCalendarAlt } from "react-icons/fa";
 import { IoTime } from "react-icons/io5";
 import { GiGate } from "react-icons/gi";
@@ -60,8 +60,8 @@ function FlightTicket({ data }) {
         </div>
       </div>
       <div className='flex space-x-2 items-center'>
-        <button className='font-semibold font-monts rounded-md text-sm text-blackGreen bg-mintGreen items-center p-3 px-4'>Download Ticket</button>
-        <button className='border border-mintGreen p-3 items-center rounded-md'>
+        <button className='font-semibold font-monts rounded-md text-xs text-blackGreen bg-mintGreen items-center p-2'>Download Ticket</button>
+        <button className='border border-mintGreen p-2 items-center rounded-md'>
           <FaChevronRight className='text-blackGreen'/>
         </button>
       </div>
@@ -88,7 +88,7 @@ function TicketBooking() {
   return (
     <div>
       {ticketsData.map((ticket, index) => (
-        <TicketCard key={index} data={ticket} />
+        <FlightTicket key={index} data={ticket} />
       ))}
     </div>
   );

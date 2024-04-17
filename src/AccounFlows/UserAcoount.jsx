@@ -36,8 +36,8 @@ const UserAccount = () => {
   };
 
   return (
-    <div className="mt-5 mx-16">
-      <h1 className="text-2xl font-monts font-semibold mb-2">Account</h1>
+    <div className="mt-5 mx-3 md:mx-16">
+      <h1 className="text-2xl  text-center md:text-left font-monts font-semibold mb-2">Account</h1>
       <div className="shadow-md border-2 rounded-2xl shadow-gray-300 p-5">
         {Object.entries(userData).map(([field, value]) => (
           <div key={field} className="mb-4">
