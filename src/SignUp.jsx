@@ -50,36 +50,36 @@ const SignUp = ({ addUserToDatabase}) => {
   }, []);
 
   return (
-    <div className={`flex px-40 h-screen bg-gradient-to-r from-blue-100 to-green-200 transition duration-500 ease-in-out ${fadeIn ? 'opacity-100' : 'opacity-0'}`}>
-      <div className="w-1/2 flex justify-center">
+    <div className={`md:flex md:px-40 md:h-screen bg-gradient-to-r from-blue-100 to-green-200 transition duration-500 ease-in-out ${fadeIn ? 'opacity-100' : 'opacity-0'}`}>
+      <div className="md:w-1/2 md:flex justify-center">
         <img
           src={myImage}
           alt="Resort with umbrellas and swimming pool"
-          className='w-[24rem] h-[34rem] my-6 rounded-3xl'
+          className='hidden md:block w-[24rem] h-[34rem] my-6 rounded-3xl'
         />
       </div>
 
-      <div className={`w-2/3 p-3 px-10 text-blackGreen ${fadeIn ? 'opacity-100' : 'opacity-0'}`}>
+      <div className={`md:w-2/3 p-3 px-3 md:px-10 text-blackGreen ${fadeIn ? 'opacity-100' : 'opacity-0'}`}>
         <Link to="/">
           <img src={logo} className='w-28 mb-6' alt="Logo" />
         </Link>
 
         <div className="">
           <div>
-            <h1 className='text-2xl md:text-2xl md:font-bold tracking-wide font-semibold font-monts'>Sign Up</h1>
-            <p className='text-xs text-gray-500 font-monts pb-3 font-medium'>Let’s get you all set up so you can access your personal account.</p>
+            <h1 className='text-3xl md:text-2xl md:font-bold tracking-wide font-semibold font-monts'>Sign Up</h1>
+            <p className='text-sm md:text-xs text-gray-500 font-monts pb-3 font-medium'>Let’s get you all set up so you can access your personal account.</p>
           </div>
 
-          <form className="space-y-3 onSubmit={formik.handleSubmit}">
-            <div className="flex gap-4">
+          <form className="space-y-2 md:space-y-3 onSubmit={formik.handleSubmit}">
+            <div className="md:flex gap-4 space-y-2 md:space-y-0">
 
-            <div className="w-1/2">
+            <div className="md:w-1/2">
               <div>
                 <fieldset className="p-1 border border-blue-400 rounded-xl">
-                  <legend className="text-xs">First Name</legend>
+                  <legend className="md:text-xs mx-2 md:mx-0">First Name</legend>
                   <input
                     id="firstName"
-                    className={`w-full bg-transparent text-sm text-gray-800 outline-none ${
+                    className={`w-full mx-1 md:mx-0 bg-transparent text-sm text-gray-800 outline-none ${
                       formik.touched.firstName && formik.errors.firstName
                         ? 'border-red-500'
                         : ''
@@ -94,13 +94,13 @@ const SignUp = ({ addUserToDatabase}) => {
               </div>
             </div>
 
-                <div className="w-1/2">
+                <div className="md:w-1/2">
                   <div>
                     <fieldset className="border border-blue-400 rounded-xl p-1">
-                      <legend className="text-xs mx-2">Last Name</legend>
+                      <legend className="md:text-xs mx-2">Last Name</legend>
                       <input
                         id="lastName"
-                        className={`w-full bg-transparent text-sm text-gray-800 outline-none ${
+                        className={`w-full mx-1 md:mx-0 bg-transparent text-sm text-gray-800 outline-none ${
                           formik.touched.lastName && formik.errors.lastName
                             ? 'border-red-500'
                             : ''
@@ -118,11 +118,11 @@ const SignUp = ({ addUserToDatabase}) => {
 
 
  <div>
-  <div className="flex gap-4">
-    <div className="w-1/2">
+  <div className="md:flex gap-4 space-y-2 md:space-y-0">
+    <div className="md:w-1/2">
       <div>
         <fieldset className="border border-blue-500 rounded-xl p-1 px-2">
-          <legend className="text-xs mx-2">Email</legend>
+          <legend className="md:text-xs mx-2">Email</legend>
           <input
             id="email"
             type="email"
@@ -141,10 +141,10 @@ const SignUp = ({ addUserToDatabase}) => {
       </div>
     </div>
 
-    <div className="w-1/2">
+    <div className="md:w-1/2">
       <div>
         <fieldset className="border border-blue-400 rounded-xl p-1 px-2">
-          <legend className="text-xs">Phone Number</legend>
+          <legend className="md:text-xs">Phone Number</legend>
           <input
             id="phoneNumber"
             type="tel"
@@ -168,7 +168,7 @@ const SignUp = ({ addUserToDatabase}) => {
 
   <div className=" my-2">
     <fieldset className="flex justify-between border border-blue-400 rounded-xl p-1 px-2 ">
-      <legend className="text-xs">Password</legend>
+      <legend className="md:text-xs mx-2 md:mx-0">Password</legend>
       <input
         id="password"
         type={formik.values.showPassword1 ? 'text' : 'password'}
@@ -194,7 +194,7 @@ const SignUp = ({ addUserToDatabase}) => {
 
   <div className="2">
     <fieldset className="flex justify-between border border-blue-400 rounded-xl p-1 px-">
-      <legend className="text-xs">Confirm Password</legend>
+      <legend className="md:text-xs mx-2 md:mx-0">Confirm Password</legend>
       <input
         id="confirmPassword"
         type={formik.values.showPassword2 ? 'text' : 'password'}
@@ -224,10 +224,10 @@ const SignUp = ({ addUserToDatabase}) => {
             <input
                 type='checkbox'
                 id="agreeCheckbox"
-                className={` bg-transparent text-sm text-gray-800 outline-none ${formik.touched.agreeCheckbox && formik.errors.agreeCheckbox ? 'border-red-500' : ''}`}
+                className={` bg-transparent w-4 md:w-2 text-gray-800 outline-none ${formik.touched.agreeCheckbox && formik.errors.agreeCheckbox ? 'border-red-500' : ''}`}
                 {...formik.getFieldProps('agreeCheckbox')}
             />
-            <label htmlFor="agreeCheckbox" className='text-monts text-sm'>
+            <label htmlFor="agreeCheckbox" className='text-monts md:text-sm'>
               I agree to all the <span className='text-red-600'>Terms</span> and <span className='text-red-600'>Privacy Policies</span>
             </label>
                 {formik.touched.agreeCheckbox && formik.errors.agreeCheckbox && <p className="text-xs text-red-500">{formik.errors.agreeCheckbox}</p>}
@@ -237,13 +237,13 @@ const SignUp = ({ addUserToDatabase}) => {
             <button className="w-full py-2 text-sm rounded-md font-semibold hover:text-white bg-gradient-to-r from-blue-300 to-green-400">
               Create account
             </button>
-            <p className='text-sm text-center'>Already have an account?
+            <p className='md:text-sm text-center'>Already have an account?
               <Link to="/login" className='text-red-500 px-1'>Login</Link>
             </p>
             <div className="flex items-center py-3">
-              <div className="w-52 border-t border-blue-300"></div>
-              <div className="mx-1 text-sm text-gray-500">or login with</div>
-              <div className="w-52 border-t border-blue-300"></div>
+              <div className="w-32 md:w-52 border-t border-blue-300"></div>
+              <div className="mx-1 md:text-sm text-gray-500">or login with</div>
+              <div className="w-32 md:w-52 border-t border-blue-300"></div>
             </div>
 
             {/* -----------OTHER LOGIN OPTIONS----------- */}
