@@ -32,9 +32,9 @@ const Login = () => {
 
 
   return (
-    <div className='px-28 py-2 h-screen bg-gradient-to-r from-blue-100 to-green-200 '>
-        <div className='flex justify-between'>
-            <div className='w-2/5 ml-10 mt-5 text-blackGreen'>
+    <div className='px-3 md:px-28 py-2 h-screen bg-gradient-to-r from-blue-100 to-green-200 '>
+        <div className='md:flex justify-between'>
+            <div className='md:w-2/5 md:ml-10 mt-5 text-blackGreen'>
                 <Link to="/">
                   <img src={logo} className='w-36 mb-8'/>
                 </Link>
@@ -45,18 +45,18 @@ const Login = () => {
 
                 <div className='space-y-3 pb-8'>
                     <div>
-                        <h1 className='text-2xl md:text-4xl tracking-wide font-semibold font-monts'>Login</h1>
-                        <p className='w-96 text-xs font-monts py-2 font-semibold'>Login to access your Golobe account</p>
+                        <h1 className='text-4xl md:text-4xl tracking-wide font-semibold font-monts'>Login</h1>
+                        <p className='w-96 md:text-xs font-monts py-2 font-semibold'>Login to access your Golobe account</p>
                     </div>
                     <fieldset className='border-2 border-gray-400 rounded-md'>
-                        <legend className=' ml-3 text-sm font-medium'>Email</legend>
-                        <input className='w-full outline-none bg-transparent px-2 text-sm text-gray-600' placeholder='heritagify@gmail.com' />
+                        <legend className=' ml-3 text-lg md:text-sm font-medium'>Email</legend>
+                        <input className='w-full outline-none bg-transparent px-2 py-2 md:py-1 text-sm text-gray-600' placeholder='heritagify@gmail.com' />
                     </fieldset>
-                    <fieldset className='flex px-2 py-1 border-2 border-gray-400 rounded-md'>
-                        <legend className='text-sm font-monts font-medium'>Password</legend>
+                    <fieldset className='flex px-2 py-2 md:py-1 border-2 border-gray-400 rounded-md'>
+                        <legend className='text-lg md:text-sm font-monts font-medium'>Password</legend>
 
                         <input
-                            className='w-full outline-none px-2 text-sm bg-transparent' 
+                            className='w-full outline-none px-2 text-sm bg-transparent'
                             type={showPassword ? 'text' : 'password'}
                             placeholder='BaZGut456!@#'
                         />
@@ -110,7 +110,7 @@ const Login = () => {
             </div>
 
                 <img src={myImage}
-                    className='w-[30rem] h-[34rem] my-6 rounded-3xl'
+                    className='hidden lg:block w-[30rem] h-[34rem] my-6 rounded-3xl'
              />
 
         </div>
