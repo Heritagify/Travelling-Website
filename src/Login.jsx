@@ -50,44 +50,44 @@ const Login = () => {
                     </div>
                     <fieldset className='border-2 border-gray-400 rounded-md'>
                         <legend className=' ml-3 text-lg md:text-sm font-medium'>Email</legend>
-                        <input className='w-full outline-none bg-transparent px-2 py-2 md:py-1 text-sm text-gray-600' placeholder='heritagify@gmail.com' />
+                        <input className='w-full outline-none bg-transparent px-2 py-2 md:py-1 text-sm text-gray-600 placeholder:text-lg md:placeholder:text-sm' placeholder='heritagify@gmail.com' />
                     </fieldset>
-                    <fieldset className='flex px-2 py-2 md:py-1 border-2 border-gray-400 rounded-md'>
-                        <legend className='text-lg md:text-sm font-monts font-medium'>Password</legend>
+                    <fieldset className='flex py-2 md:py-1 border-2 border-gray-400 rounded-md'>
+                        <legend className='text-lg md:text-sm ml-3 font-monts font-medium'>Password</legend>
 
                         <input
-                            className='w-full outline-none px-2 text-sm bg-transparent'
+                            className='w-full outline-none px-3 text-sm bg-transparent placeholder:text-lg md:placeholder:text-sm'
                             type={showPassword ? 'text' : 'password'}
                             placeholder='BaZGut456!@#'
                         />
 
                         {showPassword ? (
-                        <FaEyeSlash className="cursor-pointer" onClick={togglePasswordVisibility} />
+                        <FaEyeSlash className="cursor-pointer mr-2 text-xl md:text-sm" onClick={togglePasswordVisibility} />
                         ) : (
-                        <FaEye className="cursor-pointer" onClick={togglePasswordVisibility} />
+                        <FaEye className="cursor-pointer mr-2 text-xl md:text-sm" onClick={togglePasswordVisibility} />
                         )}
                     </fieldset>
-                    <div className="flex text-sm pb-2 font-medium justify-between">
+                    <div className="flex md:text-sm pb-2 font-medium justify-between">
                         <div className='flex space-x-1 pl-2'>
                             <input type='checkbox' className='cursor-pointer'></input>
                             <p>Remember me</p>
                         </div>
                         <Link to="/forgottenPassword">
-                          <p className='text-red-600 text-sm'>Forgot Password</p>
+                          <p className='text-red-600 md:text-sm'>Forgot Password</p>
                         </Link>
                     </div>
                     <button className='w-full mt-7 py-2 rounded-md font-semibold bg-emerald-200'>Login</button>
 
-                      <p className='text-sm text-center'>Don’t have an account? 
+                      <p className='md:text-sm text-center'>Don’t have an account? 
                         <Link to="/signUp" className='text-red-500 px-1'>Sign up
                         </Link>
                       </p>
 
 
                     <div className="flex items-center py-3">
-                              <div className="w-44 border-t border-blue-500"></div>
-                              <div className="mx-2 text-sm text-gray-500">or login with</div>
-                              <div className="w-44 border-t border-blue-500"></div>
+                              <div className="w-32 md:w-44 border-t border-blue-500"></div>
+                              <div className="mx-2 md:text-sm text-gray-500">or login with</div>
+                              <div className="w-32 md:w-44 border-t border-blue-500"></div>
                           </div>
 
                     {/* -----------OTHER LOGIN OPTIONS----------- */}
