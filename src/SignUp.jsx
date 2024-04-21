@@ -126,7 +126,7 @@ const SignUp = ({ addUserToDatabase}) => {
           <input
             id="email"
             type="email"
-            className={`w-full bg-transparent text-sm text-gray-800 outline-none ${
+            className={`w-full bg-transparent text-sm text-gray-800 outline-none placeholder:text-lg md:placeholder:text-sm ${
               formik.touched.email && formik.errors.email
                 ? 'border-red-500'
                 : ''
@@ -150,7 +150,7 @@ const SignUp = ({ addUserToDatabase}) => {
             type="tel"
             inputMode="numeric"
             pattern="[0-9]*"
-            className={`w-full bg-transparent text-sm text-gray-800 outline-none ${
+            className={`w-full bg-transparent text-sm text-gray-800 outline-none placeholder:text-lg md:placeholder:text-sm ${
               formik.touched.phoneNumber && formik.errors.phoneNumber
                 ? 'border-red-500'
                 : ''

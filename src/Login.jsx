@@ -32,7 +32,7 @@ const Login = () => {
 
 
   return (
-    <div className='px-3 md:px-28 py-2 h-screen bg-gradient-to-r from-blue-100 to-green-200 '>
+    <div className='border-4 border-red-700 px-3 lg:px-28 py-2 md:py-36 h-screen bg-gradient-to-r from-blue-100 to-green-200 '>
         <div className='md:flex justify-between'>
             <div className='md:w-2/5 md:ml-10 mt-5 text-blackGreen'>
                 <Link to="/">
@@ -110,7 +110,7 @@ const Login = () => {
             </div>
 
                 <img src={myImage}
-                    className='hidden lg:block w-[30rem] h-[34rem] my-6 rounded-3xl'
+                    className='hidden md:block w-[30rem] h-[34rem] my-6 rounded-3xl'
              />
 
         </div>
