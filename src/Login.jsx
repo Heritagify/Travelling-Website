@@ -32,7 +32,7 @@ const Login = () => {
 
 
   return (
-    <div className='border-4 border-red-700 px-3 lg:px-28 py-2 h-screen bg-gradient-to-r from-blue-100 to-green-200 '>
+    <div className='px-3 lg:px-28 py-2 h-screen bg-gradient-to-r from-blue-100 to-green-200 '>
         
         {/* for tablet screens */}
         <Link to="/">
