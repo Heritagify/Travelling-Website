@@ -46,11 +46,13 @@ const AccountsNav = ({ user}) => {
           </Link>
 
           <div className='flex gap-6'>
-            <div className="hidden md:flex items-center space-x-1">
-              <FaHeart className="text-xl text-blackGreen" />
-              <span className="text-sm md:text-base">Favourites</span>
-              <span className="text-lg">|</span>
-            </div>
+            <Link to='/favorites'>
+              <div className="hidden md:flex items-center space-x-1">
+                <FaHeart className="text-xl text-blackGreen" />
+                <span className="text-sm md:text-base">Favourites</span>
+                <span className="text-lg">|</span>
+              </div>
+            </Link>
 
             {user && (
               <div className="relative">

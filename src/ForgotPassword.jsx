@@ -37,7 +37,7 @@ const ForgotPassword = () => {
     <div className="bg-gradient-to-r from-blue-100 to-green-200 animate-gradient min-h-screen">
       <div className="md:flex">
 
-          <div className="md:w-1/2 py-4 md:py-0 md:p-10">
+          <div className="md:w-1/2 py-4 md:p-10">
             <Link to="/">
               <img src={ logo } className="w-28 mx-8" alt="logo"/>
             </Link>
@@ -71,24 +71,24 @@ const ForgotPassword = () => {
                 <button className='w-full py-2 rounded-md font-semibold hover:text-white bg-gradient-to-r from-blue-900 to-green-800'>Submit</button>
 
                 <div className="flex items-center py-6">
-                  <div className="w-28 md:w-48 border-t border-blue-500"></div>
+                  <div className="w-28 md:w-56 border-t border-blue-500"></div>
                   <div className="mx-3 md:text-sm text-gray-500">or login with</div>
-                  <div className="w-28 md:w-48 border-t border-blue-500"></div>
+                  <div className="w-28 md:w-52 border-t border-blue-500"></div>
                 </div>
 
 
                   {/* -----------OTHER LOGIN OPTIONS----------- */}
                   <div className="flex justify-between">
                     <button
-                      className="text-blue-400 p-2 px-10 border rounded-xl border-blue-300">
+                      className="text-blue-400 p-2 px-10 border rounded-xl border-blue-300 hover:bg-gradient-to-r from-blue-900 to-green-800">
                       < FaFacebook  className="text-3xl animate-bounce"/>
                       </button>
                     <button
-                      className="text-rainbow p-3 rounded-full border border-emerald-500">
+                      className="text-rainbow p-3 rounded-full border border-emerald-500 hover:bg-gradient-to-r from-blue-900 to-green-800">
                         < FaGooglePlusG className="text-red-400 text-3xl animate-bounce"/>
                       </button>
                     <button
-                      className="p-2 px-10 border border-blue-300">
+                      className="p-2 px-10 border border-blue-300 hover:bg-gradient-to-r from-blue-900 to-green-800">
                       <FaApple className="text-3xl animate-bounce" />
                     </button>
                   </div>
