@@ -95,10 +95,10 @@ const Login = () => {
 
 
                     <div className="flex items-center py-3">
-                              <div className="w-32 md:w-44 border-t border-blue-500"></div>
-                              <div className="mx-2 md:text-sm text-gray-500">or login with</div>
-                              <div className="w-32 md:w-44 border-t border-blue-500"></div>
-                          </div>
+                      <div className="w-32 md:w-44 border-t border-blue-500"></div>
+                      <div className="mx-2 md:text-sm text-gray-500">or login with</div>
+                      <div className="w-32 md:w-44 border-t border-blue-500"></div>
+                    </div>
 
                     {/* -----------OTHER LOGIN OPTIONS----------- */}
                     <div className="flex justify-center space-x-9">
