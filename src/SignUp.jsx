@@ -109,7 +109,10 @@ const SignUp = ({ addUserToDatabase }) => {
           <img src={logo} className="w-28 mb-6" alt="Logo" />
         </Link>
 
-        <form className="border-2 border-red-500">
+        <form
+          onSubmit={handleSubmit}
+          className=""
+        >
           <div>
             <h1 className="text-3xl md:text-2xl md:font-bold tracking-wide font-semibold font-monts">
               Sign Up
@@ -119,9 +122,7 @@ const SignUp = ({ addUserToDatabase }) => {
             </p>
           </div>
 
-          <form
-            onSubmit={handleSubmit}
-            className="space-y-2 md:space-y-3 onSubmit={formik.handleSubmit}"
+          <div className="space-y-2 md:space-y-3 onSubmit={formik.handleSubmit}"
           >
             <div className="md:flex gap-4 space-y-2 md:space-y-0">
               <div className="md:w-1/2">
@@ -138,7 +139,7 @@ const SignUp = ({ addUserToDatabase }) => {
                           : ""
                       }`}
                       placeholder="Heritage"
-                      {...formik.getFieldProps("firstName")}
+                      // {...formik.getFieldProps("firstName")}
                       onChange={(e) => setFirstName(e.target.value)}
                     />
                   </fieldset>
@@ -162,7 +163,7 @@ const SignUp = ({ addUserToDatabase }) => {
                           : ""
                       }`}
                       placeholder="Harrison"
-                      {...formik.getFieldProps("lastName")}
+                      // {...formik.getFieldProps("lastName")}
                       onChange={(e) => setLastName(e.target.value)}
                     />
                   </fieldset>
@@ -190,7 +191,7 @@ const SignUp = ({ addUserToDatabase }) => {
                             : ""
                         }`}
                         placeholder="heritageolaiya@gmail.com"
-                        {...formik.getFieldProps("email")}
+                        // {...formik.getFieldProps("email")}
                         onChange={(e) => setEmail(e.target.value)}
                       />
                     </fieldset>
@@ -267,7 +268,7 @@ const SignUp = ({ addUserToDatabase }) => {
                 )}
               </div>
 
-              <div className="2">
+              <div className="">
                 <fieldset className="flex justify-between border border-blue-400 rounded-xl p-1 px-">
                   <legend className="md:text-xs mx-2 md:mx-0">
                     Confirm Password
@@ -304,7 +305,7 @@ const SignUp = ({ addUserToDatabase }) => {
                   )}
               </div>
             </div>
-          </form>
+          </div>
 
           <div className="flex gap-2 mt-4">
             <input
