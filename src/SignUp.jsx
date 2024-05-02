@@ -139,7 +139,7 @@ const SignUp = ({ addUserToDatabase }) => {
                           : ""
                       }`}
                       placeholder="Heritage"
-                      // {...formik.getFieldProps("firstName")}
+                      {...formik.getFieldProps("firstName")}
                       onChange={(e) => setFirstName(e.target.value)}
                     />
                   </fieldset>
@@ -163,7 +163,7 @@ const SignUp = ({ addUserToDatabase }) => {
                           : ""
                       }`}
                       placeholder="Harrison"
-                      // {...formik.getFieldProps("lastName")}
+                      {...formik.getFieldProps("lastName")}
                       onChange={(e) => setLastName(e.target.value)}
                     />
                   </fieldset>
@@ -191,7 +191,7 @@ const SignUp = ({ addUserToDatabase }) => {
                             : ""
                         }`}
                         placeholder="heritageolaiya@gmail.com"
-                        // {...formik.getFieldProps("email")}
+                        {...formik.getFieldProps("email")}
                         onChange={(e) => setEmail(e.target.value)}
                       />
                     </fieldset>
