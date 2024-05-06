@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "zarifprogrammer.tailwind-snippets"
+        "zarifprogrammer.tailwind-snippets",
+        "bradlc.vscode-tailwindcss"
     ]
 }
