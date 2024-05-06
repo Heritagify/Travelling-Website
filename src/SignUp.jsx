@@ -9,29 +9,10 @@ import { FaGooglePlusG } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-import Axios from 'axios'
+import Axios from "axios";
 
 const SignUp = ({ addUserToDatabase }) => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [password, setPassword] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    Axios.post('http://localhost:4000/auth/signup', {
-      firstName,
-      lastName,
-      email,
-      phoneNumber,
-      password
-    }).then(response => {
-      console.log(response)
-    }).catch(err => {
-      console.log(err);
-    })
-  }
 
   const formik = useFormik({
     initialValues: {
@@ -69,18 +50,41 @@ const SignUp = ({ addUserToDatabase }) => {
 
     onSubmit: (values) => {
       // Handle form submission
-      addUserToDatabase(values);
+      Axios.post('http://localhost:4000/auth/signup', {
+        firstName: values.firstName,
+        lastName: values.lastName,
+        email: values.email,
+        phoneNumber: values.phoneNumber,
+        password: values.password
+    })
+    .then(response => {
+      console.log(response)
+      // Handle successful response, e.g., show a success message, redirect, etc.
+    })
+    .catch(err => {
+      console.log(err);
+      // Handle error, e.g., show an error message
+    })
     },
   });
   const [fadeIn, setFadeIn] = useState(false);
 
   const togglePasswordVisibility1 = () => {
-    formik.setFieldValue("password", !formik.values.showPassword1);
+    formik.setFieldValue(
+      "password",
+      formik.values.password,
+      formik.values.password.type === "password" ? "text" : "password"
+    );
   };
 
   const togglePasswordVisibility2 = () => {
-    formik.setFieldValue("confirmPassword", !formik.values.showPassword2);
+    formik.setFieldValue(
+      "password",
+      formik.values.password,
+      formik.values.password.type === "password" ? "text" : "password"
+    );
   };
+
   useEffect(() => {
     // Set fadeIn to true after the component has mounted
     setFadeIn(true);
@@ -109,10 +113,7 @@ const SignUp = ({ addUserToDatabase }) => {
           <img src={logo} className="w-28 mb-6" alt="Logo" />
         </Link>
 
-        <form
-          onSubmit={handleSubmit}
-          className=""
-        >
+        <form onSubmit={formik.handleSubmit} className="">
           <div>
             <h1 className="text-3xl md:text-2xl md:font-bold tracking-wide font-semibold font-monts">
               Sign Up
@@ -122,8 +123,7 @@ const SignUp = ({ addUserToDatabase }) => {
             </p>
           </div>
 
-          <div className="space-y-2 md:space-y-3 onSubmit={formik.handleSubmit}"
-          >
+          <div className="space-y-2 md:space-y-3 onSubmit={formik.handleSubmit}">
             <div className="md:flex gap-4 space-y-2 md:space-y-0">
               <div className="md:w-1/2">
                 <div>
@@ -140,7 +140,6 @@ const SignUp = ({ addUserToDatabase }) => {
                       }`}
                       placeholder="Heritage"
                       {...formik.getFieldProps("firstName")}
-                      onChange={(e) => setFirstName(e.target.value)}
                     />
                   </fieldset>
                   {formik.touched.firstName && formik.errors.firstName && (
@@ -164,7 +163,7 @@ const SignUp = ({ addUserToDatabase }) => {
                       }`}
                       placeholder="Harrison"
                       {...formik.getFieldProps("lastName")}
-                      onChange={(e) => setLastName(e.target.value)}
+                      // onChange={(e) => setLastName(e.target.value)}
                     />
                   </fieldset>
                   {formik.touched.lastName && formik.errors.lastName && (
@@ -192,7 +191,7 @@ const SignUp = ({ addUserToDatabase }) => {
                         }`}
                         placeholder="heritageolaiya@gmail.com"
                         {...formik.getFieldProps("email")}
-                        onChange={(e) => setEmail(e.target.value)}
+                        // onChange={(e) => setEmail(e.target.value)}
                       />
                     </fieldset>
                     {formik.touched.email && formik.errors.email && (
@@ -220,7 +219,7 @@ const SignUp = ({ addUserToDatabase }) => {
                         }`}
                         placeholder="(+234) -8100000336"
                         {...formik.getFieldProps("phoneNumber")}
-                        onChange={(e) => setPhoneNumber(e.target.value)}
+                        // onChange={(e) => setPhoneNumber(e.target.value)}
                       />
                     </fieldset>
                     {formik.touched.phoneNumber &&
@@ -239,7 +238,6 @@ const SignUp = ({ addUserToDatabase }) => {
                   <input
                     id="password"
                     type={formik.values.showPassword1 ? "text" : "password"}
-                    onChange={(e) => setPassword(e.target.value)}
                     className={`w-full bg-transparent text-sm text-gray-800 outline-none ${
                       formik.touched.password && formik.errors.password
                         ? "border-red-500"
