@@ -67,23 +67,19 @@ const SignUp = ({ addUserToDatabase }) => {
     })
     },
   });
+
   const [fadeIn, setFadeIn] = useState(false);
 
-  const togglePasswordVisibility1 = () => {
-    formik.setFieldValue(
-      "password",
-      formik.values.password,
-      formik.values.password.type === "password" ? "text" : "password"
-    );
-  };
+  const [showPassword, setShowPassword] = useState(false);
+const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-  const togglePasswordVisibility2 = () => {
-    formik.setFieldValue(
-      "password",
-      formik.values.password,
-      formik.values.password.type === "password" ? "text" : "password"
-    );
-  };
+const togglePasswordVisibility1 = () => {
+  setShowPassword((prevState) => !prevState);
+};
+
+const togglePasswordVisibility2 = () => {
+  setShowConfirmPassword((prevState) => !prevState);
+};
 
   useEffect(() => {
     // Set fadeIn to true after the component has mounted
@@ -163,7 +159,6 @@ const SignUp = ({ addUserToDatabase }) => {
                       }`}
                       placeholder="Harrison"
                       {...formik.getFieldProps("lastName")}
-                      // onChange={(e) => setLastName(e.target.value)}
                     />
                   </fieldset>
                   {formik.touched.lastName && formik.errors.lastName && (
@@ -191,7 +186,6 @@ const SignUp = ({ addUserToDatabase }) => {
                         }`}
                         placeholder="heritageolaiya@gmail.com"
                         {...formik.getFieldProps("email")}
-                        // onChange={(e) => setEmail(e.target.value)}
                       />
                     </fieldset>
                     {formik.touched.email && formik.errors.email && (
@@ -219,7 +213,6 @@ const SignUp = ({ addUserToDatabase }) => {
                         }`}
                         placeholder="(+234) -8100000336"
                         {...formik.getFieldProps("phoneNumber")}
-                        // onChange={(e) => setPhoneNumber(e.target.value)}
                       />
                     </fieldset>
                     {formik.touched.phoneNumber &&
@@ -237,7 +230,8 @@ const SignUp = ({ addUserToDatabase }) => {
                   <legend className="md:text-xs mx-2 md:mx-0">Password</legend>
                   <input
                     id="password"
-                    type={formik.values.showPassword1 ? "text" : "password"}
+                    type={showPassword ? "text" : "password"}
+                        {...formik.getFieldProps("password")}
                     className={`w-full bg-transparent text-sm text-gray-800 outline-none ${
                       formik.touched.password && formik.errors.password
                         ? "border-red-500"
@@ -273,7 +267,8 @@ const SignUp = ({ addUserToDatabase }) => {
                   </legend>
                   <input
                     id="confirmPassword"
-                    type={formik.values.showPassword2 ? "text" : "password"}
+                    type={showConfirmPassword ? "text" : "password"}
+                        {...formik.getFieldProps("confirmPassword")}
                     className={`w-full bg-transparent text-sm text-gray-800 outline-none ${
                       formik.touched.confirmPassword &&
                       formik.errors.confirmPassword
