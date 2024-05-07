@@ -7,12 +7,12 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa6";
 import { FaGooglePlusG } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
 import Axios from "axios";
 
-const SignUp = ({ addUserToDatabase }) => {
+const SignUp = () => {
 
+  const navigate = useNavigate()
 
   const formik = useFormik({
     initialValues: {
@@ -48,9 +48,12 @@ const SignUp = ({ addUserToDatabase }) => {
       ),
     }),
 
+
     onSubmit: (values) => {
       // Handle form submission
-      Axios.post('http://localhost:4000/auth/signup', {
+      console.log("Form values:", values);
+      Axios.post('http://localhost:4000/auth/signup',
+      {
         firstName: values.firstName,
         lastName: values.lastName,
         email: values.email,
@@ -58,7 +61,9 @@ const SignUp = ({ addUserToDatabase }) => {
         password: values.password
     })
     .then(response => {
-      console.log(response)
+      if(response.data.status){
+        navigate('/login')
+      }
       // Handle successful response, e.g., show a success message, redirect, etc.
     })
     .catch(err => {
@@ -119,7 +124,7 @@ const togglePasswordVisibility2 = () => {
             </p>
           </div>
 
-          <div className="space-y-2 md:space-y-3 onSubmit={formik.handleSubmit}">
+          <div className="space-y-2 md:space-y-3">
             <div className="md:flex gap-4 space-y-2 md:space-y-0">
               <div className="md:w-1/2">
                 <div>
@@ -323,7 +328,9 @@ const togglePasswordVisibility2 = () => {
           </div>
 
           <div className="space-y-2 mt-4">
-            <button className="w-full py-2 text-sm rounded-md font-semibold hover:text-white bg-gradient-to-r from-blue-300 to-green-400">
+            <button
+              type="submit"
+              className="w-full py-2 text-sm rounded-md font-semibold hover:text-white bg-gradient-to-r from-blue-300 to-green-400">
               Create account
             </button>
             <p className="md:text-sm text-center">
