@@ -8,38 +8,36 @@ import { FaApple } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 // import FlippingCarousel from './components/FlipCarousel';
 import SkeletonLoader from "./components/SkeletonLoader";
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
- 
+
   const navigate = useNavigate();
 
   const validationSchema = Yup.object({
     email: Yup.string()
-      .email('Invalid email address')
-      .required('Email is required'),
+      .email("Invalid email address")
+      .required("Email is required"),
     password: Yup.string()
-      .min(8, 'Password must be at least 8 characters')
-      .required('Password is required'),
+      .min(8, "Password must be at least 8 characters")
+      .required("Password is required"),
   });
 
   const formik = useFormik({
     initialValues: {
-      email: '',
-      password: '',
+      email: "",
+      password: "",
     },
     validationSchema,
     onSubmit: (values) => {
       // Handle form submission
-      console.log('Form values:', values);
+      console.log("Form values:", values);
       // Perform any necessary actions, such as authentication or API calls
     },
   });
-
-  
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -95,32 +93,33 @@ const Login = () => {
                 <input
                   type="email"
                   className={`w-full outline-none bg-transparent px-2 py-2 md:py-4 lg:py-1 text-sm text-gray-600 placeholder:text-lg md:placeholder:text-xl lg:placeholder:text-sm ${
-                    formik.touched.email && formik.errors.email ? 'border-red-500' : ''
+                    formik.touched.email && formik.errors.email
+                      ? "border-red-500"
+                      : ""
                   }`}
                   placeholder="heritagify@gmail.com"
-                  {...formik.getFieldProps('email')}
+                  {...formik.getFieldProps("email")}
                 />
-                {formik.touched.email && formik.errors.email ? (
-                  <div className="text-red-500">{formik.errors.email}</div>
-                ) : null}
               </fieldset>
+                {formik.touched.email && formik.errors.email ? (
+                  <div className="text-red-600 font-medium md:text-xs border-2 border-red-600">{formik.errors.email}</div>
+                ) : null}
 
               <fieldset className="flex py-2 md:py-4 lg:py-1 border-2 border-gray-400 rounded-md">
                 <legend className="text-lg md:text-2xl lg:text-sm ml-3 font-monts font-medium">
                   Password
                 </legend>
-
-                <input
-                  className={`w-full outline-none px-3 text-sm bg-transparent placeholder:text-lg md:placeholder:text-xl lg:placeholder:text-sm ${
-                    formik.touched.password && formik.errors.password ? 'border-red-500' : ''
-                  }`}
-                  type={showPassword ? 'text' : 'password'}
-                  placeholder="BaZGut456!@#"
-                  {...formik.getFieldProps('password')}
-                />
-                {formik.touched.password && formik.errors.password ? (
-                  <div className="text-red-500">{formik.errors.password}</div>
-                ) : null}
+                  <input
+                    className={`w-full outline-none px-3 text-sm bg-transparent placeholder:text-lg md:placeholder:text-xl lg:placeholder:text-sm ${
+                      formik.touched.password && formik.errors.password
+                        ? "border-red-500"
+                        : ""
+                    }`}
+                    type={showPassword ? "text" : "password"}
+                    placeholder="BaZGut456!@#"
+                    {...formik.getFieldProps("password")}
+                  />
+                  
 
                 {showPassword ? (
                   <FaEyeSlash
@@ -134,16 +133,23 @@ const Login = () => {
                   />
                 )}
               </fieldset>
+
+              {formik.touched.password && formik.errors.password ? (
+                    <div className="text-red-500 text-xs">{formik.errors.password}</div>
+                  ) : null}
+
+
+
               <div className="flex pb-2 font-medium justify-between">
                 <div className="flex space-x-1 pl-2 text-2xl lg:text-sm">
                   <input
                     type="checkbox"
-                    className="md:w-6 lg:w-4 cursor-pointer"
-                  ></input>
-                  <p>Remember me</p>
+                    className="w-5 md:w-6 lg:w-4 cursor-pointer"
+                  />
+                  <p className="text-xl lg:text-sm">Remember me</p>
                 </div>
                 <Link to="/forgottenPassword">
-                  <p className="text-red-600 text-2xl lg:text-sm">
+                  <p className="text-red-600 text-xl lg:text-sm cursor-pointer">
                     Forgot Password
                   </p>
                 </Link>
