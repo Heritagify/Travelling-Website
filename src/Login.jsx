@@ -10,12 +10,16 @@ import { Link, useNavigate } from "react-router-dom";
 import SkeletonLoader from "./components/SkeletonLoader";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import Axios from "axios";
+
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   const navigate = useNavigate();
+
+  
 
   const validationSchema = Yup.object({
     email: Yup.string()
@@ -24,17 +28,37 @@ const Login = () => {
     password: Yup.string()
       .min(8, "Password must be at least 8 characters")
       .required("Password is required"),
+      agreeCheckbox: Yup.boolean().oneOf(
+        [true],
+        "Please agree to the Terms and Privacy Policies."
+      ),
   });
 
   const formik = useFormik({
     initialValues: {
       email: "",
       password: "",
+      agreeCheckbox: false,
     },
     validationSchema,
     onSubmit: (values) => {
       // Handle form submission
       console.log("Form values:", values);
+      Axios.post("http://localhost:3000/auth/login", {
+        email: values.email,
+        password: values.password,
+      })
+        .then((response) => {
+          if (response.data.status) {
+            navigate('/home');
+          } else {
+            // setError("Invalid username or password");
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+          // setError("An error occurred. Please try again later.");
+        });
       // Perform any necessary actions, such as authentication or API calls
     },
   });
@@ -51,10 +75,6 @@ const Login = () => {
 
     fetchData();
   }, []);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
 
   return (
     <div className="px-3 lg:px-28 py-2 h-screen bg-gradient-to-r from-blue-100 to-green-200 ">
@@ -102,7 +122,7 @@ const Login = () => {
                 />
               </fieldset>
                 {formik.touched.email && formik.errors.email ? (
-                  <div className="text-red-600 font-medium md:text-xs border-2 border-red-600">{formik.errors.email}</div>
+                  <div className="text-red-600 font-medium text-lg md:text-xs font-serif">{formik.errors.email}</div>
                 ) : null}
 
               <fieldset className="flex py-2 md:py-4 lg:py-1 border-2 border-gray-400 rounded-md">
@@ -135,7 +155,7 @@ const Login = () => {
               </fieldset>
 
               {formik.touched.password && formik.errors.password ? (
-                    <div className="text-red-500 text-xs">{formik.errors.password}</div>
+                    <div className="text-red-500 font-medium text-lg md:text-xs font-serif">{formik.errors.password}</div>
                   ) : null}
 
 
@@ -144,7 +164,12 @@ const Login = () => {
                 <div className="flex space-x-1 pl-2 text-2xl lg:text-sm">
                   <input
                     type="checkbox"
-                    className="w-5 md:w-6 lg:w-4 cursor-pointer"
+                    className={` bg-transparent w-4 md:w-2 text-gray-800 outline-none ${
+                      formik.touched.agreeCheckbox && formik.errors.agreeCheckbox
+                        ? "border-red-500"
+                        : ""
+                    }`}
+                    {...formik.getFieldProps("agreeCheckbox")}
                   />
                   <p className="text-xl lg:text-sm">Remember me</p>
                 </div>
@@ -154,6 +179,13 @@ const Login = () => {
                   </p>
                 </Link>
               </div>
+
+              {formik.touched.agreeCheckbox && formik.errors.agreeCheckbox && (
+              <p className="text-xs text-red-500">
+                {formik.errors.agreeCheckbox}
+              </p>
+            )}
+            
               <button
                 type="submit"
                 className="w-full mt-7 py-2 rounded-md font-semibold bg-emerald-200"
