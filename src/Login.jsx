@@ -8,13 +8,38 @@ import { FaApple } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 // import FlippingCarousel from './components/FlipCarousel';
 import SkeletonLoader from "./components/SkeletonLoader";
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+ 
   const navigate = useNavigate();
+
+  const validationSchema = Yup.object({
+    email: Yup.string()
+      .email('Invalid email address')
+      .required('Email is required'),
+    password: Yup.string()
+      .min(8, 'Password must be at least 8 characters')
+      .required('Password is required'),
+  });
+
+  const formik = useFormik({
+    initialValues: {
+      email: '',
+      password: '',
+    },
+    validationSchema,
+    onSubmit: (values) => {
+      // Handle form submission
+      console.log('Form values:', values);
+      // Perform any necessary actions, such as authentication or API calls
+    },
+  });
+
+  
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -44,7 +69,7 @@ const Login = () => {
         className="lg:hidden hidden md:block w-full h-96 my-6 rounded-3xl"
       />
 
-      <form onSubmit={handleSubmit} className="lg:flex justify-between">
+      <form onSubmit={formik.handleSubmit} className="lg:flex justify-between">
         <div className="lg:w-2/5 lg:ml-10 mt-5 text-blackGreen">
           <Link to="/">
             <img src={logo} className="block md:hidden lg:block w-36 mb-8" />
@@ -62,28 +87,40 @@ const Login = () => {
                   Login to access your Golobe account
                 </p>
               </div>
+
               <fieldset className="border-2 border-gray-400 rounded-md">
                 <legend className=" ml-3 text-lg md:text-2xl lg:text-sm font-medium">
                   Email
                 </legend>
                 <input
                   type="email"
-                  className="w-full outline-none bg-transparent px-2 py-2 md:py-4 lg:py-1 text-sm text-gray-600 placeholder:text-lg md:placeholder:text-xl lg:placeholder:text-sm"
+                  className={`w-full outline-none bg-transparent px-2 py-2 md:py-4 lg:py-1 text-sm text-gray-600 placeholder:text-lg md:placeholder:text-xl lg:placeholder:text-sm ${
+                    formik.touched.email && formik.errors.email ? 'border-red-500' : ''
+                  }`}
                   placeholder="heritagify@gmail.com"
-                  onChange={(e) => setEmail(e.target.value)}
+                  {...formik.getFieldProps('email')}
                 />
+                {formik.touched.email && formik.errors.email ? (
+                  <div className="text-red-500">{formik.errors.email}</div>
+                ) : null}
               </fieldset>
+
               <fieldset className="flex py-2 md:py-4 lg:py-1 border-2 border-gray-400 rounded-md">
                 <legend className="text-lg md:text-2xl lg:text-sm ml-3 font-monts font-medium">
                   Password
                 </legend>
 
                 <input
-                  className="w-full outline-none px-3 text-sm bg-transparent placeholder:text-lg md:placeholder:text-xl lg:placeholder:text-sm"
-                  type={showPassword ? "text" : "password"}
+                  className={`w-full outline-none px-3 text-sm bg-transparent placeholder:text-lg md:placeholder:text-xl lg:placeholder:text-sm ${
+                    formik.touched.password && formik.errors.password ? 'border-red-500' : ''
+                  }`}
+                  type={showPassword ? 'text' : 'password'}
                   placeholder="BaZGut456!@#"
-                  onChange={(e) => setPassword(e.target.value)}
+                  {...formik.getFieldProps('password')}
                 />
+                {formik.touched.password && formik.errors.password ? (
+                  <div className="text-red-500">{formik.errors.password}</div>
+                ) : null}
 
                 {showPassword ? (
                   <FaEyeSlash
@@ -111,7 +148,11 @@ const Login = () => {
                   </p>
                 </Link>
               </div>
-              <button className="w-full mt-7 py-2 rounded-md font-semibold bg-emerald-200">
+              <button
+                type="submit"
+                className="w-full mt-7 py-2 rounded-md font-semibold bg-emerald-200"
+                disabled={formik.isSubmitting}
+              >
                 Login
               </button>
 
