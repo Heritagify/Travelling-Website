@@ -52,7 +52,7 @@ const SignUp = () => {
     onSubmit: (values) => {
       // Handle form submission
       console.log("Form values:", values);
-      Axios.post('http://localhost:4000/auth/signup',
+      Axios.post('http://localhost:3000/auth/signup',
       {
         firstName: values.firstName,
         lastName: values.lastName,
