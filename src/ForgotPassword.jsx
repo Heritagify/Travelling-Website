@@ -27,8 +27,7 @@ const ForgotPassword = () => {
 
     onSubmit: (values) => {
       // Handling form submission here...............
-      console.log(values);
-      Axios.post("http://localhost:3000/auth/forgottenPassword", {
+      Axios.post("http://localhost:3000/auth/forgotten-password", {
         email: values.email,
       }).then((response) => {
         if (response.data.status) {
