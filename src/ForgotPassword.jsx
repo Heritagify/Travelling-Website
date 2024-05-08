@@ -5,7 +5,7 @@ import { IoChevronBack } from "react-icons/io5";
 import { FaFacebook } from "react-icons/fa6";
 import { FaGooglePlusG } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
-import { Link} from 'react-router-dom';
+import { useNavigate, Link} from 'react-router-dom';
 import myImage from './assets/login1.jpg'
 
 
@@ -19,18 +19,34 @@ import myImage from './assets/login1.jpg'
 
 const ForgotPassword = () => {
 
+  const navigate = useNavigate();
+
+  const validationSchema: Yup.object({
+    email: Yup.string().email('Invalid email address').required('Email is required'),
+  });
+
   const formik = useFormik({
     initialValues: {
       email: '',
-    },
-    validationSchema: Yup.object({
-      email: Yup.string().email('Invalid email address').required('Email is required'),
-    }),
+    }, validationSchema,
+
     onSubmit: (values) => {
-      // Handle form submission here
+      // Handling form submission here...............
       console.log(values);
+      Axios.post("http://localhost:3000/auth/forgottenPassword", {
+        email: values.email,
+      }).then(response => {
+        if(response.data.status) {
+          alert("check your email for the reset password link"
+            + "\nIf you don\'t see it in your inbox,"
+            + "\nplease check your spam folder");
+          navigate("/login")
+        } else {
+          alert("This account does not exist.")
+        }
+      })
     },
-  });
+  })
 
 
   return (
@@ -104,4 +120,4 @@ const ForgotPassword = () => {
   )
 }
 
-export default ForgotPassword
+export default ForgotPassword;

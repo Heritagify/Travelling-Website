@@ -19,7 +19,7 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  
+  Axios.defaults.withCredentials = true;
 
   const validationSchema = Yup.object({
     email: Yup.string()
@@ -41,8 +41,9 @@ const Login = () => {
       agreeCheckbox: false,
     },
     validationSchema,
+
     onSubmit: (values) => {
-      // Handle form submission
+      // Handling form submission here..............
       console.log("Form values:", values);
       Axios.post("http://localhost:3000/auth/login", {
         email: values.email,
@@ -50,7 +51,7 @@ const Login = () => {
       })
         .then((response) => {
           if (response.data.status) {
-            navigate('/home');
+            navigate('/');
           } else {
             // setError("Invalid username or password");
           }
