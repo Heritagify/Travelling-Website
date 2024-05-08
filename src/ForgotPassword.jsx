@@ -8,6 +8,8 @@ import { FaApple } from "react-icons/fa";
 import { useNavigate, Link } from "react-router-dom";
 import myImage from "./assets/login1.jpg";
 
+import Axios from 'axios'
+
 const ForgotPassword = () => {
   const navigate = useNavigate();
 
