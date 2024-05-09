@@ -8,7 +8,7 @@ import { FaApple } from "react-icons/fa";
 import { useNavigate, Link } from "react-router-dom";
 import myImage from "./assets/login1.jpg";
 
-import Axios from 'axios'
+import Axios from "axios";
 
 const ForgotPassword = () => {
   const navigate = useNavigate();
@@ -92,7 +92,8 @@ const ForgotPassword = () => {
                 {formik.errors.email}
               </div>
             ) : null}
-            <link to={`/reset-password/${resetToken}`}
+            <link
+              to={`/reset-password/${resetToken}`}
               type="submit"
               className="w-full py-2 rounded-md font-semibold hover:text-white bg-gradient-to-r from-blue-900 to-green-800"
             >
