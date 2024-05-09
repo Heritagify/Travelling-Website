@@ -51,7 +51,7 @@ const Login = () => {
       })
         .then((response) => {
           if (response.data.status) {
-            navigate('/');
+            navigate('/account');
           } else {
             // setError("Invalid username or password");
           }

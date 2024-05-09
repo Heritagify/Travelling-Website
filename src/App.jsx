@@ -8,7 +8,7 @@ const Login = React.lazy(() => import("./Login"));
 const Flights = React.lazy(() => import("./Flights"));
 const ForgotPassword = React.lazy(() => import("./ForgotPassword"));
 const VerifyCode = React.lazy(() => import("./VerifyCode"));
-const SetPassword = React.lazy(() => import("./SetPassword"));
+const ResetPassword = React.lazy(() => import("./ResetPassword"));
 const SignUp = React.lazy(() => import("./SignUp"));
 
 const Account = React.lazy(() => import("./AccounFlows/Account"));
@@ -34,7 +34,7 @@ function App() {
           <Route path="/flight" element={<Flights />} />
           <Route path="/forgottenPassword" element={<ForgotPassword />} />
           <Route path="/verifyCode" element={<VerifyCode />} />
-          <Route path="/setPassword" element={<SetPassword />} />
+          <Route path="/resetPassword/:token" element={<ResetPassword />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/account" element={<Account />} >
             <Route path="/account" element={<UserAccount />} />

@@ -5,9 +5,11 @@ import { Link } from 'react-router-dom';
 import logo from './assets/footLogo.png';
 import myImage from './assets/login1.jpg';
 
-const SetPassword = () => {
+const ResetPassword = () => {
   const [showPassword1, setShowPassword1] = useState(false);
   const [showPassword2, setShowPassword2] = useState(false);
+  const [resetToken, setResetToken] = useState('');
+
 
   const togglePasswordVisibility1 = () => {
     setShowPassword1(!showPassword1);
@@ -17,11 +19,33 @@ const SetPassword = () => {
     setShowPassword2(!showPassword2);
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('/api/reset-password', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ token: resetToken, newPassword }),
+      });
+
+      const data = await response.json();
+      console.log(data);
+      // Handle the response as needed (e.g., show a success message, redirect to login, etc.)
+    } catch (err) {
+      console.error(err);
+      // Handle the error as needed (e.g., show an error message)
+    }
+  };
+
   return (
     <div className="block md:flex bg-gray-200 min-h-screen">
       <div className="md:w-1/2 md:p-8 lg:p-14">
         <img src={logo} className="w-32 md:w-28 mx-auto md:mx-0" alt="logo" />
-        <div className="pt-8 mx-3 md:mx-0 md:ml-8 text-blackGreen">
+        <form onSubmit={handleSubmit}
+         className="pt-8 mx-3 md:mx-0 md:ml-8 text-blackGreen">
           <Link to="/login" className="flex gap-1 items-center cursor-pointer">
             <IoChevronBack /> Back to login
           </Link>
@@ -63,7 +87,7 @@ const SetPassword = () => {
           <button className="w-full lg:w-96 py-2 rounded-md font-semibold hover:text-white bg-gradient-to-r from-blue-300 to-green-400">
             Set password
           </button>
-        </div>
+        </form>
       </div>
       <div className="w-full md:w-2/3 lg:w-1/2 py-12 lg:py-2">
         <div className="items-center flex justify-center">
@@ -74,4 +98,4 @@ const SetPassword = () => {
   );
 };
 
-export default SetPassword;
+export default ResetPassword;
