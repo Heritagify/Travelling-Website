@@ -92,13 +92,13 @@ const ForgotPassword = () => {
                 {formik.errors.email}
               </div>
             ) : null}
-            <link
-              to={`/reset-password/${resetToken}`}
+            <button
+              // to={`/reset-password/${resetToken}`}
               type="submit"
               className="w-full py-2 rounded-md font-semibold hover:text-white bg-gradient-to-r from-blue-900 to-green-800"
             >
               Submit
-            </link>
+            </button>
 
             <div className="flex items-center py-6">
               <div className="w-28 md:w-56 border-t border-blue-500"></div>
