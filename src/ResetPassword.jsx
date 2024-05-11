@@ -8,8 +8,14 @@ import myImage from "./assets/login1.jpg";
 
 const ResetPassword = () => {
   const { token } = useParams();
+  const navigate = useNavigate();
   const [showPassword1, setShowPassword1] = useState(false);
   const [showPassword2, setShowPassword2] = useState(false);
+  const [newPassword, setNewPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
+
 
   const togglePasswordVisibility1 = () => {
     setShowPassword1(!showPassword1);
@@ -67,8 +73,10 @@ const ResetPassword = () => {
             <input
               type={showPassword1 ? "text" : "password"}
               name="newPassword"
+              value={newPassword}
               className="w-full p-1 outline-none px-2 bg-transparent"
               placeholder="Enter new password"
+              onChange={(e) => setNewPassword(e.target.value)}
             />
             {showPassword1 ? (
               <FaEyeSlash
