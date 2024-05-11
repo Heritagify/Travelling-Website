@@ -36,7 +36,7 @@ const ForgotPassword = () => {
               "\nIf you don't see it in your inbox," +
               "\nplease check your spam folder"
           );
-          navigate("/Login");
+          navigate("/verifyCode");
         } else {
           alert("This account does not exist.");
         }
