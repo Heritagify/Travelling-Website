@@ -1,8 +1,7 @@
-import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { IoChevronBack } from "react-icons/io5";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import logo from "./assets/footLogo.png";
 import myImage from "./assets/login1.jpg";
 
@@ -17,6 +16,12 @@ const ResetPassword = () => {
   const [success, setSuccess] = useState('');
 
 
+  useEffect(() => {
+    if (!token) {
+      setError('Invalid reset token');
+    }
+  }, [token]);
+
   const togglePasswordVisibility1 = () => {
     setShowPassword1(!showPassword1);
   };
@@ -28,26 +33,42 @@ const ResetPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const newPassword = e.target.elements.newPassword.value;
-    const confirmPassword = e.target.elements.confirmPassword.value;
+    if (newPassword !== confirmPassword) {
+      setError('Passwords do not match');
+      return;
+    }
+
+    if (newPassword.length < 8) {
+      setError('Password must be at least 8 characters long');
+      return;
+    }
 
     try {
-      const response = await fetch("/api/reset-password", {
-        method: "POST",
+      const response = await fetch('/api/reset-password', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({ token, newPassword }),
       });
 
       const data = await response.json();
-      console.log(data);
-      // Handle the response as needed (e.g., show a success message, redirect to login, etc.)
+
+      if (data.status) {
+        setSuccess('Password reset successful');
+        setTimeout(() => {
+          navigate('/login');
+        }, 3000);
+      } else {
+        setError(data.msg || 'Failed to reset password');
+      }
     } catch (err) {
       console.error(err);
-      // Handle the error as needed (e.g., show an error message)
+      setError('An error occurred while resetting the password');
     }
   };
+
+
 
   return (
     <div className="block md:flex bg-gray-200 min-h-screen">
@@ -68,6 +89,9 @@ const ResetPassword = () => {
             your account.
           </p>
 
+          {error && <div className="text-red-500 mb-4">{error}</div>}
+          {success && <div className="text-green-500 mb-4">{success}</div>}
+
           <fieldset className="relative flex justify-between items-center border-2 border-green-300 py-1 w-full md:w-96 mt-4 my-5 rounded-md">
             <legend className="ml-3 text-sm">Create Password</legend>
             <input
@@ -77,18 +101,19 @@ const ResetPassword = () => {
               className="w-full p-1 outline-none px-2 bg-transparent"
               placeholder="Enter new password"
               onChange={(e) => setNewPassword(e.target.value)}
+              aria-label="Create Password"
             />
-            {showPassword1 ? (
-              <FaEyeSlash
-                className="absolute top-1/2 -mt-3 right-3 cursor-pointer"
-                onClick={togglePasswordVisibility1}
-              />
-            ) : (
-              <FaEye
-                className="absolute top-1/2 -mt-3 right-3 cursor-pointer"
-                onClick={togglePasswordVisibility1}
-              />
-            )}
+             <button
+              type="button"
+              onClick={togglePasswordVisibility1}
+              aria-label={showPassword1 ? 'Hide password' : 'Show password'}
+            >
+              {showPassword1 ? (
+                <FaEyeSlash className="absolute top-1/2 -mt-3 right-3 cursor-pointer" />
+              ) : (
+                <FaEye className="absolute top-1/2 -mt-3 right-3 cursor-pointer" />
+              )}
+            </button>
           </fieldset>
 
           <fieldset className="relative flex justify-between items-center border-2 border-green-300 py-1 w-full md:w-96 mt-4 my-5 rounded-md">
@@ -96,20 +121,23 @@ const ResetPassword = () => {
             <input
               type={showPassword2 ? "text" : "password"}
               name="confirmPassword"
+              value={confirmPassword}
               className="w-full p-1 outline-none px-2 bg-transparent"
               placeholder="Confirm new password"
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              aria-label="Confirm Password"
             />
-            {showPassword2 ? (
-              <FaEyeSlash
-                className="absolute top-1/2 -mt-3 right-3 cursor-pointer"
-                onClick={togglePasswordVisibility2}
-              />
-            ) : (
-              <FaEye
-                className="absolute top-1/2 -mt-3 right-3 cursor-pointer"
-                onClick={togglePasswordVisibility2}
-              />
-            )}
+             <button
+              type="button"
+              onClick={togglePasswordVisibility2}
+              aria-label={showPassword2 ? 'Hide password' : 'Show password'}
+            >
+              {showPassword2 ? (
+                <FaEyeSlash className="absolute top-1/2 -mt-3 right-3 cursor-pointer" />
+              ) : (
+                <FaEye className="absolute top-1/2 -mt-3 right-3 cursor-pointer" />
+              )}
+            </button>
           </fieldset>
 
           <button
