@@ -10,15 +10,14 @@ const ResetPassword = () => {
   const navigate = useNavigate();
   const [showPassword1, setShowPassword1] = useState(false);
   const [showPassword2, setShowPassword2] = useState(false);
-  const [newPassword, setNewPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [error, setError] = useState('');
-  const [success, setSuccess] = useState('');
-
+  const [newPassword, setNewPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
   useEffect(() => {
     if (!token) {
-      setError('Invalid reset token');
+      setError("Invalid reset token");
     }
   }, [token]);
 
@@ -33,21 +32,26 @@ const ResetPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Reset error and success messages
+  setError("");
+  setSuccess("");
+
+    // Validate password and confirmPassword
     if (newPassword !== confirmPassword) {
-      setError('Passwords do not match');
+      setError("Passwords do not match");
       return;
     }
 
     if (newPassword.length < 8) {
-      setError('Password must be at least 8 characters long');
+      setError("Password must be at least 8 characters long");
       return;
     }
 
     try {
-      const response = await fetch('/api/reset-password', {
-        method: 'POST',
+      const response = await fetch("/api/reset-password", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ token, newPassword }),
       });
@@ -55,20 +59,18 @@ const ResetPassword = () => {
       const data = await response.json();
 
       if (data.status) {
-        setSuccess('Password reset successful');
+        setSuccess("Password reset successful");
         setTimeout(() => {
-          navigate('/login');
+          navigate("/login");
         }, 3000);
       } else {
-        setError(data.msg || 'Failed to reset password');
+        setError(data.msg || "Failed to reset password");
       }
     } catch (err) {
       console.error(err);
-      setError('An error occurred while resetting the password');
+      setError("An error occurred while resetting the password");
     }
   };
-
-
 
   return (
     <div className="block md:flex bg-gray-200 min-h-screen">
@@ -103,10 +105,10 @@ const ResetPassword = () => {
               onChange={(e) => setNewPassword(e.target.value)}
               aria-label="Create Password"
             />
-             <button
+            <button
               type="button"
               onClick={togglePasswordVisibility1}
-              aria-label={showPassword1 ? 'Hide password' : 'Show password'}
+              aria-label={showPassword1 ? "Hide password" : "Show password"}
             >
               {showPassword1 ? (
                 <FaEyeSlash className="absolute top-1/2 -mt-3 right-3 cursor-pointer" />
@@ -127,10 +129,10 @@ const ResetPassword = () => {
               onChange={(e) => setConfirmPassword(e.target.value)}
               aria-label="Confirm Password"
             />
-             <button
+            <button
               type="button"
               onClick={togglePasswordVisibility2}
-              aria-label={showPassword2 ? 'Hide password' : 'Show password'}
+              aria-label={showPassword2 ? "Hide password" : "Show password"}
             >
               {showPassword2 ? (
                 <FaEyeSlash className="absolute top-1/2 -mt-3 right-3 cursor-pointer" />
@@ -142,7 +144,7 @@ const ResetPassword = () => {
 
           <button
             type="submit"
-            onClick={() => handleSubmit(token)}
+            // onClick={() => handleSubmit(token)}
             className="w-full lg:w-96 py-2 rounded-md font-semibold hover:text-white bg-gradient-to-r from-blue-300 to-green-400"
           >
             Set password

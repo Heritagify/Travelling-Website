@@ -33,8 +33,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/flight" element={<Flights />} />
           <Route path="/forgottenPassword" element={<ForgotPassword />} />
-          <Route path="/verifyCode" element={<VerifyCode />} />
-          <Route path="/resetPassword/:token" element={<ResetPassword />} />
+          <Route path="/verify-code" element={<VerifyCode />} />
+          <Route path="/reset-password/:token" element={<ResetPassword />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/account" element={<Account />} >
             <Route path="/account" element={<UserAccount />} />
