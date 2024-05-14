@@ -6,7 +6,7 @@ import { FaFacebook } from "react-icons/fa6";
 import { FaGooglePlusG } from "react-icons/fa";
 import { FaApple } from "react-icons/fa";
 import { useNavigate, Link } from "react-router-dom";
-import myImage from "./assets/login1.jpg";
+// import myImage from "./assets/login1.jpg";
 
 import Axios from "axios";
 
@@ -43,6 +43,11 @@ const ForgotPassword = () => {
       });
     },
   });
+  // .catch(err => {
+  //   console.log(err);
+  //   // Show an error message or perform any other error handling
+  //   alert('An error occurred while submitting the form. Please try again later.');
+  // });
 
   return (
     <div className="bg-gradient-to-r from-blue-100 to-green-200 animate-gradient min-h-screen">
@@ -87,11 +92,11 @@ const ForgotPassword = () => {
                 placeholder="herogreat@gmail.com"
               />
             </fieldset>
-            {formik.touched.email && formik.errors.email ? (
+            {formik.touched.email && formik.errors.email && (
               <div className="text-red-500 text-sm my-2">
                 {formik.errors.email}
               </div>
-            ) : null}
+            )}
             <button
               // to={`/reset-password/${resetToken}`}
               type="submit"
