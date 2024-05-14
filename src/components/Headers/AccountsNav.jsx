@@ -1,18 +1,24 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
-import logo from "../../assets/footLogo.png";
-import { FaHeart, FaBars, FaTimes, FaUser } from "react-icons/fa";
-import { IoAirplane, IoBed } from "react-icons/io5";
-import { MdPayments } from "react-icons/md";
-import { RiUserSettingsFill } from "react-icons/ri";
-import { FcCustomerSupport } from "react-icons/fc";
-import UserOptions from "../Headers/UserOptions";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { logoutUser } from './redux/actions/authActions';
+import PropTypes from 'prop-types';
+import logo from '../../assets/footLogo.png';
+import { FaHeart, FaBars, FaTimes, FaUser } from 'react-icons/fa';
+import { IoAirplane, IoBed } from 'react-icons/io5';
+import { MdPayments } from 'react-icons/md';
+import { RiUserSettingsFill } from 'react-icons/ri';
+import { FcCustomerSupport } from 'react-icons/fc';
+import UserOptions from '../Headers/UserOptions';
 import axios from 'axios';
+
 // import { RiLogoutCircleFill } from "react-icons/ri";
 
 // const AccountsNav = ({ user, logout }) => {
 const AccountsNav = ({ user }) => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isUserOptionsOpen, setIsUserOptionsOpen] = useState(false);
 
@@ -24,8 +30,6 @@ const AccountsNav = ({ user }) => {
   };
 
 
-  const dispatch = useDispatch();
-const navigate = useNavigate();
 
   const handleLogout = async () => {
     try {
