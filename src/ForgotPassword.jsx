@@ -1,12 +1,13 @@
+import React, { lazy, Suspense } from "react";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import logo from "./assets/footLogo.png";
 import { IoChevronBack } from "react-icons/io5";
-import { FaFacebook } from "react-icons/fa6";
-import { FaGooglePlusG } from "react-icons/fa";
-import { FaApple } from "react-icons/fa";
 import { useNavigate, Link } from "react-router-dom";
-// import myImage from "./assets/login1.jpg";
+const FaFacebookIcon = lazy(() => import("./icons/FaFacebookIcon"));
+const FaGooglePlusGIcon = lazy(() => import("./icons/FaGooglePlusGIcon"));
+const FaAppleIcon = lazy(() => import("./icons/FaAppleIcon"));
+import myImage from "./assets/login1.jpg";
 
 import Axios from "axios";
 
@@ -113,15 +114,21 @@ const ForgotPassword = () => {
 
             {/* -----------OTHER LOGIN OPTIONS----------- */}
             <div className="flex justify-between">
-              <button className="text-blue-400 p-2 px-10 border rounded-xl border-blue-300 hover:bg-gradient-to-r from-blue-900 to-green-800">
-                <FaFacebook className="text-3xl animate-bounce" />
-              </button>
-              <button className="text-rainbow p-3 rounded-full border border-emerald-500 hover:bg-gradient-to-r from-blue-900 to-green-800">
-                <FaGooglePlusG className="text-red-400 text-3xl animate-bounce" />
-              </button>
-              <button className="p-2 px-10 border border-blue-300 hover:bg-gradient-to-r from-blue-900 to-green-800">
-                <FaApple className="text-3xl animate-bounce" />
-              </button>
+              <Suspense fallback={<div>Loading...</div>}>
+                <button className="text-blue-400 p-2 px-10 border rounded-xl border-blue-300 hover:bg-gradient-to-r from-blue-900 to-green-800">
+                  <FaFacebookIcon className="text-3xl animate-bounce" />
+                </button>
+              </Suspense>
+              <Suspense fallback={<div>Loading...</div>}>
+                <button className="text-rainbow p-3 rounded-full border border-emerald-500 hover:bg-gradient-to-r from-blue-900 to-green-800">
+                  <FaGooglePlusGIcon className="text-red-400 text-3xl animate-bounce" />
+                </button>
+              </Suspense>
+              <Suspense fallback={<div>Loading...</div>}>
+                <button className="p-2 px-10 border border-blue-300 hover:bg-gradient-to-r from-blue-900 to-green-800">
+                  <FaAppleIcon className="text-3xl animate-bounce" />
+                </button>
+              </Suspense>
             </div>
           </form>
         </div>
