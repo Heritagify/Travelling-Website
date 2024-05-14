@@ -67,7 +67,7 @@ const SignUp = () => {
       // Handle successful response, e.g., show a success message, redirect, etc.
     })
     .catch(err => {
-      console.log(err);
+      alert('An error occurred while submitting the form. Please try again later.');
       // Handle error, e.g., show an error message
     })
     },

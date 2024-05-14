@@ -33,8 +33,8 @@ const ResetPassword = () => {
     e.preventDefault();
 
     // Reset error and success messages
-  setError("");
-  setSuccess("");
+    setError("");
+    setSuccess("");
 
     // Validate password and confirmPassword
     if (newPassword !== confirmPassword) {
