@@ -6,7 +6,7 @@ import slamon from '../assets/vectors/slamon.png';
 
 const Vector = () => {
   return (
-    <div className="hidden md:flex mx-8 my-10">
+    <div className="hidden lg:flex mx-8 my-10">
         <img src={vector1} className='relative z-30 w-34 h-32 ml-1 mt-1'/>
         <img src={vector2} className='absolute z-20 mr-4 w-36 h-32'/>
         <img src={vector3} className='absolute mr-4 w-60 h-32 z-10'/>
