@@ -48,9 +48,9 @@ const HomeNav = () => {
       {/* Desktop Navigation */}
       <nav className="hidden sm:flex text-white justify-between p-2 items-center">
         <div className="flex space-x-5">
-          <h1 className="flex space-x-3">
+          <Link to="/flight" className="cursor-pointer flex space-x-3">
             <IoAirplane className="text-white text-2xl" />Find Flight
-          </h1>
+          </Link>
           <h1 className="flex space-x-4">
             <IoBed className="text-white text-2xl" />Find Stays
           </h1>
