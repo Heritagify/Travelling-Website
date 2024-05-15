@@ -19,7 +19,7 @@ const Home = () => {
       {/* Hero Section */}
       <div
         className="rounded-3xl relative p-3 pt-1 bg-cover h-[550px] bg-center bg-gray-900 mx-3 mt-3"
-        style={{ backgroundImage: 'url("../public-assets/lp1.png")' }}>
+        style={{ backgroundImage: 'url("/public-assets/lp1.png")' }}>
         <div className="rounded-3xl absolute inset-0 bg-black bg-opacity-30"></div>
 
         {/* Navigation */}
@@ -69,7 +69,7 @@ const Home = () => {
       {/* Sections for Flights and Hotels */}
       <div className='md:flex md:space-x-4 space-y-5 md:space-y-0 md:justify-center my-14'>
         {/* Flights Section */}
-        <div className="sm:px-10 rounded-3xl bg-cover md:w-full md:max-w-[31rem] h-[29rem] bg-center bg-gray-900" style={{ backgroundImage: 'url("../public-assets/flights.png")' }}>
+        <div className="sm:px-10 rounded-3xl bg-cover md:w-full md:max-w-[31rem] h-[29rem] bg-center bg-gray-900" style={{ backgroundImage: 'url("/public-assets/flights.png")' }}>
   <div className='md:mt-72 pt-72 md:pt-8 text-center'>
     <h1 className='text-white text-5xl sm:text-4xl tracking-wide font-bold font-montserrat'>Flights</h1>
     <p className='text-white text-center font-normal text-sm leading-5 my-2'>Search Flights & Places. Hire to our most popular destinations.</p>
@@ -84,7 +84,7 @@ const Home = () => {
 
 
         {/* Hotels Section */}
-        <div className="rounded-3xl size-40 relative p-3 pt-1 md:w-full md:max-w-[31rem] h-[29rem] bg-cover bg-center" style={{ backgroundImage: 'url("../public-assets/hotels.png")' }}>
+        <div className="rounded-3xl size-40 relative p-3 pt-1 md:w-full md:max-w-[31rem] h-[29rem] bg-cover bg-center" style={{ backgroundImage: 'url("/public-assets/hotels.png")' }}>
   <div className='mt-72 pt-3 text-center'>
     <h1 className='text-white text-4xl tracking-wide font-bold font-montserrat'>Hotels</h1>
     <p className='text-white text-center font-normal text-sm leading-5 my-2'>Search hotels & Places. Hire to our most popular destinations.</p>
