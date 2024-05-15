@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { logoutUser } from './redux/actions/authActions';
+// import { logoutUser } from './redux/actions/authActions';
 import { FaUser } from 'react-icons/fa';
 import { MdPayments } from 'react-icons/md';
 import { RiUserSettingsFill } from 'react-icons/ri';
@@ -13,21 +13,21 @@ const UserOptions = ({ user }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const handleLogout = async () => {
-    try {
-      // Send a request to the logout route on your server
-      await axios.post('/api/logout');
+  // const handleLogout = async () => {
+  //   try {
+  //     // Send a request to the logout route on your server
+  //     await axios.post('/api/logout');
 
-      // Clear user data from the Redux store
-      dispatch(logoutUser());
+  //     // Clear user data from the Redux store
+  //     dispatch(logoutUser());
 
-      // Redirect the user to the login page or another appropriate page
-      navigate('/login');
-    } catch (err) {
-      console.error(err);
-      // Handle the error appropriately (e.g., display an error message)
-    }
-  };
+  //     // Redirect the user to the login page or another appropriate page
+  //     navigate('/login');
+  //   } catch (err) {
+  //     console.error(err);
+  //     // Handle the error appropriately (e.g., display an error message)
+  //   }
+  // };
 
   return (
     <div className="absolute right-0 sm:right-5 lg:right-0 top-full mt-2 w-52 md:w-64 lg:w-48 bg-mintGreen shadow shadow-green-700 rounded-lg">
@@ -70,13 +70,13 @@ const UserOptions = ({ user }) => {
         <FcCustomerSupport className="md:text-xl lg:text-sm" />
         Support
       </Link>
-      <button
+      {/* <button
         className="flex items-center gap-1 w-full text-left py-2 px-3 text-sm md:text-lg lg:text-xs font-medium md:font-semibold lg:font-medium font-monts hover:bg-blackGreen hover:text-mintGreen hover:px-9 focus:outline-none"
         onClick={handleLogout}
       >
         <RiLogoutCircleFill className="md:text-xl lg:text-sm" />
         Logout
-      </button>
+      </button> */}
     </div>
   );
 };

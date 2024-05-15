@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { logoutUser } from './redux/actions/authActions';
+// import { useNavigate } from 'react-router-dom';
+// import { useDispatch } from 'react-redux';
+// import { logoutUser } from './redux/actions/authActions';
 import PropTypes from 'prop-types';
 import logo from '../../assets/footLogo.png';
 import { FaHeart, FaBars, FaTimes, FaUser } from 'react-icons/fa';
@@ -10,15 +10,15 @@ import { IoAirplane, IoBed } from 'react-icons/io5';
 import { MdPayments } from 'react-icons/md';
 import { RiUserSettingsFill } from 'react-icons/ri';
 import { FcCustomerSupport } from 'react-icons/fc';
-import UserOptions from '../Headers/UserOptions';
+// import UserOptions from '../Headers/UserOptions';
 import axios from 'axios';
 
 // import { RiLogoutCircleFill } from "react-icons/ri";
 
 // const AccountsNav = ({ user, logout }) => {
 const AccountsNav = ({ user }) => {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+  // const dispatch = useDispatch();
+  // const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isUserOptionsOpen, setIsUserOptionsOpen] = useState(false);
 
@@ -31,22 +31,22 @@ const AccountsNav = ({ user }) => {
 
 
 
-  const handleLogout = async () => {
-    try {
-      // Send a request to the logout route on your server
-      await axios.post("/api/logout");
+  // const handleLogout = async () => {
+  //   try {
+  //     // Send a request to the logout route on your server
+  //     await axios.post("/api/logout");
 
-      // Clear user data from the client-side state or storage
-      // For example, using Redux:
-      dispatch(logoutUser());
+  //     // Clear user data from the client-side state or storage
+  //     // For example, using Redux:
+  //     dispatch(logoutUser());
 
-      // Redirect the user to the login page or another appropriate page
-      navigate("/login");
-    } catch (err) {
-      console.error(err);
-      // Handle the error appropriately (e.g., display an error message)
-    }
-  };
+  //     // Redirect the user to the login page or another appropriate page
+  //     navigate("/login");
+  //   } catch (err) {
+  //     console.error(err);
+  //     // Handle the error appropriately (e.g., display an error message)
+  //   }
+  // };
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-10">
@@ -108,9 +108,9 @@ const AccountsNav = ({ user }) => {
                     {user.name}
                   </span>
                 </button>
-                {isUserOptionsOpen && (
+                {/* {isUserOptionsOpen && (
                   <UserOptions user={user} logout={handleLogout} />
-                )}
+                )} */}
               </div>
             )}
           </div>
@@ -157,7 +157,7 @@ AccountsNav.propTypes = {
     name: PropTypes.string.isRequired,
     profilePicture: PropTypes.string.isRequired,
   }),
-  logout: PropTypes.func.isRequired,
+  // logout: PropTypes.func.isRequired,
 };
 
 export default AccountsNav;
