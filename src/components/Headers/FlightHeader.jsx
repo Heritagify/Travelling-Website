@@ -6,7 +6,7 @@ import { FaHeart } from 'react-icons/fa6';
 
 
 
-const Flight = ({ user }) => {
+const FlightHeader = ({ user }) => {
   return (
     <nav className="p-4 shadow-md shadow-gray-200">
       <div className="flex justify-between items-center mx-8">
@@ -58,4 +58,4 @@ Flight.propTypes = {
     }),
 };
 
-export default Flight;
+export default FlightHeader;
