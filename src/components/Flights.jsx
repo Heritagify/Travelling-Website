@@ -5,13 +5,13 @@ import DateSelector from './DateSelector.jsx';
 import TripOption from './TripOption.jsx';
 import Passenger from './Passenger.jsx';
 import { FaPaperPlane } from "react-icons/fa6";
-import bgMap from "./assets/bgMap.png"
+import bgMap from "/src/assets/bgMap.png"
 
 // ---------Images-------
-import lanka1 from "./assets/lanka1.png"
-import lanka2 from "./assets/lanka2.png"
-import lanka3 from "./assets/lanka3.png"
-import lanka4 from "./assets/lanka4.png"
+import lanka1 from "/src/assets/lanka1.png"
+import lanka2 from "/src/assets/lanka2.png"
+import lanka3 from "/src/assets/lanka3.png"
+import lanka4 from "/src/assets/lanka4.png"
 
 const Flights = () => {
   return (
