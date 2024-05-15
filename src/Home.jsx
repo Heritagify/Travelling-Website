@@ -2,7 +2,7 @@ import { IoAirplane } from "react-icons/io5";
 import { IoBed } from "react-icons/io5";
 import { FaPaperPlane } from "react-icons/fa6";
 import SwapInput from "./components/SwapInput.jsx";
-import DateSelector from "./components/DateSelector.jsx";
+import DateSelector from "./components/DateSelector";
 import TripOption from "./components/TripOption.jsx";
 import Passenger from "./components/Passenger.jsx";
 import Places from "./Places.jsx";
