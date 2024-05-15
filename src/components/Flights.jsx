@@ -1,9 +1,9 @@
-import FlightNav from "./components/FlightNav";
-import Footer from "./components/Footer";
-import SwapInput from './components/SwapInput.jsx';
-import DateSelector from './components/DateSelector.jsx';
-import TripOption from './components/TripOption.jsx';
-import Passenger from './components/Passenger.jsx';
+import FlightNav from "./FlightNav.jsx";
+import Footer from "./Footer.jsx";
+import SwapInput from './SwapInput.jsx';
+import DateSelector from './DateSelector.jsx';
+import TripOption from './TripOption.jsx';
+import Passenger from './Passenger.jsx';
 import { FaPaperPlane } from "react-icons/fa6";
 import bgMap from "./assets/bgMap.png"
 

@@ -5,7 +5,7 @@ import Spinner from "./components/Spinner";
 
 const Home = React.lazy(() => import("./Home"));
 const Login = React.lazy(() => import("./Login"));
-const Flights = React.lazy(() => import("./Flights"));
+const Flights = React.lazy(() => import("./components/Flights"));
 const ForgotPassword = React.lazy(() => import("./ForgotPassword"));
 const VerifyCode = React.lazy(() => import("./VerifyCode"));
 const ResetPassword = React.lazy(() => import("./ResetPassword"));
