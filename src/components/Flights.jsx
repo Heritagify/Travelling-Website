@@ -1,7 +1,7 @@
 import FlightNav from "./FlightNav.jsx";
 import Footer from "./Footer.jsx";
 import SwapInput from './SwapInput.jsx';
-import DateSelector from '../components/DateSelector.jsx';
+// import DateSelector from '../components/DateSelector.jsx';
 import TripOption from './TripOption.jsx';
 import Passenger from './Passenger.jsx';
 import { FaPaperPlane } from "react-icons/fa6";
@@ -29,7 +29,7 @@ const Flights = () => {
           <div className='lg:flex my-4 space-y-2 md:space-y-0 md:space-x-5 mx-3'>
             <SwapInput />
             <TripOption />
-            <DateSelector />
+            {/* <DateSelector /> */}
             <Passenger />
           </div>
           <div className='flex justify-end items-center space-x-4 mx-4 font-medium text-md'>
