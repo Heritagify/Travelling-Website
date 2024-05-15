@@ -20,14 +20,14 @@ const AccountsNav = ({ user }) => {
   // const dispatch = useDispatch();
   // const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isUserOptionsOpen, setIsUserOptionsOpen] = useState(false);
+  // const [isUserOptionsOpen, setIsUserOptionsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  const toggleUserOptions = () => {
-    setIsUserOptionsOpen(!isUserOptionsOpen);
-  };
+  // const toggleUserOptions = () => {
+  //   setIsUserOptionsOpen(!isUserOptionsOpen);
+  // };
 
 
 
@@ -97,7 +97,7 @@ const AccountsNav = ({ user }) => {
               <div className="relative">
                 <button
                   className="flex items-center gap-1 cursor-pointer"
-                  onClick={toggleUserOptions}
+                  // onClick={toggleUserOptions}
                 >
                   <img
                     src={user.profilePicture}
