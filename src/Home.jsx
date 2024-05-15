@@ -2,7 +2,7 @@ import { IoAirplane } from "react-icons/io5";
 import { IoBed } from "react-icons/io5";
 import { FaPaperPlane } from "react-icons/fa6";
 import SwapInput from "./components/SwapInput.jsx";
-import DateSelector from "./components/DateSelector";
+// import DateSelector from "./components/DateSelector";
 import TripOption from "./components/TripOption.jsx";
 import Passenger from "./components/Passenger.jsx";
 import Places from "./Places.jsx";
@@ -46,7 +46,7 @@ const Home = () => {
           <div className="lg:flex my-4 space-x-5 mx-3">
             <SwapInput />
             <TripOption />
-            <DateSelector />
+            {/* <DateSelector /> */}
             <Passenger />
           </div>
           <div className="flex justify-end items-center space-x-4 font-medium text-md">
