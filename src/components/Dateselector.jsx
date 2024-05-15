@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+import { useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const DateSelector = () => {
   const [startDate, setStartDate] = useState(null);
@@ -12,7 +12,7 @@ const DateSelector = () => {
     setEndDate(end);
   };
 
-  const placeholderText = 'Select Departure and Return';
+  const placeholderText = "Select Departure and Return";
 
   return (
     <fieldset className="border border-gray-500 p-2 rounded-md">
