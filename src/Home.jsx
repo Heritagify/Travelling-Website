@@ -31,7 +31,7 @@ const Home = () => {
           <p className="text-2xl">Special offers to suit your plan</p>
         </div>
 
-        {/* Search Section */}
+        {/* Search Section */}l
         <div className="relative rounded-lg px-1 pt-2 pb-2 mx-5 mt-32 shadow-md shadow-blue-400 bg-white">
           <div className="flex text-blackGreen">
             <button className="flex py-2 px-4 ">
