@@ -4,7 +4,7 @@ import { FaTimes, FaBars } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 // import Spinner from "../components/Spinner"
 
-import logo from '../assets/Group.png';
+import logo from '../assets/heritagifyLogo1.png';
 
 // eslint-disable-next-line react/prop-types
 const MobileNav = ({ isOpen, toggle }) => (
@@ -56,7 +56,7 @@ const HomeNav = () => {
           </h1>
         </div>
         <div className="flex justify-center space-x-5">
-        <img src={logo}/>
+        <img src={logo} className='w-40 shadow-md px-2 shadow-teal-900'/>
         </div>
         <div className="flex font-bold space-x-5 items-center">
           <Link to="/login">
